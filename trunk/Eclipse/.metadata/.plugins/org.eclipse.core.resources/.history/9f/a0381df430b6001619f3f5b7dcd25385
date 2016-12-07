@@ -1,7 +1,0 @@
-package ch.mitti.MitarbeiterKunden;
-
-public class Mitarbeiter {
-	private int mitarbeiterNummer;
-	private int anstellungsgradInProzent;
-	private int lohn;
-}

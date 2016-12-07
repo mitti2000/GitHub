@@ -1,6 +1,0 @@
-package ch.mitti.MitarbeiterKunden;
-
-public class Kunde extends Person{
-	private int kundennummer;
-	private char kundentyp;
-}

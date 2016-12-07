@@ -1,7 +1,0 @@
-package ch.mitti.konstruktorenverkettung;
-
-public class D {
-	public D(){
-		System.out.println("Konstruktor der Klasse D aufgerufen");
-	}
-}

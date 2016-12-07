@@ -1,0 +1,22 @@
+package ch.mitti.methoden_polymorphie;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Operation> ops= new ArrayList<Operation>();
+		
+		double t1 = 10;
+		double t2 = 5;
+		
+		ops.add(new OpPlus());
+		ops.addAll(new OpMinus());
+		ops.add(new OpMultiplikation());
+		ops.add(new OpDivision());
+		
+
+	}
+
+}

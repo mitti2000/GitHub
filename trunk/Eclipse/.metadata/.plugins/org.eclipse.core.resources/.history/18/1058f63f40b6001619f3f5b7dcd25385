@@ -1,7 +1,0 @@
-package ch.mitti.ueberschreiben;
-
-abstract class A {
-	
-	abstract void sagHallo(){
-	}
-}

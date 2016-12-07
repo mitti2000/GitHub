@@ -1,6 +1,0 @@
-package ch.mitti.MitarbeiterKunden;
-
-public class Lehrling {
-	private int aktuellesLehrjahr;
-	private int anzahl lehrjahre;
-}

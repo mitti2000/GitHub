@@ -1,0 +1,27 @@
+package ch.mitti.methoden_polymorphie;
+
+public class Operation {
+	protected double result;
+	protected double term1;
+	protected double term2;
+	
+	public Operation(){
+		
+	}
+	
+	public double getResult(){
+		return 12.3;
+	}
+	
+	public void setTerm1(int term){
+		
+	}
+	
+	public void setTerm2(int term){
+		
+	}
+	
+	public void doOperation(){
+		
+	}
+}

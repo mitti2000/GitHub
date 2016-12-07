@@ -1,0 +1,9 @@
+package ch.mitti.methoden_polymorphie;
+
+public class OpMultiplikation extends Operation {
+	
+	public OpMultiplikation(){
+		
+	}
+
+}
