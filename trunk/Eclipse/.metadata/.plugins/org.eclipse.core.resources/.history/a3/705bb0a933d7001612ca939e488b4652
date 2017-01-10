@@ -1,0 +1,10 @@
+package ch.mitti.tierwelt;
+
+public class Katze extends Vierbeiner {
+	
+	public Katze(){
+		
+	}
+	
+	
+}

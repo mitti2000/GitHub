@@ -1,0 +1,5 @@
+package ch.mitti.tierwelt;
+
+public abstract class Lebewesen {
+
+}

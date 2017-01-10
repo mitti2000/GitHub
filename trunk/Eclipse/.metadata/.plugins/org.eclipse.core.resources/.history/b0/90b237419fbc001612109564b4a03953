@@ -1,9 +1,0 @@
-package ch.mitti.methoden_polymorphie;
-
-public class OpMinus {
-	
-	public OpMinus(){
-		
-	}
-
-}

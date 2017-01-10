@@ -1,0 +1,29 @@
+package ch.mitti.tierwelt;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Zoo {
+
+	public static void main(String[] args) {
+		ArrayList<Lebewesen> zoo = new ArrayList<Lebewesen>();
+		
+		zoo.add(new Katze());
+		zoo.add(new Katze());
+		zoo.add(new Katze());
+		
+		zoo.add(new Hund());
+		zoo.add(new Hund());
+		zoo.add(new Hund());
+
+		zoo.add(new Wellensittich());
+		zoo.add(new Wellensittich());
+		zoo.add(new Wellensittich());
+		zoo.add(new Wellensittich());
+		
+		Iterator it = zoo.iterator();
+
+
+	}
+
+}

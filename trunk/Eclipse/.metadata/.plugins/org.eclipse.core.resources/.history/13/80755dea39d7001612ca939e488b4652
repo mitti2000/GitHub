@@ -1,0 +1,8 @@
+package ch.mitti.comperatorUebung;
+
+public class Bier {
+	private String name;
+	private Sting herkunft;
+	private float inhalt;
+
+}

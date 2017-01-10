@@ -1,0 +1,10 @@
+package ch.mitti.tierwelt;
+
+public class Zoo {
+
+	public static void main(String[] args) {
+		ArrayList<Lebewesen> zoo = new ArrayList<Lebewesen>();
+
+	}
+
+}

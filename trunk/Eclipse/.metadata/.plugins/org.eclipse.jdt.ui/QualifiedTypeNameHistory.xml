@@ -46,5 +46,7 @@
 <fullyQualifiedTypeName name="ch.mitti.MitarbeiterKunden.Kunde"/>
 <fullyQualifiedTypeName name="ch.mitti.geometrische_figuren.Dreieck"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
 </qualifiedTypeNameHistroy>

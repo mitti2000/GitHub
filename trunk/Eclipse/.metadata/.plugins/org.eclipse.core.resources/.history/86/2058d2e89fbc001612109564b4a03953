@@ -1,8 +1,0 @@
-package ch.mitti.methoden_polymorphie;
-
-public class OpPlus extends Operation {
-	
-	public OpPlus(){
-		
-	}
-}

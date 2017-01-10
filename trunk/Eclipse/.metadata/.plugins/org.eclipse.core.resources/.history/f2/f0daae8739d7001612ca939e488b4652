@@ -1,0 +1,14 @@
+package ch.mitti.comperatorUebung;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayAndCollectionsTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
