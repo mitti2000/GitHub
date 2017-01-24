@@ -1,5 +1,0 @@
-package ch.mitti.tierweltauto;
-
-public interface Hoerbar {
-
-}

@@ -1,7 +1,0 @@
-package ch.mitti.comperatorUebung;
-
-import java.util.Comparator;
-
-public class BierComparator implements Comparator<Bier>{
-	
-}
