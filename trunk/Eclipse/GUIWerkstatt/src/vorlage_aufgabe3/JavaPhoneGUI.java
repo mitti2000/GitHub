@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -73,11 +75,33 @@ public class JavaPhoneGUI{
 		this.keyStar = new JButton("*");
 		this.keyPound = new JButton("#");
 		this.keyHook = new JButton("Hook off");
-		// ...
+		
+		
+		// addListeners
+		this.key1.addActionListener(new KeyListener());
+		this.key2.addActionListener(new KeyListener());
+		this.key3.addActionListener(new KeyListener());
+		this.key4.addActionListener(new KeyListener());
+		this.key5.addActionListener(new KeyListener());
+		this.key6.addActionListener(new KeyListener());
+		this.key7.addActionListener(new KeyListener());
+		this.key8.addActionListener(new KeyListener());
+		this.key9.addActionListener(new KeyListener());
+		this.key0.addActionListener(new KeyListener());
+		this.keyStar.addActionListener(new KeyListener());
+		this.keyPound.addActionListener(new KeyListener());
+		this.keyHook.addActionListener(new ActionListener(){
+				public void actionPerformed(ActionEvent e){
+					display.setText("");
+					mainFrame.setVisible(false);
+					mainFrame.dispose();
+					System.exit(0);
+				}
+			});
 
 		// Declare and create other GUI elements
 		
-		this.display = new JTextField("012345678");
+		this.display = new JTextField("");
 		this.display.setFont(myPlainFont);
 		this.display.setForeground(Color.BLUE);
 		this.status = new JLabel("ready");
@@ -155,6 +179,26 @@ public class JavaPhoneGUI{
 		// Add key/display panel and hook/state panel to frame
 		mainFrame.setSize(600, 600);
 		mainFrame.setVisible(true);
+		
+		//Close on x
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	
+	class KeyListener implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			String ziffer = e.getActionCommand();
+			display.setText(display.getText() + ziffer);
+		}
+	}
+	
+	class HookListener implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			display.setText("");
+			mainFrame.setVisible(false);
+			mainFrame.dispose();
+			System.exit(0);
+		}
 	}
 
 	/**

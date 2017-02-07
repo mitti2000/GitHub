@@ -1,0 +1,7 @@
+package aufgabenserie1.mitti.ch;
+
+import java.awt.event.ActionListener;
+
+public class ButtonListener implements ActionListener{
+
+}

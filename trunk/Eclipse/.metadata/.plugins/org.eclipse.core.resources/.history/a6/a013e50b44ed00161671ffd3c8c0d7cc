@@ -1,0 +1,9 @@
+package aufgabenserie1.mitti.ch;
+
+import javax.swing.JButton;
+
+public class MyButton extends JButton {
+	public void count(){
+		
+	}
+}
