@@ -45,7 +45,7 @@ public class Aufgabe8 extends JFrame implements ActionListener {
 	}
 	
 	private void bindListener(){
-		for(MyButton button : buttons){
+		for(JButton button : buttons){
 			button.addActionListener(this);
 		}
 	}
