@@ -1,0 +1,27 @@
+package ch.mitti.tetris;
+
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+public class Testklasse extends JFrame {
+	
+	private void initGui(){		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLayout(new FlowLayout());
+		setSize(400,400);	
+		setVisible(true);	
+	}
+	
+	
+	
+	public static void main(String[] args){
+		Testklasse test = new Testklasse();
+		test.initGui();
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		System.out.println(dim);
+	}
+	
+}

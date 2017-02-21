@@ -1,0 +1,19 @@
+package ch.mitti.tetris;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+public class Testklasse extends JFrame {
+	
+	private JFrame frame;
+	
+	
+	
+	public static void main(String[] args){
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		System.out.println(dim);
+	}
+	
+}
