@@ -1,0 +1,7 @@
+package ch.mitti.tetris.testing;
+
+import java.awt.Toolkit;
+
+public class Testklasse {
+	Toolkit.getDefaultToolkit().getScreenSize();
+}
