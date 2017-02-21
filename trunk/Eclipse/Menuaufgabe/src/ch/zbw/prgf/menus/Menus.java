@@ -22,6 +22,7 @@ import java.awt.event.MouseListener;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -122,7 +123,7 @@ public class Menus extends JFrame implements ActionListener{
 		submenuitem2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_2, ActionEvent.ALT_MASK));
 
 		//Menuicon einbinden
-		java.net.URL imageURL = this.getClass().getResource("/16x16.png");
+		URL imageURL = this.getClass().getResource("/16x16.png");
 		ImageIcon image = new ImageIcon(imageURL);
 		
 		//Menuicon setzen

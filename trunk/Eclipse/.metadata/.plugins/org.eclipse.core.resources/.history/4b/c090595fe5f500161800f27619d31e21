@@ -1,0 +1,11 @@
+package ch.mitti.tetris.testing;
+
+import javax.swing.JFrame;
+
+public class graphics1 {
+	private JFrame frame;
+	
+	public static void main(String[] args){
+		
+	}
+}
