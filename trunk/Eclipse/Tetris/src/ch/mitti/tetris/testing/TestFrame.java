@@ -1,7 +1,5 @@
 package ch.mitti.tetris.testing;
 
-import java.awt.FlowLayout;
-import java.awt.LayoutManager;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -16,7 +14,7 @@ public class TestFrame extends JFrame {
 	
 	private void drawGui(){
 		panel = new JPanel();
-		panel.setLayout(););
+		
 	}
 	
 	private void initGui(){		
