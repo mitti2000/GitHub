@@ -1,0 +1,10 @@
+package ch.mitti.tetris;
+
+public class Coordinates {
+	int y;
+	int x;
+	
+	public Coordinates(int x, int y){
+		
+	}
+}
