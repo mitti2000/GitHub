@@ -1,0 +1,41 @@
+package ch.mitti.cubes;
+
+import java.awt.GridLayout;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
+import ch.mitti.dice.DicePanel;
+
+public class GraphicsContainer extends JFrame {
+	
+	int size;
+	Square square;
+	
+	public void initGUI(){
+		size = 1000;
+		this.setLayout(null);
+		
+		
+		
+		this.add(square);
+
+		this.setSize(size,size);
+		
+		
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+	
+	public ArrayList<Square> createSquares(){
+		ArrayList<Square> squares = new ArrayList<Square>();
+		
+	}
+	
+	public static void main(String[] args){
+		GraphicsContainer container = new GraphicsContainer();
+		container.initGUI();
+	}
+
+}

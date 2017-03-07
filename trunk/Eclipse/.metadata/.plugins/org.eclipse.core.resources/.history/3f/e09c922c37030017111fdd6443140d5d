@@ -1,0 +1,39 @@
+package ch.mitti.grafik;
+
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class GraphicsContainer extends JFrame {
+	
+	
+	public void initGUI(){
+		
+		this.setLayout(new GridLayout(1,5));
+		this.setSize(800,800);
+		
+	
+		this.add(addDice());
+		this.add(addDice());
+		this.add(addDice());
+		this.add(addDice());
+		this.add(addDice());
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+	public JPanel addDice(){
+		JPanel panel = new JPanel();
+		//panel.add(new Dice((int)(Math.random()*6)+1));
+		panel.add(new Dice(1));
+		return panel;
+	}
+	
+	
+	public static void main(String[] args){
+		GraphicsContainer frame = new GraphicsContainer();
+		frame.initGUI();
+	}
+}

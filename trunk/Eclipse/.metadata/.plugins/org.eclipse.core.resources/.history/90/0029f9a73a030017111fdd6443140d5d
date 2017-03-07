@@ -1,0 +1,36 @@
+package ch.mitti.grafik;
+
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class GraphicsContainer extends JFrame {
+	
+	private int anzahl;
+	private int size;
+	
+	
+	public void initGUI(){
+		anzahl = 5;
+		size = 100;
+		
+		this.setLayout(new GridLayout(1,anzahl));
+		this.setSize(800,800);
+		
+	
+		for(int i=0; i<5; i++){
+			this.add(new DicePanel());
+		}
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+	
+	
+	public static void main(String[] args){
+		GraphicsContainer frame = new GraphicsContainer();
+		frame.initGUI();
+	}
+}

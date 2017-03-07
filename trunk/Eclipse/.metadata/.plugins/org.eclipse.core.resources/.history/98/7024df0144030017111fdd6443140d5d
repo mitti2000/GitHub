@@ -1,0 +1,27 @@
+package ch.mitti.cubes;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseWheelEvent;
+
+public class ClickAdapter extends MouseAdapter {
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		super.mouseEntered(e);
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		super.mouseExited(e);
+	}
+
+	@Override
+	public void mouseWheelMoved(MouseWheelEvent e) {
+		// TODO Auto-generated method stub
+		super.mouseWheelMoved(e);
+	}
+	
+}

@@ -1,0 +1,77 @@
+package ch.mitti.grafik;
+
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Dice extends Canvas {
+	
+	private int count;
+	
+	public Dice(int count){
+		this.count = count;
+		this.setSize(100,100);
+		this.setBackground(Color.BLUE);
+	}
+	
+	public int getCount(){
+		return count;
+	}
+	
+	@Override
+	public void paint(Graphics g){
+		g.setColor(Color.WHITE);
+		int eyeSize = this.getHeight()/5;
+		int topY = this.getHeight()/5;
+		int bottomY = this.getHeight()/5+eyeSize;
+		int leftX = this.getWidth()/5;
+		int rightX = this.getWidth()/5+eyeSize;
+		int center = this.getHeight()/5-(eyeSize/2);
+		
+		
+		if(count<1||count>6) return;
+		else{
+			switch(count){
+			case 1:
+				g.fillOval(center, center, eyeSize, eyeSize);
+				break;
+			
+			case 2:
+				g.fillOval(leftX, topY, eyeSize, eyeSize);
+				g.fillOval(rightX, bottomY, eyeSize, eyeSize);
+				break;
+			
+			case 3:
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				break;
+				
+			case 4:
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				break;
+			
+			case 5:
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				break;
+				
+			case 6:
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				g.fillOval(center, center, eyeSize, eyeSize);
+				break;
+			}
+		}
+		
+	}
+}

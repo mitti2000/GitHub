@@ -1,0 +1,30 @@
+package ch.mitti.cubes;
+
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+
+import ch.mitti.dice.DicePanel;
+
+public class GraphicsContainer extends JFrame {
+	
+	int size;
+	Square square;
+	
+	public void initGUI(){
+		size = 1000;
+
+		this.setSize(size,size);
+		
+		
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		GraphicsContainer container = new GraphicsContainer();
+		container.initGUI();
+	}
+
+}
