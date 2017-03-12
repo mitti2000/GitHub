@@ -28,11 +28,7 @@ public class GraphicsContainer extends JFrame {
 			Square square = new Square(size/10, size/10);
 			square.setLocation(r.nextInt(size-50), r.nextInt(size-50));
 			squares.add(square);
-			
 		}
-		/*
-		square = new Square(size/10,size/10);
-		square.setLocation(150, 250);*/
 		
 		for(Square square : squares){
 			this.add(square);
@@ -40,16 +36,12 @@ public class GraphicsContainer extends JFrame {
 
 		this.setSize(size,size);
 		
-		
-		
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
-	
 	
 	public static void main(String[] args){
 		GraphicsContainer container = new GraphicsContainer();
 		container.initGUI();
 	}
-
 }
