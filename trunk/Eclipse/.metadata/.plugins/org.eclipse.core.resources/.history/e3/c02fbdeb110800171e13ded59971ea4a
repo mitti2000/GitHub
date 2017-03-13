@@ -20,7 +20,7 @@ public class GUITest extends JFrame {
 		label3 = new JLabel("Label 3");
 		JPanel panel = new JPanel();
 		
-		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));		
+		panel.setLayout(new BoxLayout(panel, BoxLayout.LINE_AXIS));		
 		
 		panel.add(label1);
 		panel.add(label2);

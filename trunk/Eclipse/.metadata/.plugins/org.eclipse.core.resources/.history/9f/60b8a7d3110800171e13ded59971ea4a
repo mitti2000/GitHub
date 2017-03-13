@@ -18,15 +18,13 @@ public class GUITest extends JFrame {
 		label1 = new JLabel("Label 1");
 		label2 = new JLabel("Label 2");
 		label3 = new JLabel("Label 3");
-		JPanel panel = new JPanel();
 		
-		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));		
+		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));		
 		
-		panel.add(label1);
-		panel.add(label2);
-		panel.add(label3);
-		
-		this.add(panel);
+		this.add(label1);
+		this.add(label2);
+		this.add(label3);
+	
 		
 		this.setSize(800, 800);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
