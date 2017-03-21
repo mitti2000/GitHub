@@ -1,0 +1,12 @@
+package ch.mitti.mystack;
+
+public class MyStack {
+	
+	private Integer[] e;
+
+	public boolean empty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

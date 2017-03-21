@@ -1,0 +1,16 @@
+package ch.mitti.mystack;
+
+public class MyStack {
+	
+	private Integer[] e;
+	
+	public MyStack(){
+		e = new Integer[0];
+	}
+
+	public Integer[] getE() {
+		return e;
+	}
+
+	
+}

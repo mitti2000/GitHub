@@ -1,0 +1,33 @@
+package ch.mitti.junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+public class BankkontoTest {
+	private Bankonto b;
+	
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Ignore
+	public void test() {
+		Bankkonto b = new Bankkonto();
+		assertNotNull("Objekt konnte nicht instantiiert werden.");
+	}
+	
+	@Test
+	public void bankkontoMitArgumentenInstantiieren(){
+		Bankkonto b = new Bankkonto("Max Muster", 1000.00);
+	}
+	
+	@Test
+	public void gibBesitzerVonKonto(){
+		Bankkonto b = new Bankkonto("Max Muster", 1000);
+		assertTrue(b.gibBesitzer().equals("Max Muster"));
+	}
+
+}

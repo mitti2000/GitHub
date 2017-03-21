@@ -1,0 +1,25 @@
+package ch.mitti.mystack;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class MyStackTest {
+
+	@Before
+	public void setUp() throws Exception {
+		MyStack ms = new MyStack();
+	}
+
+	@Ignore
+	public void test() {
+		//MyStack ms = new MyStack();
+	}
+	
+	@Test
+	public void testArray(){
+		assertTrue(ms.empty());
+	}
+
+}
