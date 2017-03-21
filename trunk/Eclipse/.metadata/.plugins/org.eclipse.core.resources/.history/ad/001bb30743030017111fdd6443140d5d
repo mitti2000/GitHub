@@ -1,5 +1,0 @@
-package ch.mitti.cubes;
-
-public class ClickAdapter extends MouseAdapter {
-
-}

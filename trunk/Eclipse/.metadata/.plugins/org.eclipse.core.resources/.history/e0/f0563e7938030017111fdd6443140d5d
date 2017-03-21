@@ -1,5 +1,0 @@
-package ch.mitti.grafik;
-
-public class DicePanel extends JPanel implements MouseListener{
-
-}

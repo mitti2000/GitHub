@@ -1,7 +1,0 @@
-package ch.mitti.grafik;
-
-import java.awt.Canvas;
-
-public class Dice extends Canvas {
-
-}

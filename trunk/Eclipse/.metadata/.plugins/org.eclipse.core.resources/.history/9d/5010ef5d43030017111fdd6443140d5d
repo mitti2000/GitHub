@@ -1,7 +1,0 @@
-package ch.mitti.cubes;
-
-import java.awt.event.MouseAdapter;
-
-public class ClickAdapter extends MouseAdapter {
-	
-}
