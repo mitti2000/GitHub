@@ -1,0 +1,5 @@
+package ch.mitti.testing;
+
+public class abstaction {
+	public abstract void getHelp();
+}
