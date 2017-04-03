@@ -1,0 +1,16 @@
+package ch.mitti.yahtzee.model;
+
+import java.util.ArrayList;
+
+public class ScoreBoardData {
+	private ArrayList<String> boardData;
+	
+	public ScoreBoardData(){
+		boardData = new ArrayList<String>();
+		this.fill();
+	}
+
+	private void fill() {
+				
+	}
+}

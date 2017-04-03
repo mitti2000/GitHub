@@ -1,0 +1,46 @@
+package ch.mitti.yahtzee.view;
+
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import ch.mitti.yahtzee.controller.DiceBoardMouseListener;
+import ch.mitti.yahtzee.controller.DiceController;
+
+public class DiceBoardView extends JPanel {
+	private DiceController[] dice;
+	private DicePanel[][] position;
+	
+	public DiceBoardView(){
+		dice = new DiceController[5];
+		position = new DicePanel[5][2];
+		init();
+	}
+	
+	private void init(){
+		
+		//Create Grid Layout
+		this.setLayout(new GridLayout(5,2,50,50));
+		
+		//Creating Dice
+		for(int i=0; i<5; i++){
+			dice[i] = new DiceController();
+		}
+		
+		for(int j=0; j<5; j++){
+			for(int k=0;k<2;k++){
+				if(k>0)this.add(null);
+				else this.add(new DiceController().getView());
+			}
+		}
+		
+	}
+	
+	public void move(int y, int x){
+	//	System.out.println("Pos X ="+x);
+	//	System.out.println("Pos Y ="+y);
+	}
+}

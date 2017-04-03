@@ -1,0 +1,16 @@
+package ch.mitti.yahtzee.view;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class ButtonView extends JPanel {
+	private JButton roll;
+	private JButton newGame;
+	private JButton highscore;
+	
+	public ButtonView(){
+		
+	}
+	
+	
+}

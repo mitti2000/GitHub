@@ -1,0 +1,96 @@
+package ch.mitti.yahtzee.view;
+
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import ch.mitti.yahtzee.controller.DiceBoardMouseListener;
+import ch.mitti.yahtzee.controller.DiceController;
+
+public class DiceBoardView extends JPanel {
+	private DiceController[] dice;
+	private DicePanel[][] position;
+	
+	public DiceBoardView(){
+		dice = new DiceController[5];
+		position = new DicePanel[5][2];
+		init();
+	}
+	
+	private void init(){
+		
+		//Create Grid Layout
+		this.setLayout(new GridLayout(5,2));
+		/*
+		JLabel label = new JLabel("Test");
+		this.add(label);
+		this.add(label);
+		this.add(label);
+		this.add(label);
+		this.add(label);
+		
+		this.add(new JLabel("Test"));
+		this.add(new JLabel("Test"));
+		this.add(new JLabel("Test"));
+		this.add(new JLabel("Test"));
+		this.add(new JLabel("Test"));*/
+		
+		
+		//Creating Dice
+		for(int i=0; i<5; i++){
+			dice[i] = new DiceController();
+		}
+		
+		
+		/*
+		//Adding Labels to GridLayout
+		for(int j=0; j<5; j++){
+			for(int k=0;k<2;k++){
+				position[j][k] = new DicePanel(j,k);
+				position[j][k].setBorder(BorderFactory.createLineBorder(Color.black));
+				position[j][k].addMouseListener(new DiceBoardMouseListener(this));
+				this.add(position[j][k]);
+			}
+		}*/
+		
+		for(int j=0; j<5; j++){
+			for(int k=0;k<2;k++){
+				this.add(new DicePanel(j,k,this));
+			}
+		}
+		
+	
+		
+		//Adding Dice
+		for(int l=0;l<5;l++){
+			JPanel panel = (JPanel) this.getComponentAt(0, l);
+			panel.add(dice[l].getView());
+		}
+		
+	}
+	/*
+	private DicePanel createLabel(int number){
+		/*
+		for(int j=0; j<5; j++){
+			for(int k=0;k<2;k++){
+				position[j][k] = new DicePanel(j,k);
+				position[j][k].setBorder(BorderFactory.createLineBorder(Color.black));
+				position[j][k].addMouseListener(new DiceBoardMouseListener(this));
+				this.add(position[j][k]);
+			}
+		}
+		
+		DicePanel panel = new DicePanel(0,0);
+		panel.setBorder(BorderFactory.createLineBorder(Color.black));
+		panel.addMouseListener(new DiceBoardMouseListener(this));
+		return panel;
+	}*/
+	
+	public void move(int y, int x){
+	//	System.out.println("Pos X ="+x);
+	//	System.out.println("Pos Y ="+y);
+	}
+}

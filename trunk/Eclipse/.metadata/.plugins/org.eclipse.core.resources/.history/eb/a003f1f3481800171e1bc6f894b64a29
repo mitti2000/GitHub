@@ -1,0 +1,18 @@
+package ch.mitti.yahtzee.controller;
+
+import ch.mitti.yahtzee.model.DiceModel;
+import ch.mitti.yahtzee.view.DiceView;
+
+public class DiceController implemets MouseListener{
+	private DiceModel diceModel;
+	private DiceView diceView;
+	
+	public DiceController(){
+		diceModel = new DiceModel();
+		diceView = new DiceView(diceModel.getCount());
+	}
+	
+	public DiceView getView(){
+		return diceView;
+	}
+}

@@ -1,0 +1,22 @@
+package ch.mitti.yahtzee.view;
+
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+public class ScoreBoardView extends GridBagLayout{
+	
+	private GridBagConstraints gbc = new GridBagConstraints();
+	
+	public ScoreBoardView(){
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.weightx = 1.0;
+		gbc.weighty = 1.0;
+		gbc.insets = new Insets(0,0,0,0);
+		this.init();
+	}
+	
+	public void fillMain(int row){
+		
+	}
+}

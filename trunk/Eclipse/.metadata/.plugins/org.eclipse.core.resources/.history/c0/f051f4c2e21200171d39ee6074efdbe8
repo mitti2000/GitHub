@@ -1,5 +1,0 @@
-package ch.mitti.pruefung;
-
-public abstract class B extends A {
-	public abstract void message();
-}

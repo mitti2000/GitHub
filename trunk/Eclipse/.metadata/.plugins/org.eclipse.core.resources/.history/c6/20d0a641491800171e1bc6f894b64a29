@@ -1,0 +1,27 @@
+package ch.mitti.yahtzee.controller;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import ch.mitti.yahtzee.model.DiceModel;
+import ch.mitti.yahtzee.view.DiceView;
+
+public class DiceController extends MouseAdapter{
+	private DiceModel diceModel;
+	private DiceView diceView;
+	
+	public DiceController(){
+		diceModel = new DiceModel();
+		diceView = new DiceView(diceModel.getCount());
+	}
+	
+	public DiceView getView(){
+		return diceView;
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e){
+		
+	}
+	
+}

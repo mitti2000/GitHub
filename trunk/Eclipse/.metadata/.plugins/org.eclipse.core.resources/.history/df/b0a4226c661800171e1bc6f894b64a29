@@ -1,0 +1,11 @@
+package ch.mitti.yahtzee.controller;
+
+import java.awt.event.MouseAdapter;
+
+public class ButtonController extends MouseAdapter{
+	
+	
+	public ButtonController(){
+		
+	}
+}

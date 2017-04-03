@@ -1,7 +1,0 @@
-package ch.mitti.pruefung;
-
-public class B extends A {
-	public void message(){
-		System.out.println("B");
-	}
-}

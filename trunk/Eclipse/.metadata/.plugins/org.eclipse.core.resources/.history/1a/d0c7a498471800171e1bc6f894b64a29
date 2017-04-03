@@ -1,0 +1,6 @@
+package ch.mitti.yahtzee.view;
+
+import java.awt.Canvas;
+
+public class DiceView extends Canvas {
+}

@@ -1,0 +1,22 @@
+package ch.mitti.yahtzee.view;
+
+import javax.swing.JPanel;
+
+public class DicePanel extends JPanel{
+	private int posX;
+	private int posY;
+	
+	public DicePanel(int y, int x){
+		super();
+		this.posX = x;
+		this.posY = y;
+	}
+	
+	public int getX(){
+		return posX;
+	}
+	
+	public int getY(){
+		return posY;
+	}
+}

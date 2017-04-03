@@ -1,0 +1,23 @@
+package ch.mitti.yahtzee.controller;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import ch.mitti.yahtzee.view.ButtonView;
+
+public class ButtonController extends MouseAdapter{
+	private ButtonView buttonView;
+	
+	public ButtonController(){
+		this.buttonView = new ButtonView();
+	}
+	
+	public ButtonView getView(){
+		return this.buttonView
+	}
+	
+	@Override
+	public void mouseClicked(MouseEvent e){
+		
+	}
+}

@@ -1,7 +1,0 @@
-package ch.mitti.junit;
-
-public class Bankkonto {
-	public Bankkonto(String besitzer, double betrag){
-		
-	}
-}

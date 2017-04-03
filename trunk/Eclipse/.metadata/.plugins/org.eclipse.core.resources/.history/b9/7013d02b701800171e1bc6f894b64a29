@@ -1,0 +1,25 @@
+package ch.mitti.yahtzee.controller;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JDialog;
+
+import ch.mitti.yahtzee.model.PlayerModel;
+
+public class PlayerController {
+	private PlayerModel playerModel;
+	
+	public PlayerController(String name){
+		playerModel = new PlayerModel(name);
+		}
+	
+	public PlayerModel getData(){
+		return playerModel;
+	}
+	
+	private void addPlayer(){
+		JDialog dialog = new JDialog(new JFrame(), "Neuer Spieler", true);
+		dialog.setLayout(new FlowLayout());
+		dialog.setSize(200, 200);
+	}
+}

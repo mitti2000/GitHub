@@ -1,0 +1,16 @@
+package ch.mitti.yahtzee.controller;
+
+import ch.mitti.yahtzee.model.PlayerModel;
+
+public class PlayerController {
+	private PlayerModel playerModel;
+	
+	public PlayerController(String name){
+		playerModel = new PlayerModel(name);
+		}
+	
+	public PlayerModel getData(){
+		return playerModel;
+	}
+	
+}

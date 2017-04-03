@@ -1,0 +1,9 @@
+package ch.mitti.yahtzee.main;
+
+import ch.mitti.yahtzee.view.GameBoardView;
+
+public class Main {
+	public static void main(String[] args){
+		GameBoardView game = new GameBoardView();
+	}
+}

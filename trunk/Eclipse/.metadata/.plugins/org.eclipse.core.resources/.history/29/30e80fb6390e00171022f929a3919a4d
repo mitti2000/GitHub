@@ -1,9 +1,0 @@
-package ch.mitti.exceptions;
-
-public class ArrayAccessException extends Exception{
-	private static int counter;
-	
-	public ArrayAccessException(){
-		private int counter
-	}
-}

@@ -1,0 +1,15 @@
+package ch.mitti.yahtzee.controller;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JPanel;
+
+public class DiceBoardMouseListener extends MouseAdapter {
+	
+	@Override
+	public void mouseClicked(MouseEvent e){
+		JPanel panel = (JPanel)e.getComponent();
+		
+	}
+}

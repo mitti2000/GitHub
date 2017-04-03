@@ -1,0 +1,13 @@
+package ch.mitti.yahtzee.controller;
+
+import ch.mitti.yahtzee.model.DiceModel;
+import ch.mitti.yahtzee.view.DiceView;
+
+public class DiceController {
+	private DiceModel diceModel;
+	private DiceView diceView;
+	
+	public DiceController(){
+		
+	}
+}

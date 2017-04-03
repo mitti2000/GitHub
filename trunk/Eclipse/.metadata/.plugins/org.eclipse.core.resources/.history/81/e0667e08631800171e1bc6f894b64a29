@@ -1,0 +1,63 @@
+package ch.mitti.yahtzee.view;
+
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import ch.mitti.yahtzee.controller.DiceBoardMouseListener;
+import ch.mitti.yahtzee.controller.DiceController;
+
+public class DiceBoardView extends JPanel {
+	private DiceController[] dice;
+	private DicePanel[][] position;
+	
+	public DiceBoardView(){
+		dice = new DiceController[5];
+		position = new DicePanel[5][2];
+		init();
+	}
+	
+	private void init(){
+		
+		//Create Grid Layout
+		this.setLayout(new GridLayout(5,2));
+		
+		//Creating Dice
+		for(int i=0; i<5; i++){
+			dice[i] = new DiceController();
+		}
+		/*
+		this.add(new JLabel("Test"));
+		this.add(new JLabel("Test"));
+		this.add(new JLabel("Test"));
+		this.add(new JLabel("Test"));
+		this.add(new JLabel("Test"));
+		*/
+		for(int j=0; j<5; j++){
+			for(int k=0;k<2;k++){
+				
+				this.add(new DiceController().getView());
+				//DicePanel panel = new DicePanel(j,k,this);
+				//panel.setBackground(new Color(200/(j+1),200/(j+1),200/(j+1)));
+				//this.add(panel);
+				//this.add(new DicePanel(j,k,this));
+				//this.add(new JLabel("test"));
+			}
+		}
+		/*
+		//Adding Dice
+		for(int l=0;l<5;l++){
+			JPanel panel = (JPanel) this.getComponentAt(l, 0);
+			panel.add(dice[l].getView());
+		}*/
+		
+	}
+	
+	public void move(int y, int x){
+	//	System.out.println("Pos X ="+x);
+	//	System.out.println("Pos Y ="+y);
+	}
+}

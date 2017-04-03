@@ -1,0 +1,37 @@
+package ch.mitti.yahtzee.controller;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+import ch.mitti.yahtzee.model.PlayerModel;
+import ch.mitti.yahtzee.view.GameBoardView;
+
+public class PlayerController {
+	private PlayerModel playerModel;
+	private GameBoardView gameBoard;
+	
+	public PlayerController(GameBoardView gameBoard){
+		playerModel = new PlayerModel(name);
+		this.gameBoard = gameBoard;
+		
+		if(gameBoard.getPlayerAmount()<GameBoardView.TOTAL_PLAYER_AMOUNT) addPlayer();
+		
+		}
+	
+	public PlayerModel getData(){
+		return playerModel;
+	}
+	
+	private String addPlayer(){
+		JDialog dialog = new JDialog(new JFrame(), "Neuer Spieler", true);
+		dialog.setLayout(new FlowLayout());
+		dialog.setSize(200, 200);
+		dialog.add(new JTextArea("Spielername"));
+		dialog.setContentPane(gameBoard);
+		dialog.setVisible(true);
+		return("Name");
+	}
+}
