@@ -1,12 +1,16 @@
 package ch.mitti.yahtzee.view;
 
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.util.ArrayList;
+
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import ch.mitti.yahtzee.controller.PlayerController;
 import ch.mitti.yahtzee.model.ScoreBoardModel;
 
 public class ScoreBoardView extends JPanel{
@@ -15,9 +19,11 @@ public class ScoreBoardView extends JPanel{
 	private GridBagConstraints gbc;
 	private ArrayList<JLabel> labels;
 	private ScoreBoardModel sbm;
+	private PlayerController playerController;
 	
 	
-	public ScoreBoardView(){
+	public ScoreBoardView(PlayerController playercontroller){
+		this.playerController = playerController;
 		gbl = new GridBagLayout();
 		gbc = new GridBagConstraints();
 		sbm = new ScoreBoardModel();
@@ -36,7 +42,7 @@ public class ScoreBoardView extends JPanel{
 		gbc.gridwidth = 2;
 		gbc.gridheight = 1;
 		
-		for(int i=0;i<22;i++){
+		for(int i=0;i<sbm.modelLength();i++){
 			labels.add(new JLabel());
 		}
 		fillMain();
@@ -48,20 +54,19 @@ public class ScoreBoardView extends JPanel{
 	
 	public void fillMain(){
 		int counter = 0;
-		for(int i=0; i<22; i++){
+		for(int i=0; i<labels.size(); i++){
 			gbc.gridy = counter;
 			gbl.setConstraints(labels.get(counter), gbc);
 			labels.get(counter).setText(sbm.getValue(counter));
+			labels.get(counter).setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
 			this.add(labels.get(counter));
 			counter++;
+			System.out.println("Counter: "+counter);
 		}
 		
 	}
 	
 	public void fillPlayers(){
-		if(gbc.gridx > GameBoardView.TOTAL_PLAYER_AMOUNT+2) gbc.gridx += 1;
-		else return;
-		
 		
 	}
 	

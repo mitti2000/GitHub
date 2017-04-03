@@ -1,0 +1,14 @@
+package ch.mitti.yahtzee.view;
+
+import javax.swing.JPanel;
+
+public class FillerView extends JPanel{
+	
+	public FillerView(){
+		init();
+	}
+	
+	public void init(){
+		
+	}
+}

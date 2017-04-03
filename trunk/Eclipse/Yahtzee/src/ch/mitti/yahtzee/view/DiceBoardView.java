@@ -20,6 +20,7 @@ public class DiceBoardView extends JPanel {
 		
 		//Create Grid Layout
 		this.setLayout(new GridLayout(5,1,20,20));
+		this.setBackground(Color.CYAN);
 		
 		
 		for(int j=0; j<5; j++){

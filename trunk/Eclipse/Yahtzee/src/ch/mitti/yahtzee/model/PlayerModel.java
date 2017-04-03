@@ -42,6 +42,14 @@ public class PlayerModel {
 		lowerScore = 0;
 		totalScore = 0;
 		bonus = false;
+	}	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getOnes() {

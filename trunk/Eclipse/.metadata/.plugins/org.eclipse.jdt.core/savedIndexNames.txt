@@ -1,4 +1,2 @@
-INDEX VERSION 1.129+C:\Users\mitti\GitHub\trunk\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
-703454088.index
-3810033081.index
+INDEX VERSION 1.129+F:\GitHub\trunk\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
 593864079.index

@@ -13,6 +13,7 @@ public class DiceView extends Canvas {
 		this.size = size;
 		this.setSize(size, size);
 		this.setBackground(Color.WHITE);
+		
 	}
 	
 	public void setValue(int value){
@@ -29,6 +30,7 @@ public class DiceView extends Canvas {
 	@Override
 	public void paint(Graphics g){
 		g.setColor(Color.BLACK);
+		g.drawRoundRect(0, 0, this.getWidth()-1, this.getHeight()-1, 5, 5);
 		int eyeSize = this.getHeight()/5;
 		int topY = this.getHeight()/5;
 		int bottomY = this.getHeight()-(eyeSize*2);

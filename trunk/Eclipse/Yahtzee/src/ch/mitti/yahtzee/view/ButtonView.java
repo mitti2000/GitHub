@@ -1,5 +1,6 @@
 package ch.mitti.yahtzee.view;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -22,6 +23,7 @@ public class ButtonView extends JPanel {
 	}
 
 	private void init() {
+		this.setBackground(Color.CYAN);
 		roll.addActionListener(controller);
 		newGame.addActionListener(controller);
 		highscore.addActionListener(controller);

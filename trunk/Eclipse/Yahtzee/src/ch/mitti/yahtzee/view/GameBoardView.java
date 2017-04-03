@@ -1,14 +1,18 @@
 package ch.mitti.yahtzee.view;
 
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import ch.mitti.yahtzee.controller.ButtonController;
 import ch.mitti.yahtzee.controller.PlayerController;
+import ch.mitti.yahtzee.main.MainFrameListener;
 
 public class GameBoardView extends JFrame{
 	
@@ -17,6 +21,7 @@ public class GameBoardView extends JFrame{
 	private ScoreBoardView scoreBoard;
 	private ButtonController buttonBoard;
 	private PlayerController playerController;
+	private FillerView fillerView;
 	private int inset;
 	private DiceBoardView diceBoard;
 	public static final int WINDOW_SIZE = 800;
@@ -28,19 +33,28 @@ public class GameBoardView extends JFrame{
 		inset = 30;
 		gbl = new GridBagLayout();
 		gbc = new GridBagConstraints();
-		scoreBoard = new ScoreBoardView();
-		diceBoard = new DiceBoardView();
-		buttonBoard = new ButtonController();
 		playerController = new PlayerController(this);
+		scoreBoard = new ScoreBoardView(playerController);
+		diceBoard = new DiceBoardView();
+		fillerView = new FillerView();
+		buttonBoard = new ButtonController();
+		
 		this.init();
 	}
 	
 	public void init(){
+		this.setResizable(false);
+		this.getContentPane().setBackground(Color.CYAN);
+		ArrayList<PlayerView> playerViews = playerController.getPlayerView();
+		
+		Iterator<PlayerView> it = playerViews.iterator();
+		PlayerView view = null;
+		
 		this.setLayout(gbl);
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.weightx = 1.0;
 		gbc.weighty = 1.0;
-		gbc.insets = new Insets(inset, inset, inset, inset);
+		gbc.insets = new Insets(inset, inset, inset, 0);
 		
 		
 		gbc.gridx = 0;
@@ -56,9 +70,11 @@ public class GameBoardView extends JFrame{
 		gbc.gridy = 0;
 		gbc.gridwidth = 1;
 		gbc.gridheight = 8;
+		gbc.insets = new Insets(inset,0,inset,0);
 		
-		gbl.setConstraints(new JLabel("Player1"), gbc);
-		this.add(new JLabel("Player1"));
+		if(it.hasNext()) view = it.next();
+		gbl.setConstraints(view, gbc);
+		this.add(view);
 		
 		//Player2
 		gbc.gridx = 4;
@@ -66,23 +82,52 @@ public class GameBoardView extends JFrame{
 		gbc.gridwidth = 1;
 		gbc.gridheight = 8;
 		
-		gbl.setConstraints(new JLabel("Player2"), gbc);
-		this.add(new JLabel("Player2"));
+		if(it.hasNext()) view = it.next();
+		gbl.setConstraints(view, gbc);
+		this.add(view);
+		
+		//Player3
+		gbc.gridx = 5;
+		gbc.gridy = 0;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 8;
+		gbc.insets = new Insets(inset,0,inset,inset);
+		
+		if(it.hasNext()) view = it.next();
+		gbl.setConstraints(view, gbc);
+		this.add(view);
 		
 		//Dice
-		gbc.gridx = 5;
+		gbc.gridx = 6;
 		gbc.gridwidth = 1;
 		gbc.gridheight = 5;
 		gbc.weightx = 0.5;
+		gbc.fill = GridBagConstraints.NONE;
 		gbl.setConstraints(diceBoard, gbc);
 		this.add(diceBoard);
 		
+		
+		
 		//Buttons
-		gbc.gridy = 5;
+		gbc.gridy = 6;
 		gbc.gridwidth = 2;
 		gbc.gridheight = 3;
+		gbc.weightx = 1.0;
 		gbl.setConstraints(buttonBoard.getView(), gbc);
 		this.add(buttonBoard.getView());
+		
+		//Filler
+		/*
+		gbc.gridx = 7;
+		gbc.gridy = 0;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 5;
+		gbc.weightx = 1.0;
+		
+		gbl.setConstraints(fillerView, gbc);
+		this.add(fillerView);*/
+		
+		
 		
 		this.setSize(WINDOW_SIZE,WINDOW_SIZE);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);

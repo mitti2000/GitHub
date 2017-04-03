@@ -1,0 +1,62 @@
+package ch.mitti.yahtzee.view;
+
+import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.util.ArrayList;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+
+import ch.mitti.yahtzee.controller.PlayerLabelListener;
+import ch.mitti.yahtzee.model.PlayerModel;
+
+public class PlayerView extends JPanel {
+	private JLabel[] labels;
+	private PlayerModel playerModel;
+	private String name;
+	private GridBagLayout gbl;
+	private GridBagConstraints gbc;
+	
+	public PlayerView(String name){
+		this.name = name;
+		labels = new JLabel[23];
+		gbl = new GridBagLayout();
+		gbc = new GridBagConstraints();
+		playerModel = new PlayerModel(name);
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.weightx = 1.0;
+		gbc.weighty = 1.0;
+		gbc.insets = new Insets(0,0,0,0);
+		this.setLayout(gbl);
+		init();
+	}
+	
+	public void init(){
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 1;
+		
+		labels[0]= new JLabel(playerModel.getName());
+		
+		labels[0].setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
+		labels[0].setHorizontalAlignment(SwingConstants.CENTER);
+		gbl.setConstraints(labels[0], gbc);
+		this.add(labels[0]);
+		
+		for(int i=1;i<labels.length;i++){
+			
+			gbc.gridy = i;
+			labels[i] = new JLabel(" ");
+			if(i!=21 && i<8 && i>10 && i!=8 && i!=9 &&i!= 10) labels[i].addMouseListener(new PlayerLabelListener());
+			labels[i].setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
+			labels[i].setHorizontalAlignment(SwingConstants.CENTER);
+			gbl.setConstraints(labels[i], gbc);
+			this.add(labels[i]);
+		}
+	}
+}
