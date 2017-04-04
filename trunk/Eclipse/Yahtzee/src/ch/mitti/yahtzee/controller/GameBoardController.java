@@ -46,6 +46,8 @@ public class GameBoardController {
 			player = it.next();
 			if(player.isActivePlayer()) {
 				activePlayer = player;
+				this.buttonController = gameBoardView.getButtonController();
+				buttonController.getView().setActivePlayer(player);
 				break;
 			}
 		}
@@ -64,15 +66,23 @@ public class GameBoardController {
 					playerModels.get(0).setActivePlayer(true);
 					player = playerModels.get(0);
 				}
-				else {
+				else {				
 					playerModels.get(i+1).setActivePlayer(true);
 					player = playerModels.get(i+1);
 				}
-				diceBoardView.resetDice();
-				activePlayer = player;
+				if(!player.isDone())
 				break;
 			}
 		}
+		
+		if(player.isDone()){
+			endGame();
+			return;
+		}
+		
+		diceBoardView.resetDice();
+		activePlayer = player;
+		buttonController.getView().setActivePlayer(player);
 		resetRolls();
 		JOptionPane.showMessageDialog(gameBoardView, "Nächster Spieler: " + player.getName() );
 	}
@@ -88,6 +98,10 @@ public class GameBoardController {
 	
 	public void resetRolls(){
 		rolls = 3;
+	}
+	
+	public void setRollsToZero(){
+		rolls=0;
 	}
 	
 	public int getRollCount(){

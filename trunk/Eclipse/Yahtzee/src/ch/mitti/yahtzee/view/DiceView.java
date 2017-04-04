@@ -33,6 +33,9 @@ public class DiceView extends Canvas {
 	
 	@Override
 	public void paint(Graphics g){
+		if(value<1||value>6) return;
+		else{
+		
 		g.setColor(Color.BLACK);
 		g.drawRoundRect(0, 0, this.getWidth()-1, this.getHeight()-1, 5, 5);
 		int eyeSize = this.getHeight()/5;
@@ -43,8 +46,7 @@ public class DiceView extends Canvas {
 		int center = this.getHeight()/2-(eyeSize/2);
 		
 		
-		if(value<1||value>6) return;
-		else{
+		
 			switch(value){
 			case 1:
 				g.fillOval(center, center, eyeSize, eyeSize);

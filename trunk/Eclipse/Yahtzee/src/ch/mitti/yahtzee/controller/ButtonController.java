@@ -37,9 +37,14 @@ public class ButtonController implements ActionListener{
 		Iterator<DiceController> it = diceControllers.iterator();
 		while(it.hasNext()){
 			DiceController dice = it.next();
+			dice.addListeners();
 			dice.roll();
 		}
 		gameBoardController.setRollsMinusOne();
+	}
+	
+	public void setNextPlayer(){
+		buttonView.setNextPlayer();
 	}
 
 	@Override

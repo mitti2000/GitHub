@@ -70,7 +70,7 @@ public class GameBoardView extends JFrame{
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		gbc.gridwidth = 2;
-		gbc.gridheight = 8;
+		gbc.gridheight = 9;
 		
 		gbl.setConstraints(scoreBoardView, gbc);
 		this.add(scoreBoardView);
@@ -79,7 +79,7 @@ public class GameBoardView extends JFrame{
 		gbc.gridx = 3;
 		gbc.gridy = 0;
 		gbc.gridwidth = 1;
-		gbc.gridheight = 8;
+		gbc.gridheight = 9;
 		gbc.insets = new Insets(inset,0,inset,0);
 		
 		if(it.hasNext()) view = it.next();
@@ -90,7 +90,7 @@ public class GameBoardView extends JFrame{
 		gbc.gridx = 4;
 		gbc.gridy = 0;
 		gbc.gridwidth = 1;
-		gbc.gridheight = 8;
+		gbc.gridheight = 9;
 		
 		if(it.hasNext()) view = it.next();
 		gbl.setConstraints(view, gbc);
@@ -100,7 +100,7 @@ public class GameBoardView extends JFrame{
 		gbc.gridx = 5;
 		gbc.gridy = 0;
 		gbc.gridwidth = 1;
-		gbc.gridheight = 8;
+		gbc.gridheight = 9;
 		gbc.insets = new Insets(inset,0,inset,inset);
 		
 		if(it.hasNext()) view = it.next();
@@ -121,7 +121,7 @@ public class GameBoardView extends JFrame{
 		//Buttons
 		gbc.gridy = 6;
 		gbc.gridwidth = 2;
-		gbc.gridheight = 3;
+		gbc.gridheight = 4;
 		gbc.weightx = 1.0;
 		gbl.setConstraints(buttonController.getView(), gbc);
 		this.add(buttonController.getView());
@@ -157,5 +157,9 @@ public class GameBoardView extends JFrame{
 	
 	public DiceBoardController getDiceBoardController(){
 		return diceBoardController;
+	}
+	
+	public GameBoardController getGameBoardController(){
+		return gameBoardController;
 	}
 }

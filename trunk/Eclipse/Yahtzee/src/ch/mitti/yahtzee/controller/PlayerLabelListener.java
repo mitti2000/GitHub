@@ -38,10 +38,14 @@ public class PlayerLabelListener implements MouseListener {
 						JOptionPane.showMessageDialog(view, "Feld schon Voll");
 					}
 					else{
-						System.out.println(diceBoardController);
 						playerModel.setScore(i, diceBoardController.getPoints(i));
 						label.setText(""+playerModel.getScore(i));
 						view.getModel().setPointsSet(true);
+						if(playerModel.isAllSet()){
+							playerModel.setIsDone(true);
+						}
+						gameBoardView.getButtonController().setNextPlayer();
+						gameBoardView.getGameBoardController().setRollsToZero();
 					}
 				
 			}

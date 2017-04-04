@@ -55,6 +55,8 @@ public class DiceBoardView extends JPanel {
 		while(it.hasNext()){
 			DiceController controller = it.next();
 			controller.resetColor();
+			controller.resetLockedStatus();
+			controller.resetDice();
 		}
 	}
 }

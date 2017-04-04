@@ -15,7 +15,6 @@ public class DiceModel {
 	}
 	
 	public int getCount(){
-		setCount();
 		return count;
 	}
 	
@@ -27,6 +26,10 @@ public class DiceModel {
 	
 	public boolean getLockedStatus(){
 		return isLocked;
+	}
+	
+	public void resetLockedStatus(){
+		isLocked = false;
 	}
 	
 	public int roll(){

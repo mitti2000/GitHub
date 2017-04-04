@@ -2,6 +2,7 @@ package ch.mitti.yahtzee.model;
 
 public class PlayerModel {
 	private int[] scores;
+	private int[] isSet;
 	
 	
 	private int upperScore;
@@ -16,17 +17,24 @@ public class PlayerModel {
 	
 	private boolean pointsSet;
 	
+	private boolean isAllSet;
+	
+	private boolean isDone;
+	
 	
 
 	public PlayerModel(String name, boolean activePlayer){
 		this.name = name;
 		this.activePlayer = activePlayer;
 		scores = new int[23];
+		isSet = new int[23];
 		upperScore = 0;
 		lowerScore = 0;
 		totalScore = 0;
 		bonus = false;
 		pointsSet = false;
+		isAllSet = false;
+		isDone = false;
 		
 		init();
 	}
@@ -34,17 +42,57 @@ public class PlayerModel {
 	public void init(){
 		for(int i=0; i<scores.length;i++){
 				scores[i]=0;
+				isSet[i]=0;
 		}
 	}
 	
 	public void setScore(int index, int score){
 		scores[index] = score;
+		isSet[index] = 1;
 	}
 	
 	public int getScore(int index){
 		return scores[index];
 	}
 	
+	public int[] getScores() {
+		return scores;
+	}
+
+	public void setScores(int[] scores) {
+		this.scores = scores;
+	}
+
+	public int[] getIsSet() {
+		return isSet;
+	}
+
+	public void setIsSet(int[] isSet) {
+		this.isSet = isSet;
+	}
+
+	public boolean isAllSet() {
+		int counter = 0;
+		for(int i=0; i<isSet.length; i++){
+			if(isSet[i]==1) counter++;
+		}
+		
+		if(counter>13)return true;
+		return false;
+	}
+
+	public void setAllSet(boolean isAllSet) {
+		this.isAllSet = isAllSet;
+	}
+
+	public void setUpperScore(int upperScore) {
+		this.upperScore = upperScore;
+	}
+
+	public void setLowerScore(int lowerScore) {
+		this.lowerScore = lowerScore;
+	}
+
 	public boolean isPointsSet() {
 		return pointsSet;
 	}
@@ -100,6 +148,13 @@ public class PlayerModel {
 		this.bonus = bonus;
 	}
 	
+	public boolean isDone(){
+		return isDone;
+	}
+	
+	public void setIsDone(boolean isDone){
+		this.isDone = isDone;
+	}
 	
 	
 }

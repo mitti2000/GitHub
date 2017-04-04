@@ -32,12 +32,27 @@ public class DiceController extends MouseAdapter{
 		this.diceView.resetBackgroundColor();
 	}
 	
+	public void resetLockedStatus(){
+		this.diceModel.resetLockedStatus();
+	}
 	
+	public void resetDice(){
+		diceView.setValue(7);
+		diceView.removeMouseListener(this);
+	}
+	
+	public void addListeners(){
+		if(diceView.getMouseListeners().length==0) diceView.addMouseListener(this);
+	}
 	
 	@Override
 	public void mouseClicked(MouseEvent e){
 		this.diceView.switchBackgroundColor();
 		this.diceModel.setLockedStatus();
+	}
+	
+	public int getDiceCount(){
+		return diceModel.getCount();
 	}
 	
 }

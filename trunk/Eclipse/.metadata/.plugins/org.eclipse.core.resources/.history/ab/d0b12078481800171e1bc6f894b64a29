@@ -1,6 +1,0 @@
-package ch.mitti.yahtzee.controller;
-
-public class DiceController {
-	private DiceModel diceModel;
-	private DiceView diceView;
-}
