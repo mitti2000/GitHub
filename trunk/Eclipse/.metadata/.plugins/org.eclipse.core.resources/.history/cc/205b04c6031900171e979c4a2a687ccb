@@ -1,0 +1,18 @@
+package ch.mitti.yahtzee.controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import ch.mitti.yahtzee.model.DiceBoardModel;
+
+public class ButtonRollController implements ActionListener{
+	private DiceBoardModel diceBoardModel;
+	private ArrayList<DiceController> diceControllers;
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		
+	}
+
+}

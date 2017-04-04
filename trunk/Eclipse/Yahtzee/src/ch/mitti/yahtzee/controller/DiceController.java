@@ -23,11 +23,21 @@ public class DiceController extends MouseAdapter{
 		return diceView;
 	}
 	
+	public void roll(){
+		int count = diceModel.roll();
+		diceView.setValue(count);
+	}
+	
+	public void resetColor(){
+		this.diceView.resetBackgroundColor();
+	}
+	
 	
 	
 	@Override
 	public void mouseClicked(MouseEvent e){
 		this.diceView.switchBackgroundColor();
+		this.diceModel.setLockedStatus();
 	}
 	
 }

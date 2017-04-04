@@ -1,0 +1,65 @@
+package ch.mitti.yahtzee.controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import ch.mitti.yahtzee.model.PlayerModel;
+import ch.mitti.yahtzee.view.PlayerView;
+
+public class PlayerLabelListener implements MouseListener {
+	private PlayerModel playerModel;
+	
+	public PlayerLabelListener(PlayerModel playerModel){
+		this.playerModel = playerModel;
+	}
+
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		JLabel label = (JLabel) e.getComponent();
+		PlayerView view = (PlayerView) e.getComponent().getParent();
+		if(view.getModel().isActivePlayer() && view.getModel().isPointsSet()==false){
+			JLabel[] labels = view.getLabels();
+			for(int i=0; i<labels.length; i++){
+				if(labels[i].equals(label))
+					if(!label.getText().equals(""))
+					playerModel.setScore(i, playerModel.getScore(i));
+					label.setText(""+playerModel.getScore(i));
+					view.getModel().setPointsSet(true);
+			}
+		}
+		else if(view.getModel().isPointsSet()) JOptionPane.showMessageDialog(view, "Punkte schon gesetzt!");
+		else if(!view.getModel().isActivePlayer()) JOptionPane.showMessageDialog(view, "Bitte im eigenen Feld eintragen");
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package ch.mitti.yahtzee.controller;
+
+import ch.mitti.yahtzee.view.DiceBoardView;
+import ch.mitti.yahtzee.view.GameBoardView;
+
+public class DiceBoardController {
+	public DiceBoardView diceBoardView;
+	public GameBoardView gameBoardView;
+	
+	public DiceBoardController(GameBoardView gameBoardView){
+		this.gameBoardView = gameBoardView;
+		diceBoardView = gameBoardView.getDiceBoardView();
+	}
+	
+	public void getPoints(){
+		
+	}
+}

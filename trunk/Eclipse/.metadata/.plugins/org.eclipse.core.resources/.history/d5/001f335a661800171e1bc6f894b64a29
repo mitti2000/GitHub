@@ -1,5 +1,0 @@
-package ch.mitti.yahtzee.controller;
-
-public class ButtonController extends MouseAdapter{
-
-}

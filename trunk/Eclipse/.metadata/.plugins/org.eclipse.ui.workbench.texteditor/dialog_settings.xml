@@ -2,27 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="addPlayer" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="addPlayer"/>
+			<item value="gameBoard"/>
+			<item value="addP"/>
+			<item value="addpl"/>
+			<item value="scoreBoard"/>
+			<item value="diceBoard"/>
+			<item value="buttonBoard"/>
 			<item value="jpanel"/>
-			<item value="package controller;"/>
-			<item value="jpopupmenu"/>
-			<item value="lebewesen"/>
-			<item value="zeitString"/>
-			<item value="Ã¤"/>
-			<item value="Ã¶"/>
-			<item value="ö"/>
 		</list>
 		<list key="replacehistory">
+			<item value="gameBoardView"/>
+			<item value="scoreBoardView"/>
+			<item value="diceBoardView"/>
+			<item value="ButtonController"/>
 			<item value="imZoo"/>
 			<item value="ä"/>
 			<item value="ö"/>
 			<item value="ü"/>
-			<item value="Ü"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -1,0 +1,45 @@
+package ch.mitti.yahtzee.controller;
+
+import java.util.ArrayList;
+
+import ch.mitti.yahtzee.view.DiceBoardView;
+import ch.mitti.yahtzee.view.GameBoardView;
+
+public class DiceBoardController {
+	public DiceBoardView diceBoardView;
+	public GameBoardView gameBoardView;
+	
+	public DiceBoardController(GameBoardView gameBoardView){
+		this.gameBoardView = gameBoardView;
+		diceBoardView = gameBoardView.getDiceBoardView();
+	}
+	
+	public int getPoints(int index){
+		int points = 0;
+		ArrayList<DiceController> diceControllers = diceBoardView.getDiceBoardModel().getDiceControllers();
+		
+		switch(index){
+		
+		//Zahlen
+		//1er
+		case 2:
+		//2er
+		case 3:
+		//3er
+		case 4:
+		//4er
+		case 5:
+		//5er
+		case 6:
+		//6er
+		case 7:
+			break;
+		//Punkte
+		
+		
+		}
+		
+		
+		return points;
+	}
+}

@@ -61,7 +61,6 @@ public class ScoreBoardView extends JPanel{
 			labels.get(counter).setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
 			this.add(labels.get(counter));
 			counter++;
-			System.out.println("Counter: "+counter);
 		}
 		
 	}

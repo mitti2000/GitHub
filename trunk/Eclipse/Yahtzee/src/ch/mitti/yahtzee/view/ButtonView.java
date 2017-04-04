@@ -7,15 +7,19 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import ch.mitti.yahtzee.controller.ButtonController;
+import ch.mitti.yahtzee.model.ButtonRollModel;
 
 public class ButtonView extends JPanel {
-	private JButton roll;
+	private ButtonRollModel roll;
 	private JButton newGame;
 	private JButton highscore;
 	private ButtonController controller;
+	private DiceBoardView diceBoardView;
+
 	
-	public ButtonView(ButtonController controller){
-		roll = new JButton("Roll");
+	public ButtonView(ButtonController controller, DiceBoardView diceBoardView){
+		this.diceBoardView = diceBoardView;
+		roll = new ButtonRollModel("Roll");
 		newGame = new JButton("New Game");
 		highscore = new JButton("Highscore");
 		this.controller = controller;

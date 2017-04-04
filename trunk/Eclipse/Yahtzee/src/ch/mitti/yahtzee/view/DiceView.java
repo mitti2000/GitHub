@@ -21,6 +21,10 @@ public class DiceView extends Canvas {
 		repaint();
 	}
 	
+	public void resetBackgroundColor(){
+		this.setBackground(Color.WHITE);
+	}
+	
 	public void switchBackgroundColor(){
 		if(this.getBackground() == Color.WHITE) this.setBackground(Color.YELLOW);
 		else if (this.getBackground() == Color.YELLOW) this.setBackground(Color.WHITE);
