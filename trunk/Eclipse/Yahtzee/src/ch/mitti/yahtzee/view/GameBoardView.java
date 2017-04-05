@@ -9,11 +9,13 @@ import java.util.Iterator;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
 
 import ch.mitti.yahtzee.controller.ButtonController;
 import ch.mitti.yahtzee.controller.DiceBoardController;
 import ch.mitti.yahtzee.controller.GameBoardController;
 import ch.mitti.yahtzee.controller.PlayerController;
+import ch.mitti.yahtzee.main.GameMenu;
 import ch.mitti.yahtzee.main.MainFrameListener;
 
 public class GameBoardView extends JFrame{
@@ -31,6 +33,7 @@ public class GameBoardView extends JFrame{
 	public static final int WINDOW_SIZE = 800;
 	public static final int TOTAL_PLAYER_AMOUNT = 3;
 	private int playerAmount;
+	private GameMenu gameMenu;
 	
 	public GameBoardView(){
 		playerAmount = 0;
@@ -46,6 +49,7 @@ public class GameBoardView extends JFrame{
 		diceBoardController = new DiceBoardController(this);
 		gameBoardController = new GameBoardController(playerController, this);
 		buttonController = new ButtonController(diceBoardView, gameBoardController);
+		gameMenu = new GameMenu(this);
 		
 		
 		
@@ -59,6 +63,8 @@ public class GameBoardView extends JFrame{
 		
 		Iterator<PlayerView> it = playerViews.iterator();
 		PlayerView view = null;
+		
+		this.setJMenuBar(gameMenu);
 		
 		this.setLayout(gbl);
 		gbc.fill = GridBagConstraints.BOTH;
@@ -161,5 +167,9 @@ public class GameBoardView extends JFrame{
 	
 	public GameBoardController getGameBoardController(){
 		return gameBoardController;
+	}
+	
+	public void removeWindow(){
+		this.dispose();
 	}
 }

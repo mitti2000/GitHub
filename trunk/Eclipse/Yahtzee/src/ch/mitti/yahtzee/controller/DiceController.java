@@ -39,6 +39,7 @@ public class DiceController extends MouseAdapter{
 	public void resetDice(){
 		diceView.setValue(7);
 		diceView.removeMouseListener(this);
+		diceModel.resetCount();
 	}
 	
 	public void addListeners(){

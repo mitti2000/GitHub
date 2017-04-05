@@ -20,6 +20,7 @@ public class GameBoardController {
 	private DiceBoardView diceBoardView;
 	private int rolls;
 	private PlayerModel activePlayer;
+	private boolean gameDone;
 	
 	
 	public GameBoardController(PlayerController playerController, GameBoardView gameBoardView){
@@ -30,6 +31,7 @@ public class GameBoardController {
 		this.buttonController = gameBoardView.getButtonController();
 		this.diceBoardView = gameBoardView.getDiceBoardView();
 		this.rolls = 3;
+		this.gameDone = false;
 		activePlayer = null;
 		
 		Iterator<PlayerView> it = playerViews.iterator();
@@ -40,6 +42,7 @@ public class GameBoardController {
 	}
 	
 	public void nextPlayerStart(){
+		diceBoardView.resetDice();
 		PlayerModel player = null;
 		Iterator<PlayerModel> it = playerModels.iterator();
 		while(it.hasNext()){
@@ -55,36 +58,71 @@ public class GameBoardController {
 	}
 	
 	public void nextPlayer(){
+		if(gameDone) endGame();
 		PlayerModel player = null;
+		int doneCount = 0;
 		
 		for(int i=0; i<playerModels.size();i++){
 			player = playerModels.get(i);
-			if(player.isActivePlayer()){
-				player.setActivePlayer(false);
-				player.setPointsSet(false);
-				if(i==playerModels.size()-1){
-					playerModels.get(0).setActivePlayer(true);
-					player = playerModels.get(0);
+			
+			if(!player.isDone() || (player.isDone() || player.isActivePlayer())){
+				if(player.isActivePlayer()){
+					player = setNextPlayerActive(player, i);
+					break;
 				}
-				else {				
-					playerModels.get(i+1).setActivePlayer(true);
-					player = playerModels.get(i+1);
-				}
-				if(!player.isDone())
-				break;
 			}
 		}
 		
-		if(player.isDone()){
+		for(int i=0; i<playerModels.size();i++){
+			if(playerModels.get(i).isDone()) doneCount++;
+		}
+		
+		if(doneCount>=playerModels.size()) {
 			endGame();
 			return;
 		}
+		
+		
 		
 		diceBoardView.resetDice();
 		activePlayer = player;
 		buttonController.getView().setActivePlayer(player);
 		resetRolls();
 		JOptionPane.showMessageDialog(gameBoardView, "Nächster Spieler: " + player.getName() );
+	}
+	
+	public PlayerModel setNextPlayerActive(PlayerModel player, int i){
+		player.setActivePlayer(false);
+		player.setPointsSet(false);
+		if(i==playerModels.size()-1){
+			playerModels.get(0).setActivePlayer(true);
+			player = playerModels.get(0);
+		}
+		else {				
+			playerModels.get(i+1).setActivePlayer(true);
+			player = playerModels.get(i+1);
+		}
+		
+		return player;
+	}
+	
+	public void endGame(){
+		gameDone = true;
+		int maxScore = 0;
+		String bestPlayer = "";
+		
+		for(int i=0; i<playerModels.size();i++){
+			if(playerModels.get(i).getTotalScore()>maxScore){
+				maxScore = playerModels.get(i).getTotalScore();
+				bestPlayer = playerModels.get(i).getName();
+			}
+		}
+		buttonController.setGameDone();
+		JOptionPane.showMessageDialog(gameBoardView, "Spiel Beendet \n  "
+				+ "Bester Spieler ist " + bestPlayer + " mit " + maxScore + " Punkten. \n\n"
+						+ "Gratulation !!");
+		
+		
 	}
 	
 	public boolean rollsLeft(){
@@ -106,6 +144,15 @@ public class GameBoardController {
 	
 	public int getRollCount(){
 		return rolls;
+	}
+	
+	public void setScores(){
+		ArrayList<PlayerView> playerViews = playerController.getPlayerViews();
+		for(PlayerView view : playerViews){
+			if(view.getModel().isActivePlayer()){
+				view.setSums();
+			}
+		}
 	}
 	
 	public PlayerModel getActivePlayer(){

@@ -59,7 +59,13 @@ public class PlayerView extends JPanel {
 			gbc.gridy = i;
 			labels[i] = new JLabel(" ");
 			if(i!=1 && i!=8 && i!=9 && i!=10 && i!=11 && i!=12 && i!=20 && i!=21 && i!=22){
+				labels[i].setOpaque(true);
+				labels[i].setBackground(Color.WHITE);
 				labels[i].addMouseListener(new PlayerLabelListener(playerModel, playerController));
+			}
+			else if (i==1 || i==11 || i==12 || i==21){
+				labels[i].setOpaque(true);
+				labels[i].setBackground(Color.GRAY);
 			}
 			labels[i].setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
 			labels[i].setHorizontalAlignment(SwingConstants.CENTER);
@@ -96,5 +102,22 @@ public class PlayerView extends JPanel {
 	
 	public JLabel[] getLabels(){
 		return labels;
+	}
+	
+	public boolean getActivePlayer(){
+		return activePlayer;
+	}
+	
+	public void setSums(){
+		labels[8].setText(""+playerModel.getPoints());
+		System.out.println(playerModel.getPoints());
+		if (playerModel.getBonus()) labels[9].setText("35");
+		labels[10].setText(""+playerModel.getUpperScore());
+		labels[20].setText(""+playerModel.getLowerScore());
+		labels[22].setText(""+playerModel.getTotalScore());
+	}
+	
+	public String getName(){
+		return name;
 	}
 }

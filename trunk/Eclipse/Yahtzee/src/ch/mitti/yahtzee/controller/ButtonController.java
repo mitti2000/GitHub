@@ -46,6 +46,10 @@ public class ButtonController implements ActionListener{
 	public void setNextPlayer(){
 		buttonView.setNextPlayer();
 	}
+	
+	public void setGameDone(){
+		buttonView.gameEnd();
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

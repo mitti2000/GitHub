@@ -41,8 +41,8 @@ public class ButtonView extends JPanel {
 		this.setLayout(new GridLayout(3,1,30,30));
 		this.add(activePlayer);
 		this.add(roll);
-		this.add(newGame);
-		this.add(highscore);
+		//this.add(newGame);
+		//this.add(highscore);
 	}
 	
 	public void setActivePlayer(PlayerModel player){
@@ -53,5 +53,9 @@ public class ButtonView extends JPanel {
 		roll.setText("Nächster Spieler");
 	}
 	
+	public void gameEnd(){
+		roll.setText("Spiel fertig");
+		roll.setEnabled(false);
+	}
 	
 }

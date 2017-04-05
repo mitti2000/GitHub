@@ -36,4 +36,8 @@ public class DiceModel {
 		if(!isLocked) setCount();
 		return count;
 	}
+	
+	public void resetCount(){
+		count = 0;
+	}
 }

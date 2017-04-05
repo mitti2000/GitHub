@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.border.Border"/>
-<fullyQualifiedTypeName name="java.awt.event.ComponentEvent"/>
-<fullyQualifiedTypeName name="java.awt.event.ComponentAdapter"/>
-<fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="ch.mitti.tetris.Coordinates"/>
 <fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="java.awt.geom.Rectangle2D"/>
@@ -39,7 +35,6 @@
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.main.MainFrameListener"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="javax.swing.JButton"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.controller.ButtonRollController"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.model.DiceModel"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.controller.DiceController"/>
@@ -53,11 +48,16 @@
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.view.DiceBoardView"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.controller.PlayerController"/>
-<fullyQualifiedTypeName name="ch.mitti.yahtzee.view.GameBoardView"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.controller.DiceBoardController"/>
-<fullyQualifiedTypeName name="ch.mitti.yahtzee.controller.GameBoardController"/>
 <fullyQualifiedTypeName name="javax.swing.JLabel"/>
 <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
 <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.model.PlayerModel"/>
+<fullyQualifiedTypeName name="ch.mitti.yahtzee.controller.GameBoardController"/>
+<fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
+<fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="javax.swing.JMenu"/>
+<fullyQualifiedTypeName name="ch.mitti.yahtzee.main.GameMenu"/>
+<fullyQualifiedTypeName name="ch.mitti.yahtzee.view.GameBoardView"/>
 </qualifiedTypeNameHistroy>

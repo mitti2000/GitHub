@@ -1,0 +1,23 @@
+package ch.mitti.yahtzee.main;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class GameMenu extends JMenuBar {
+	JMenu mainMenu;
+	JMenuItem newgame;
+	JMenuItem highscores;
+	JMenuItem endApplication;
+	
+	public GameMenu(){
+		init();
+	}
+	
+	private void init(){
+		mainMenu = new JMenu("Game");
+		newgame = new JMenuItem("Neues Spiel");
+	}
+}
+
+

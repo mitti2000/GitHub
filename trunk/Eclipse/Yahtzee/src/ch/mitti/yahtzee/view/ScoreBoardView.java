@@ -59,6 +59,10 @@ public class ScoreBoardView extends JPanel{
 			gbl.setConstraints(labels.get(counter), gbc);
 			labels.get(counter).setText(sbm.getValue(counter));
 			labels.get(counter).setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
+			if(counter==11 || counter ==21){
+				labels.get(counter).setOpaque(true);
+				labels.get(counter).setBackground(Color.GRAY);
+			}
 			this.add(labels.get(counter));
 			counter++;
 		}

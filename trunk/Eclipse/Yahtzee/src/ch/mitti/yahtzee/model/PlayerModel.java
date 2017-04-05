@@ -4,7 +4,7 @@ public class PlayerModel {
 	private int[] scores;
 	private int[] isSet;
 	
-	
+	private int punkte;
 	private int upperScore;
 	private int lowerScore;
 	private int totalScore;
@@ -28,6 +28,7 @@ public class PlayerModel {
 		this.activePlayer = activePlayer;
 		scores = new int[23];
 		isSet = new int[23];
+		punkte = 0;
 		upperScore = 0;
 		lowerScore = 0;
 		totalScore = 0;
@@ -49,6 +50,11 @@ public class PlayerModel {
 	public void setScore(int index, int score){
 		scores[index] = score;
 		isSet[index] = 1;
+		setPunkte();
+		setBonus();
+		setUpperScore();
+		setLowerScore();
+		setTotalScore();
 	}
 	
 	public int getScore(int index){
@@ -85,12 +91,29 @@ public class PlayerModel {
 		this.isAllSet = isAllSet;
 	}
 
-	public void setUpperScore(int upperScore) {
-		this.upperScore = upperScore;
+	private void setBonus(){
+		if(punkte>=63) bonus = true;
+	}
+	
+	private void setPunkte(){
+		int tempScore =0;
+		for(int i=0; i<8; i++){
+			tempScore += scores[i];
+		}
+		this.punkte = tempScore;
+	}
+	
+	private void setUpperScore() {
+		if(bonus) upperScore = punkte + 35;
+		else upperScore = punkte;
 	}
 
-	public void setLowerScore(int lowerScore) {
-		this.lowerScore = lowerScore;
+	private void setLowerScore() {
+		int tempScore =0;
+		for(int i=12; i<20; i++){
+			tempScore += scores[i];
+		}
+		this.lowerScore = tempScore;
 	}
 
 	public boolean isPointsSet() {
@@ -118,34 +141,23 @@ public class PlayerModel {
 	}
 
 	public int getUpperScore() {
-		for(int i=0; i<10; i++){
-			upperScore += scores[i];
-		}
 		return upperScore;
 	}
 
 	public int getLowerScore() {
-		for(int i=13; i<20; i++){
-			lowerScore += scores[i];
-		}
 		return lowerScore;
 	}
 
 	public int getTotalScore() {
-		totalScore = upperScore+lowerScore;
 		return totalScore;
 	}
 
-	public void setTotalScore(int totalScore) {
-		this.totalScore = totalScore;
+	private void setTotalScore() {
+		this.totalScore = upperScore + lowerScore;
 	}
 
 	public boolean isBonus() {
 		return bonus;
-	}
-
-	public void setBonus(boolean bonus) {
-		this.bonus = bonus;
 	}
 	
 	public boolean isDone(){
@@ -154,6 +166,14 @@ public class PlayerModel {
 	
 	public void setIsDone(boolean isDone){
 		this.isDone = isDone;
+	}
+	
+	public int getPoints(){
+		return punkte;
+	}
+	
+	public boolean getBonus(){
+		return bonus;
 	}
 	
 	
