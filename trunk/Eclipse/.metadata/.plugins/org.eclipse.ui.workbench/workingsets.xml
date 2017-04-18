@@ -20,6 +20,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GUIAufgaben" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Grafik_mit_Java" type="4"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492537879642_7" label="SVN" name="SVN"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1417678534638_0" label="Window Working Set" name="Aggregate for window 1417678534638"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1474470996165_1" label="Window Working Set" name="Aggregate for window 1474470996165"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479210878041_2" label="Window Working Set" name="Aggregate for window 1479210878041"/>
