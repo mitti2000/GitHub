@@ -1,9 +1,0 @@
-package ch.mitti.yahtzee.model;
-
-public class ScoreBoardData {
-	private ArrayList<String> BoardData;
-	
-	public ScoreBoardData(){
-		
-	}
-}

@@ -1,5 +1,0 @@
-package ch.mitti.yahtzee.model;
-
-public class DiceModel {
-	private int count;
-}

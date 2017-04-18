@@ -1,7 +1,0 @@
-package ch.mitti.yahtzee.main;
-
-import javax.swing.JMenuBar;
-
-public class GameMenu extends JMenuBar {
-	JMenu mainMenu;
-}

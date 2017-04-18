@@ -1,9 +1,0 @@
-package ch.mitti.yahtzee.model;
-
-public class DiceBoardModel {
-	private ArrayList<DiceController> dice;
-	
-	public DiceBoardModel(){
-		
-	}
-}

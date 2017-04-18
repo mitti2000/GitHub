@@ -1,5 +1,0 @@
-package ch.mitti.yahtzee.controller;
-
-public class ButtonRollController implements ActionListener{
-
-}
