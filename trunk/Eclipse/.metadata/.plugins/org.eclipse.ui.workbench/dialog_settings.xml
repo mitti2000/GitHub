@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="workingset_selection_history">
+		<item value="SVN"/>
+	</list>
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="219" key="DIALOG_Y_ORIGIN"/>
-		<item value="405" key="DIALOG_X_ORIGIN"/>
+		<item value="224" key="DIALOG_Y_ORIGIN"/>
+		<item value="547" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 		<item value="true" key="actionSetFilter"/>
@@ -44,6 +47,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\mitti\Documents\SVN\testworkingcopy\trunk"/>
 			<item value="C:\Users\mitti\Desktop\Kapitel11"/>
 			<item value="C:\Users\mitti\Desktop\GUIWerkstattVorlagen"/>
 			<item value="C:\Users\mitti\Desktop\Vererbung"/>
