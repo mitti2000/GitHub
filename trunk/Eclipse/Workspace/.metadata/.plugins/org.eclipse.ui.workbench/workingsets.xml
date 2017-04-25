@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492518019366_3" label="Projekte" name="Projekte">
+<item elementID="=Yahtzee" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492518124115_5" label="Übungen" name="Übungen"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1493055710763_6" label="Tests" name="Tests"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1417678534638_0" label="Window Working Set" name="Aggregate for window 1417678534638"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1474470996165_1" label="Window Working Set" name="Aggregate for window 1474470996165"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479210878041_2" label="Window Working Set" name="Aggregate for window 1479210878041"/>
+<mruList name="Tests"/>
+</workingSetManager>

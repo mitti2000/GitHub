@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;ch.mitti.vermischte_nachrichten&apos; to &apos;ch.mitti.methoden_polymorphie&apos;&#x0D;&#x0A;- Original project: &apos;Aufgaben_Vererbung&apos;&#x0D;&#x0A;- Original element: &apos;Aufgaben_Vererbung/src/ch.mitti.vermischte_nachrichten&apos;&#x0D;&#x0A;- Renamed element: &apos;Aufgaben_Vererbung/src/ch.mitti.methoden_polymorphie&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;ch.mitti.vermischte_nachrichten&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;ch.mitti.vermischte_nachrichten" name="ch.mitti.methoden_polymorphie" qualified="false" references="true" stamp="1481129693138" textual="false" version="1.0"/>
+</session>

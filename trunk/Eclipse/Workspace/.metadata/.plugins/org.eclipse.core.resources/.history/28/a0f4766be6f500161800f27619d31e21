@@ -1,0 +1,14 @@
+package ch.mitti.tetris.testing;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+
+public class graphics1 {
+	
+
+	public static void main(String[] args) {
+		TestFrame frame = new TestFrame();
+	}
+	
+}
