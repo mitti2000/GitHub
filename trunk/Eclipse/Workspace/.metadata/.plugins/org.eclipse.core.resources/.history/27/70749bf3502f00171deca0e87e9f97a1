@@ -1,0 +1,10 @@
+package ch.mitti.tuerme;
+
+public class Tuerme {
+	
+	
+	
+	public static void main(String[] args){
+		
+	}
+}

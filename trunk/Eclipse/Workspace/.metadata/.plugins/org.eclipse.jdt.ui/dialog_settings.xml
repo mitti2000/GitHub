@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
 	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="true" key="ProjectSelectionDialog.show_all"/>
-	<item value="0" key="CallHierarchyViewPart.call_mode"/>
 	<item value="2" key="CallHierarchyViewPart.field_mode"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
-	<item value="3" key="CallHierarchyViewPart.orientation"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
 	<item value="500" key="CallHierarchyViewPart.ratio1"/>
 	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
-	<item value="C:\Users\mitti\SVN\mittischulezbw\trunk" key="org.eclipse.jdt.ui.last.external.project"/>
 	<item value="500" key="CallHierarchyViewPart.ratio3"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="0" key="CallHierarchyViewPart.call_mode"/>
+	<item value="C:\Users\mitti\Desktop" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="3" key="CallHierarchyViewPart.orientation"/>
+	<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Neuer Ordner" key="org.eclipse.jdt.ui.last.external.project"/>
 	<list key="workingset_selection_history">
-		<item value="Tests"/>
 		<item value="Übungen"/>
+		<item value="Tests"/>
 	</list>
 	<list key="SearchScopeActionGroup.working_set">
 	</list>
@@ -213,5 +214,8 @@
 	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
 	</section>
 </section>

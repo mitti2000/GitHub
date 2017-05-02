@@ -1,0 +1,15 @@
+package ch.mitti.ackermann;
+
+public class Ackermann {
+	
+	
+	public int am(int a, int b){
+		
+		
+		return res
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}

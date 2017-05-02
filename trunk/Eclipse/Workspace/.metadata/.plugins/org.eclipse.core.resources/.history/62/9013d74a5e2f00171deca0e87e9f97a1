@@ -1,0 +1,37 @@
+package ch.mitti.turtle;
+import ch.aplu.*;
+import ch.aplu.turtle.Turtle;
+
+public class Kochkurve {
+	Turtle t;
+	public Kochkurve(int max, int min){
+		t = new Turtle();
+		t.speed(200);
+		t.hideTurtle();
+		t.setX(-200);
+		t.setY(-50);
+		t.right(90);
+		zeichne(max, min);
+	}
+	
+	public void zeichne(int max, int min){
+		if(max<5){
+			t.forward(max);
+			
+		}
+		else{
+		zeichne(max/3, min);
+		t.left(60);
+		zeichne(max/3, min);
+		t.right(120);
+		zeichne(max/3, min);
+		t.left(60);
+		zeichne(max/3, min);
+		}
+	}
+
+	public static void main(String[] args) {
+		Kochkurve kochkurve = new Kochkurve(400,10);
+	}
+
+}

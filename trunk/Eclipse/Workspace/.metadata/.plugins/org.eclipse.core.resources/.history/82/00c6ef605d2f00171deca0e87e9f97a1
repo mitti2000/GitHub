@@ -1,0 +1,14 @@
+package ch.mitti.baum;
+
+public class Baum {
+	
+	public Baum(){
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

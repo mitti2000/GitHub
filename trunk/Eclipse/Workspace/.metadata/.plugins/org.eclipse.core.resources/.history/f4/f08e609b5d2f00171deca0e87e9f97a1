@@ -1,0 +1,28 @@
+package ch.mitti.baum;
+
+import ch.aplu.*;
+import ch.aplu.turtle.Turtle;
+
+public class Baum {
+	Turtle t;
+	
+	public Baum(){
+		t = new Turtle();
+		t.speed(200);
+		t.hideTurtle();
+		t.setX(-200);
+		t.setY(-50);
+		t.right(90);
+		zeichne();
+	}
+	
+	public void zeichnen(){
+		
+	}
+
+	public static void main(String[] args) {
+		Baum baum = new Baum();
+
+	}
+
+}

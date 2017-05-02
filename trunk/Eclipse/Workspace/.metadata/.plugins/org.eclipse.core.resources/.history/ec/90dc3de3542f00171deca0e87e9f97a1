@@ -1,0 +1,21 @@
+package ch.mitti.tuerme;
+
+public class Tuerme {
+	
+	private int anzahlScheiben;
+	private int hoehe;
+	
+	public Tuerme(int anzahlScheiben){
+		this.anzahlScheiben = anzahlScheiben;
+	}
+	
+	public void bewege(int hoehe, int ausgang, int hilf, int ziel){
+		
+	}
+	
+	
+	
+	public static void main(String[] args){
+		Tuerme tuerme = new Tuerme(5);
+	}
+}

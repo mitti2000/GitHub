@@ -1,0 +1,10 @@
+package ch.mitti.ackermann;
+
+public class Ackermann {
+	
+	
+	
+	public static void main(String[] args){
+		
+	}
+}

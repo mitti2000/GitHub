@@ -1,0 +1,21 @@
+package ch.mitti.quadrate;
+import ch.aplu.turtle.*;
+
+public class Quadrate {
+	
+	Turtle t;
+	
+	public Quadrate(){
+		zeichnen();
+	}
+	
+	public void zeichnen(){
+		
+	}
+
+	public static void main(String[] args) {
+		Quadrate quadrate = new Quadrate();
+
+	}
+
+}

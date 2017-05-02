@@ -1,0 +1,18 @@
+package ch.mitti.baum;
+
+public class Baum {
+	
+	public Baum(){
+		
+	}
+	
+	public zeichnen(){
+		
+	}
+
+	public static void main(String[] args) {
+		Baum baum = new Baum();
+
+	}
+
+}

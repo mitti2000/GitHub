@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ch.mitti.tetris.Coordinates"/>
 <fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="java.awt.geom.Rectangle2D"/>
 <fullyQualifiedTypeName name="java.awt.event.MouseMotionListener"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="javax.swing.JMenu"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.main.GameMenu"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.view.GameBoardView"/>
+<fullyQualifiedTypeName name="ch.aplu.turtle.Turtle"/>
 </qualifiedTypeNameHistroy>

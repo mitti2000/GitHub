@@ -1,0 +1,19 @@
+package ch.mitti.ackermann;
+
+public class Ackermann {
+	
+	
+	public int am(int m, int n){
+		int res;
+		
+		if(m==0){
+			n++;
+		}
+		
+		return res;
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}

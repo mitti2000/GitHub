@@ -1,0 +1,18 @@
+package ch.mitti.quadrate;
+
+public class Quadrate {
+	
+	public Quadrate(){
+		zeichnen()
+	}
+	
+	public void zeichnen(){
+		
+	}
+
+	public static void main(String[] args) {
+		Quadrate quadrate = new Quadrate();
+
+	}
+
+}
