@@ -16,6 +16,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Drachenkurve"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Yahtzee"/>
 			<item value="C:\Users\mitti\Documents\SVN\testworkingcopy\trunk"/>
 			<item value="C:\Users\mitti\Desktop\MVC_Beispiel"/>
