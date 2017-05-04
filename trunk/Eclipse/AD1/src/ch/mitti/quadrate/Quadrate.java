@@ -13,7 +13,7 @@ public class Quadrate {
 		t.setY(0);
 		
 		
-		zeichnen(max, min, 0, 0);
+		zeichnen(max, min, 0, -100);
 	}
 	
 	public void zeichnen(int max, int min, int posX, int posY){
@@ -27,12 +27,13 @@ public class Quadrate {
 			t.forward(max);
 			t.right(90);
 			t.forward(max);
-			zeichnen(max/2, min, posX+(max/2), posY+(max/2));
+			zeichnen(max/2, min, posX+max, posY+max);
+			zeichnen(max/2, min, posX-max, posY+max);
 		}
 	}
 
 	public static void main(String[] args) {
-		Quadrate quadrate = new Quadrate(50, 2);
+		Quadrate quadrate = new Quadrate(100, 1);
 		
 	}
 

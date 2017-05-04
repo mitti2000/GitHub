@@ -1,0 +1,5 @@
+package ch.mitti.jeep;
+
+public class Jeep {
+
+}

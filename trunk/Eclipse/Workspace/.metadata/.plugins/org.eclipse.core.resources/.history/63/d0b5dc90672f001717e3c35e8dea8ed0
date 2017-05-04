@@ -1,0 +1,16 @@
+package ch.mitti.fibonacci;
+
+public class Fibonacci {
+	
+	public int rechnen(int anzahl){
+		
+		return 5;
+	}
+	
+	
+	public static void main(String[] args){
+		Fibonacci fibonacci = new Fibonacci();
+		int res = fibonacci.rechnen(5);
+		System.out.println(res);
+	}
+}
