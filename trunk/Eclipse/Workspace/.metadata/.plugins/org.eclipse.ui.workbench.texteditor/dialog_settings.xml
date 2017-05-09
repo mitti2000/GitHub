@@ -2,19 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="resetDice" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="system"/>
 			<item value="resetDice"/>
 			<item value="count"/>
 			<item value="compare"/>
 			<item value="sorted"/>
 			<item value="System"/>
 			<item value="&#x09;&#x09;this.playerViews = playerController.getPlayerViews();"/>
-			<item value="system"/>
 			<item value="addPlayer"/>
 		</list>
 		<list key="replacehistory">
