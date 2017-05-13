@@ -1,0 +1,118 @@
+package ch.zbw.prgf.menus;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+import java.awt.AWTException;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.Menu;
+import java.awt.MenuItem;
+import java.awt.PopupMenu;
+import java.awt.SystemTray;
+import java.awt.TrayIcon;
+import java.awt.TrayIcon.MessageType;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
+import javax.swing.KeyStroke;
+import javax.swing.border.EmptyBorder;
+
+public class Tray extends JFrame implements ActionListener{
+	//Menukomponenten definieren
+	private JMenu menu1, submenu;
+	private JMenuItem menuitem1, menuitem2, menuitem3, submenuitem1, submenuitem2;
+	private PopupMenu popup;
+	private TrayIcon trayIcon;
+	private SystemTray tray;
+	
+	public Tray(){
+		initComponents();
+		bindListener();
+		initTray();
+	}
+	
+	private void initComponents() {
+		//Menukomponenten initialisieren
+		menu1 = new JMenu("Menü 1");
+		submenu = new JMenu("Submenü 1");
+		menuitem1 = new JMenuItem("Menü Item 1");
+		menuitem2 = new JMenuItem("Menü Item 2");
+		menuitem3 = new JMenuItem("Menü Item 3");
+		submenuitem1 = new JMenuItem("SubMenü Item 1");
+		submenuitem2 = new JMenuItem("SubMenü Item 2");
+		
+		//Menü Struktur aufbauen
+		menu1.add(menuitem1);
+		menu1.add(menuitem2);
+		menu1.add(menuitem3);
+		menu1.addSeparator();
+		menu1.add(submenu);
+		submenu.add(submenuitem1);
+		submenu.add(submenuitem2);
+	}
+	//Listeners einbinden
+	private void bindListener(){
+		menuitem1.addActionListener(this);
+		menuitem2.addActionListener(this);
+		menuitem3.addActionListener(this);
+		submenuitem1.addActionListener(this);
+		submenuitem2.addActionListener(this);
+	}
+	
+	//TrayIcon und Menu
+	private void initTray(){
+		//Ist ein SystemTray vom aktuellen System unterstützt?
+        if (!SystemTray.isSupported()) {
+            System.out.println("SystemTray wird nicht unterstützt");
+            return;
+        }
+        
+        //System TrayIcon definieren
+        java.net.URL imageURL = this.getClass().getResource("/16x16.png");
+		ImageIcon image = new ImageIcon(imageURL);
+        
+		//Ein AWT Popup Menu wird erstellt
+        popup = new JPopupMenu();
+        //Ein TrayIcon wird erstellt. Dem Konstruktor muss ein Bild übergeben werden
+        trayIcon = new TrayIcon(image.getImage());
+        //Der SystemTray wird angezogen
+        tray = SystemTray.getSystemTray();
+        
+        //Das oben erstellte Menu wird dem PopUp Menu zugefügt
+        popup.add(menu1);
+        //Das PopUpMenu wird als Menu für das Tray Icon definiert
+        trayIcon.setPopupMenu(popup);
+        //Tootltip definieren
+        trayIcon.setToolTip("Dies ist ein tolles Tray Icon");
+        
+        //SysteTray.add wirft eine Exception
+        try {
+        	//Das TrayIcon wird dem SystemTray zugefügt
+			tray.add(trayIcon);
+		} catch (AWTException e) {
+			System.out.println("TrayIcon konnte nicht zugefügt werden");
+		}
+	}
+	
+	public static void main(String[] args){
+		Tray a1 = new Tray();
+	}
+	
+	//actionPerformed für Menueinträge
+	public void actionPerformed(ActionEvent event) {
+		MenuItem clicked = (MenuItem)event.getSource();
+		System.out.println("Menü " + clicked.getLabel() + " wurde ausgewählt.");
+		//Balloon Message wird ausgegeben
+		trayIcon.displayMessage("ALARM", "Ein Menueintrag wurde gklickt", MessageType.INFO);
+	}
+}

@@ -12,6 +12,7 @@ public class JUNITTestListe {
 	public void setUp() throws Exception {
 	//	liste = new ArrayListe();
 		liste = new VListe();
+		//liste = new VklisteMarkus();
 	//	liste = new StudListe();
 	}
 

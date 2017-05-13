@@ -1,0 +1,11 @@
+package ch.mitti.tetris.testing;
+
+public class graphics1 {
+	
+
+	public static void main(String[] args) {
+		TestFrame frame = new TestFrame();
+		System.out.println(frame.getHeight());
+	}
+	
+}
