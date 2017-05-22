@@ -1,0 +1,26 @@
+package ch.mitti.queue;
+
+public class Queue_ImplArray implements Queue {
+	
+	private int head;
+	private int last;
+
+	@Override
+	public boolean enq(Element obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Element deq() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean empty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

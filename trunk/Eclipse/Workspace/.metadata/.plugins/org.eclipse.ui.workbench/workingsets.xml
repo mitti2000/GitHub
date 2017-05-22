@@ -8,6 +8,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Drachenkurve" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AD1" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AD2" type="4"/>
+<item elementID="=AD3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1493055710763_6" label="Tests" name="Tests"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1417678534638_0" label="Window Working Set" name="Aggregate for window 1417678534638"/>

@@ -1,0 +1,5 @@
+package ch.mitti.queue;
+
+public class MyQueue implements Queue {
+
+}
