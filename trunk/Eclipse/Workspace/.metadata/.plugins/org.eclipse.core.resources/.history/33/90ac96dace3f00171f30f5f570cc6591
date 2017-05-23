@@ -1,0 +1,5 @@
+package ch.mitti.maventest;
+
+public class Test {
+	//StringUtils.isNotEmpty("...");
+}
