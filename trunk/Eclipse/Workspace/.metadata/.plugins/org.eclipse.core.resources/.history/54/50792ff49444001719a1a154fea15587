@@ -1,0 +1,23 @@
+package ch.mitti.sorting;
+
+public class BubbleSort implements Isorter {
+	int a;
+	int b;
+	boolean sorted;
+	int marker;
+	
+	public BubbleSort() {
+		a=0;
+		b=1;
+		sorted = false;
+		marker = 0;
+	}
+
+	@Override
+	public void sort(int[] zahlen) {
+		while(!sorted){
+			for(int i=0; i<)
+		}
+	}
+
+}

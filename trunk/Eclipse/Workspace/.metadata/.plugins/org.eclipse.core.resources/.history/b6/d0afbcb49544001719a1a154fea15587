@@ -1,0 +1,11 @@
+package ch.mitti.sorting;
+
+public class Shakersort implements Isorter {
+
+	@Override
+	public void sort(int[] zahlen) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

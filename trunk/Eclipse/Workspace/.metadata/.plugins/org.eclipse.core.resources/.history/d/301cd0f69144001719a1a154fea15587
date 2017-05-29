@@ -1,0 +1,19 @@
+package ch.mitti.sorting;
+
+public class StraightSelection implements Isorter {
+
+	@Override
+	public void sort(int[] zahlen) {
+		int compare = 0;
+		int temp = 0;
+		b
+		for(int i=0; i < zahlen.length; i++){
+			if(zahlen[i]<zahlen[compare]){
+				temp = zahlen[i];
+				zahlen[i]=zahlen[compare];
+				zahlen[compare] = temp;
+			}
+		}
+	}
+
+}

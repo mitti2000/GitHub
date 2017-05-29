@@ -1,0 +1,18 @@
+package ch.mitti.sorting;
+
+public class Shakersort implements Isorter {
+	boolean direction;
+	int posBottom;
+	int posTop;
+	
+	public Shakersort() {
+		direction = true;
+	}
+
+	@Override
+	public void sort(int[] zahlen) {
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package ch.mitti.sorting;
+
+public class StraightSelection implements Isorter {
+	int hpos;
+	
+	public public StraightSelection() {
+		hpos = -1;
+	}
+
+	@Override
+	public void sort(int[] zahlen) {
+		for(int i=0; i < (zahlen.length-1); i++){
+			
+		}
+	}
+
+}

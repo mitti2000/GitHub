@@ -1,5 +1,0 @@
-package ch.mitti.stack;
-
-public class MyStack implements Stack {
-
-}

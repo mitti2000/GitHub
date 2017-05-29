@@ -1,0 +1,5 @@
+package ch.mitti.sorting;
+
+public class StraightSelection implements Isorter {
+
+}

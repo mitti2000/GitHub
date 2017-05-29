@@ -1,0 +1,19 @@
+package ch.mitti.sorting;
+
+public class StraightInsertation implements Isorter {
+	int hilf;
+	
+	public StraightInsertation() {
+		hilf = -1;
+	}
+	
+	@Override
+	public void sort(int[] zahlen) {
+		
+		for(int i=1;i<(zahlen.length-1);i++){
+			hilf = zahlen[i];
+			
+			for(int j=i; j>=1 && (hilf < feld[j-1];j--)
+		}
+	}
+}

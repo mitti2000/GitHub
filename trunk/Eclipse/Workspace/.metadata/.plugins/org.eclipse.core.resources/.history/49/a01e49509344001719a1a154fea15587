@@ -1,0 +1,8 @@
+package ch.mitti.sorting;
+
+public class StraightInsertation implements Isorter {
+	@Override
+	public void sort(int[] zahlen) {
+		
+	}
+}

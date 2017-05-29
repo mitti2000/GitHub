@@ -1,0 +1,12 @@
+package ch.mitti.sorting;
+
+public class Shakersort implements Isorter {
+	boolean direction;
+
+	@Override
+	public void sort(int[] zahlen) {
+		
+
+	}
+
+}
