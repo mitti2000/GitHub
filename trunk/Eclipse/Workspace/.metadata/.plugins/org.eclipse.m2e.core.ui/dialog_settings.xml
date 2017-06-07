@@ -2,13 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="ch.mitti"/>
 		</list>
 		<list key="name">
-			<item value="Superpom"/>
 		</list>
 		<list key="artifactId">
-			<item value="superpom"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -19,7 +16,6 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
@@ -67,6 +63,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -78,6 +75,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\mitti\SVN\mittischulezbw\compress_tutorial"/>
+			<item value="C:\Users\mitti\SVN\mittischulezbw\JPA"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -90,10 +89,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="ch.mitdom.compresstutorial"/>
+			<item value="ch.mitti.jpa_testing.jpa_testing"/>
 		</list>
 		<list key="groupId">
+			<item value="ch.mitdom"/>
+			<item value="ch.mitti.jpa_testing"/>
 		</list>
 		<list key="artifactId">
+			<item value="compresstutorial"/>
+			<item value="jpa_testing"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
