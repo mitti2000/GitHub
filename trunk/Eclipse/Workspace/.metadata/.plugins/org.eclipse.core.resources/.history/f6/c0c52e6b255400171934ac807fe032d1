@@ -1,0 +1,420 @@
+package ch.mitdom.compresstutorial;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionListener;
+import java.io.File;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
+
+/**
+ * GUI für Dekompression
+ */
+public class DecompressorGui extends JFrame implements ActionGui {
+	
+	//Main Panels
+	JPanel panTitle;
+	JPanel panExecute;
+	JPanel panSelectors;
+	GridBagConstraints gbcMain;
+	GridBagConstraints gbcSelectors;
+	//Selector Panels
+	JPanel panDestinationSelector;
+	JPanel panSourceSelector;
+	//Title
+	JLabel labTitle;
+	//SourceSelector
+	GridBagConstraints gbcSource;
+	JLabel labSelectSource;
+	JButton btnSeletSource;
+	JLabel labSelectedFileTitle;
+	JLabel labSelectedFileName;
+	//DestinationSelector
+	GridBagConstraints gbcDest;
+	JButton btnSelectDestinationFolder;
+	JLabel labSelectedDestinationFolderTag;
+	JLabel labSelectedDestinationFolder;
+	JLabel labSelectedDestinationFolderTitle;
+	//ExecutePanel
+	GridBagConstraints gbcExecute;
+	JButton btnExecute;
+	JProgressBar prgExecutionProgressBar;
+	JTextArea txtExecutionProgress;
+	JScrollPane sclExecutionProgress;
+	
+	//File Management
+	File destinationFolder;
+	File sourceFile;
+	String fileType;
+	
+	//Compressor
+	IDecompressor decompressor;
+	DecompressorFactory decompressorFactory;
+	
+	/**
+	 * Erstellt ein DecompressorGui mit Hilfe des GridBagLayouts
+	 */
+	public DecompressorGui(){
+		this.setSize(1024,768);
+		this.setLayout(new GridBagLayout());
+		sourceFile = null;
+		decompressorFactory = new DecompressorFactory();
+		init();
+		this.addWindowListener(new GuiListener());
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+	}
+	
+	/**
+	 * Breite die Decompression vor
+	 */
+	public void prepareDecompress(){
+		btnExecute.setEnabled(false); //Disable den Execution Button
+		//*********
+		//Überprüfen ob alle Daten gesetzt sind
+		if(destinationFolder == null) {
+			JOptionPane.showMessageDialog(this, "Kein Zielpfad ausgewählt!", "Warnung", JOptionPane.WARNING_MESSAGE);
+			btnExecute.setEnabled(true);
+			return;
+		}
+		if(sourceFile == null){
+			JOptionPane.showMessageDialog(this, "Keine Datei ausgewählt!", "Warnung", JOptionPane.WARNING_MESSAGE);
+			return;
+		}
+		//*************
+		
+		//ProgressBar vorbereiten
+		prgExecutionProgressBar.setMinimum(0);
+		prgExecutionProgressBar.setMaximum(0);
+		prgExecutionProgressBar.setValue(0);
+		prgExecutionProgressBar.setVisible(true);
+		prgExecutionProgressBar.setStringPainted(true);
+		this.revalidate();
+		
+		//Neuen Compressor aus Factory holen und überprüfen
+		if(fileType != null){
+			decompressor = decompressorFactory.getCompressor(fileType, this);
+		}
+		if(decompressor == null){
+			JOptionPane.showMessageDialog(this, "Kein Kompressor gefunden!", "Warnung", JOptionPane.WARNING_MESSAGE);
+			return;
+		}		
+	}
+	
+	/**
+	 * Zielpfad setzen
+	 * @param Zielpfad als File
+	 */
+	public void setDestination(File destination){
+		if(destination == null){
+			JOptionPane.showMessageDialog(this, "Kein Pfad gewählt!", "Warnung", JOptionPane.WARNING_MESSAGE);
+			return;
+		}
+		this.destinationFolder = destination;
+		labSelectedDestinationFolder.setText(destinationFolder.getAbsolutePath());
+	}
+	
+	/**
+	 * Quelldateien setzen
+	 * @param sourceFiles Eine oder mehrere Dateien als Array vom Typ File[]
+	 */
+	public void setSource(File sourceFile){
+		if (sourceFile == null){
+			JOptionPane.showMessageDialog(this, "Keine Datei ausgewählt!", "Warnung", JOptionPane.WARNING_MESSAGE);
+			return;
+		}
+		
+		if(checkFile(sourceFile)){ //Überprüfe, ob Dateityp unterstützt wird
+			this.sourceFile = sourceFile;
+			labSelectedFileName.setText(sourceFile.getAbsolutePath());
+			String fileName = sourceFile.getName();
+			int dot = fileName.lastIndexOf('.');
+			fileType = (dot == -1) ? "" : fileName.substring(dot); //Setze den gewählten Dateityp
+			return;
+		}
+		
+		else {
+			JOptionPane.showMessageDialog(this, "Kein unterstützter Dateityp", "Warnung", JOptionPane.WARNING_MESSAGE);
+			return;
+		}
+	}
+	
+	/**
+	 * ProgressBar aktualisieren
+	 * @param progress Anzahl bearbeitete Files
+	 * @param filename Name der Bearbeiteten Datei
+	 * @param length Anzahl Dateien
+	 */
+	public void setProgress(int progress, String filename, int length){
+		if(prgExecutionProgressBar.getMaximum()==0){
+			prgExecutionProgressBar.setMaximum(length);
+		}
+		if(sourceFile != null && progress>0 && progress<=length){
+			prgExecutionProgressBar.setValue(progress);
+			prgExecutionProgressBar.setString(progress + "/" + length + " decompressed");
+			txtExecutionProgress.append(filename + ".......done!\n");
+			this.revalidate();
+		}
+	}
+	
+	/**
+	 * Setze den Executon Button anhand des Resultats der Dekompression
+	 * @param result true=alles erldigt; false=Fehler
+	 */
+	public void setBtnExecute(boolean result){
+		for(ActionListener al : btnExecute.getActionListeners()){
+			btnExecute.removeActionListener(al);
+		}
+		btnExecute.addActionListener(new ReturnListener(this));
+		btnExecute.setEnabled(true);
+		if(result){
+			btnExecute.setForeground(Color.GREEN);
+			btnExecute.setText("Fertig. Zurück?");
+		}
+		
+		else{
+			btnExecute.setForeground(Color.RED);
+			btnExecute.setText("Fehler. Zurück?");
+		}
+	}
+	
+	/**
+	 * Getter für Kompressor
+	 * @return Kompressor als IDeompressor
+	 */
+	public IDecompressor getDecompressor(){
+		return decompressor;
+	}
+	
+	/**
+	 * Kehre zum MainGui zurück
+	 */
+	public void backToMain(){
+		new MainGui();
+		this.dispose();
+	}
+	
+	/**
+	 * Getter für Source
+	 * @return source als File
+	 */
+	public File getSource(){
+		return sourceFile;
+	}
+	
+	/** 
+	 * Getter für Destination
+	 * @return Destination als File
+	 */
+	public File getDestination(){
+		return destinationFolder;
+	}
+	
+	/**
+	 * Überprüfe Dateityp ob unterstützt
+	 * @param file
+	 * @return True oder False
+	 */
+	private boolean checkFile(File file){
+		String fileName = file.getName();
+		int dot = fileName.lastIndexOf('.');
+		String fileExtension = (dot == -1) ? "" : fileName.substring(dot+1);
+		
+		switch (fileExtension){
+			case("zip"):
+			case("7z"):
+				return true;
+			default:
+				return false;
+		}
+	}
+	
+	/**
+	 * GUI Initialisieren
+	 */
+	private void init(){
+		//********
+		//Title
+		//********
+		labTitle = new JLabel("Decompressor");
+		labTitle.setFont(new Font("Arial",Font.BOLD,30));
+		labTitle.setForeground(Color.BLUE);
+		labTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		panTitle = new JPanel();
+		panTitle.add(labTitle);
+		
+		//********
+		//Selectors
+		//********
+		panSelectors = new JPanel(new GridBagLayout());
+		gbcSelectors = new GridBagConstraints();
+		gbcSelectors.fill = GridBagConstraints.NONE;
+		
+		//***SourceSelector
+		gbcSource = new GridBagConstraints();
+		panSourceSelector = new JPanel(new GridBagLayout());
+		gbcSource.fill = GridBagConstraints.HORIZONTAL;
+		
+		labSelectSource = new JLabel("Datei:");
+		labSelectSource.setFont(new Font("Arial", Font.BOLD, 14));
+		labSelectSource.setForeground(Color.BLUE);
+		gbcSource.weightx = 0.75;
+		gbcSource.gridwidth = 2;
+		gbcSource.gridheight = 1;
+		gbcSource.gridx = 0;
+		gbcSource.gridy = 0;
+		gbcSource.insets = new Insets(50,0,10,100);
+		panSourceSelector.add(labSelectSource, gbcSource);
+		
+		btnSeletSource = new JButton("Wählen");
+		btnSeletSource.addActionListener(new ChooseSourceListener(this));
+		gbcSource.weightx = 0.25;
+		gbcSource.gridwidth = 1;
+		gbcSource.gridheight = 1;
+		gbcSource.gridx = 2;
+		gbcSource.gridy = 0;
+		gbcSource.insets = new Insets(50,0,10,10);
+		panSourceSelector.add(btnSeletSource, gbcSource);
+		
+		labSelectedFileTitle = new JLabel("Ausgewählte Datei");
+		gbcSource.weightx = 0.75;
+		gbcSource.gridwidth = 2;
+		gbcSource.gridheight = 1;
+		gbcSource.gridx = 0;
+		gbcSource.gridy = 1;
+		gbcSource.insets = new Insets(0,0,10,10);
+		panSourceSelector.add(labSelectedFileTitle, gbcSource);
+		
+		labSelectedFileName = new JLabel("");
+		gbcSource.weightx = 1.0;
+		gbcSource.gridwidth = 2;
+		gbcSource.gridheight = 1;
+		gbcSource.gridx = 2;
+		gbcSource.gridy = 1;
+		panSourceSelector.add(labSelectedFileName, gbcSource);
+		
+		//***DestinationSelector
+		panDestinationSelector = new JPanel(new GridBagLayout());
+		gbcDest = new GridBagConstraints();
+		gbcDest.fill = GridBagConstraints.HORIZONTAL;
+		
+		labSelectedDestinationFolderTitle = new JLabel("Zielordner");
+		labSelectedDestinationFolderTitle.setFont(new Font("Arial", Font.BOLD, 14));
+		labSelectedDestinationFolderTitle.setForeground(Color.BLUE);
+		labSelectedDestinationFolderTitle.setHorizontalAlignment(SwingConstants.LEFT);
+		gbcDest.weightx = 0.75;
+		gbcDest.gridwidth = 2;
+		gbcDest.gridheight = 1;
+		gbcDest.gridx = 0;
+		gbcDest.gridy = 0;
+		gbcDest.insets = new Insets(50,0,10,100);
+		panDestinationSelector.add(labSelectedDestinationFolderTitle, gbcDest);
+		
+		btnSelectDestinationFolder = new JButton("Wählen...");
+		btnSelectDestinationFolder.addActionListener(new ChooseDestinationListener(this));
+		gbcDest.weightx = 0.25;
+		gbcDest.gridwidth = 1;
+		gbcDest.gridheight = 1;
+		gbcDest.gridx = 2;
+		gbcDest.gridy = 0;
+		gbcDest.insets = new Insets(50,0,10,10);
+		panDestinationSelector.add(btnSelectDestinationFolder, gbcDest);
+		
+		labSelectedDestinationFolderTag = new JLabel("Ausgewählter Ordner");
+		labSelectedDestinationFolderTag.setHorizontalAlignment(SwingConstants.LEFT);
+		gbcDest.weightx = 0.75;
+		gbcDest.gridwidth = 2;
+		gbcDest.gridheight = 1;
+		gbcDest.gridx = 0;
+		gbcDest.gridy = 1;
+		gbcDest.insets = new Insets(0,0,10,10);
+		panDestinationSelector.add(labSelectedDestinationFolderTag, gbcDest);
+		
+		labSelectedDestinationFolder = new JLabel();
+		gbcDest.weightx = 1;
+		gbcDest.gridwidth = 2;
+		gbcDest.gridheight = 1;
+		gbcDest.gridx = 2;
+		gbcDest.gridy = 1;
+		panDestinationSelector.add(labSelectedDestinationFolder, gbcDest);
+				
+		//********
+		//Build Selectors
+		//********
+		gbcSelectors.gridx = 0;
+		gbcSelectors.gridy = 0;
+		panSelectors.add(panSourceSelector, gbcSelectors);
+		gbcSelectors.gridy = 1;
+		panSelectors.add(panDestinationSelector, gbcSelectors);
+		
+		
+		//*********
+		//Execute
+		//*********
+		panExecute = new JPanel(new GridBagLayout());
+		gbcExecute = new GridBagConstraints();
+		gbcExecute.fill = GridBagConstraints.NONE;
+		
+		btnExecute = new JButton("Decompress");
+		btnExecute.addActionListener(new DecompressListener(this));
+		gbcExecute.weightx = 0.2;
+		gbcExecute.gridwidth = 1;
+		gbcExecute.gridheight = 1;
+		gbcExecute.gridx = 2;
+		gbcExecute.gridy = 0;
+		gbcExecute.insets = new Insets(0,0,10,0);
+		panExecute.add(btnExecute, gbcExecute);
+		
+		txtExecutionProgress = new JTextArea(5,1);
+		txtExecutionProgress.setEditable(false);
+		sclExecutionProgress = new JScrollPane(txtExecutionProgress);
+		gbcExecute.fill = GridBagConstraints.HORIZONTAL;
+		gbcExecute.weightx = 1.0;
+		gbcExecute.gridwidth = 5;
+		gbcExecute.gridheight = 1;
+		gbcExecute.gridx = 0;
+		gbcExecute.gridy = 1;
+		gbcExecute.insets = new Insets(0,0,60,0);
+		panExecute.add(sclExecutionProgress, gbcExecute);
+		
+		prgExecutionProgressBar = new JProgressBar();
+		prgExecutionProgressBar.setVisible(false);
+		gbcExecute.fill = GridBagConstraints.HORIZONTAL;
+		gbcExecute.gridwidth = 5;
+		gbcExecute.gridheight = 1;
+		gbcExecute.gridx = 0;
+		gbcExecute.gridy = 2;
+		gbcExecute.insets = new Insets(0,0,10,0);
+		panExecute.add(prgExecutionProgressBar, gbcExecute);
+		
+		
+		//*********
+		//Build GUI
+		//*********
+		gbcMain = new GridBagConstraints();
+		gbcMain.fill = GridBagConstraints.NONE;
+		gbcMain.gridx = 0;
+		gbcMain.gridy = 0;
+		gbcMain.anchor = GridBagConstraints.NORTH;
+		this.add(panTitle, gbcMain);
+		gbcMain.gridx = 0;
+		gbcMain.gridy = 1;
+		gbcMain.weighty = 1.0;
+		this.add(panSelectors, gbcMain);
+		gbcMain.fill = GridBagConstraints.HORIZONTAL;
+		gbcMain.gridx = 0;
+		gbcMain.gridy = 2;
+		gbcMain.weighty = 1.0;
+		this.add(panExecute, gbcMain);
+	}
+}

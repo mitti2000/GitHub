@@ -1,0 +1,34 @@
+package ch.mitdom.compresstutorial;
+
+/**
+ * DecompressorFactory erstellt anhand eines Dateityps den richtigen Deompressor
+ * und gibt diesen zurück.
+ */
+
+public class DecompressorFactory {
+	IDecompressor decompressor;
+	
+	/**
+	 * Erstellt einen Decompressor vom gewünschten Typ und gibt diesen zurück
+	 * @param fileType Dateityp als String bsw. ".zip", ".7z", etc.
+	 * @param decompressorGui GUI vom Typ decompressorGui
+	 * @return gibt den gewählten Dekompressor vom Typ ICompressor zurück
+	 */
+	
+	public IDecompressor getCompressor(String fileType, DecompressorGui decompressorGui){
+		switch(fileType){
+			case(".zip"):
+				decompressor =  new DecompressorZip();
+				break;
+				
+			case(".7z"):
+				decompressor = new Decompressor7z();
+				break;
+			
+			default:
+				decompressor = null;
+				break;
+		}
+		return decompressor;
+	}
+}

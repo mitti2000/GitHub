@@ -1,0 +1,15 @@
+package ch.mitdom.compresstutorial;
+
+import java.io.File;
+/**
+ * Interface für GUI Implementation
+ * Dient vor allem der Polymorphie damit für Compression und Dekompression
+ * gemeinsame Listener, Worker, etc. verwendet werden können.
+ */
+public interface ActionGui{
+	
+	public void backToMain();
+	
+	public void setDestination(File file);
+	
+}

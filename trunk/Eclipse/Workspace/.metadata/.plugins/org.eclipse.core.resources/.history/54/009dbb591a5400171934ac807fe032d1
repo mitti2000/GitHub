@@ -1,0 +1,15 @@
+package ch.mitdom.compresstutorial;
+
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+public class GuiListener extends WindowAdapter{
+	private ActionGui gui;
+	public GuiListener(ActionGui gui){
+		this.gui = gui;
+	}
+	public void windowClosing(WindowEvent e){
+		new MainGui();
+	}
+}

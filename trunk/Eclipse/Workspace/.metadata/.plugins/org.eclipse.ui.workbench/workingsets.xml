@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492518019366_3" label="Projekte" name="Projekte">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/compresstutorial" type="4"/>
+<item elementID="=compresstutorial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Yahtzee" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492518124115_5" label="Übungen" name="Übungen">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/my-maventest" type="4"/>
+<item elementID="=my-maventest" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/jpa_testing" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Drachenkurve" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/superpom" type="4"/>

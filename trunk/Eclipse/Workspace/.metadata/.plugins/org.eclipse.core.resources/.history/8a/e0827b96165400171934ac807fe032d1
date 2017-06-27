@@ -1,0 +1,22 @@
+package ch.mitdom.compresstutorial;
+
+public class CompressorFactory {
+	ICompressor compressor;
+	
+	public ICompressor getCompressor(String fileType, CompressorGui compressorGui){
+		switch(fileType){
+			case(".zip"):
+				compressor =  new CompressorZIP(compressorGui);
+				break;
+				
+			case(".7z"):
+				compressor = new Compressor7z(compressorGui);
+				break;
+			
+			default:
+				compressor = null;
+				break;
+		}
+		return compressor;
+	}
+}

@@ -1,0 +1,42 @@
+package ch.mitdom.compresstutorial;
+
+import javax.swing.SwingWorker;
+
+/**
+ * Der CompressorWorker dient dazu, dass der Kompressionsvorgang in einem
+ * seperaten Thread läuft und somit das GUI während der Laufzeit geupdatet werden kann.
+ * Die Klasse leitet von SwingWorker ab.
+ */
+
+public class CompressorWorker extends SwingWorker {
+	
+	private CompressorGui compressorGui;
+	private ICompressor compressor;
+	
+	/**
+	 * Der Konstruktor erwartet ein
+	 * @param gui
+	 * @param usedCompressor
+	 */
+	public CompressorWorker(CompressorGui gui, ICompressor usedCompressor){
+		this.gui = gui;
+		this.compressor = usedCompressor;
+	}
+
+	@Override
+	protected Object doInBackground() throws Exception {
+		if(compressor.compress()){
+			gui.setBtnExecute(true);
+		}
+		
+		else{
+			gui.setBtnExecute(false);
+		}
+		return null;
+	}
+	
+	protected void updateProcess(int progress, String filename, int length){
+		gui.setProgress(progress, filename, length);
+	}
+
+}

@@ -1,0 +1,29 @@
+package ch.mitdom.compresstutorial;
+
+import javax.swing.SwingWorker;
+
+public class DecompressorWorker extends SwingWorker {
+	private DecompressorGui decompressorGui;
+	private IDecompressor decompressor;
+	
+	public DecompressorWorker(DecompressorGui usedDecompressorGui, IDecompressor usedDecompressor){
+		this.decompressorGui = usedDecompressorGui;
+		this.decompressor = usedDecompressor;
+	}
+
+	@Override
+	protected Object doInBackground() throws Exception {
+		if(decompressor.decompress(decompressorGui)){
+			decompressorGui.setBtnExecute(true);
+		}
+		
+		else{
+			decompressorGui.setBtnExecute(false);
+		}
+		return null;
+	}
+	
+	protected void updateProcess(int progress, String filename, int length){
+		decompressorGui.setProgress(progress, filename, length);
+	}
+}

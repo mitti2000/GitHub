@@ -1,0 +1,32 @@
+package ch.mitdom.compresstutorial;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+
+/**
+ * Listener der einen FileChooser Dialog öffnet um mehrere Dateien auszuwählen.
+ */
+
+public class ChooseFilesListener extends JFileChooser implements ActionListener {
+	
+	ActionGui gui;
+	/**
+	 * Konstruktor erwartet ein Gui vom Typ ActionGui
+	 * @param gui GUI vom Typ ActionGui
+	 */
+	public ChooseFilesListener(ActionGui gui){
+		this.gui = gui;
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		this.setControlButtonsAreShown(true);
+		this.setMultiSelectionEnabled(true);
+		this.showOpenDialog(this);
+		File[] files = this.getSelectedFiles();
+		compressGUI.setFiles(files);
+	}
+
+}

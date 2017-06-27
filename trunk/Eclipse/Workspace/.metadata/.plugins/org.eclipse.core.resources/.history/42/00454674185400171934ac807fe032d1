@@ -1,0 +1,22 @@
+package ch.mitdom.compresstutorial;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class DecompressListener implements ActionListener{
+
+	DecompressorGui decompressGUI;
+	IDecompressor decompressor;
+	
+	public DecompressListener(DecompressorGui decompressGUI){
+		this.decompressGUI = decompressGUI;
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		decompressGUI.prepareDecompress();
+		this.decompressor = decompressGUI.getDecompressor();
+		if(decompressGUI != null && decompressor != null){
+			new DecompressorWorker(decompressGUI, decompressor).execute();
+		}
+	}
+}

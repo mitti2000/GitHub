@@ -75,6 +75,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\mitti\SVN\Test"/>
 			<item value="C:\Users\mitti\SVN\mittischulezbw\compress_tutorial"/>
 			<item value="C:\Users\mitti\SVN\mittischulezbw\JPA"/>
 		</list>
@@ -89,6 +90,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="ch.mitdom.testing"/>
 			<item value="ch.mitdom.compresstutorial"/>
 			<item value="ch.mitti.jpa_testing.jpa_testing"/>
 		</list>
@@ -97,6 +99,7 @@
 			<item value="ch.mitti.jpa_testing"/>
 		</list>
 		<list key="artifactId">
+			<item value="testing"/>
 			<item value="compresstutorial"/>
 			<item value="jpa_testing"/>
 		</list>

@@ -1,0 +1,76 @@
+package ch.mitdom.compresstutorial;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import org.apache.commons.compress.archivers.sevenz.*;
+
+/**
+ * Erstellt ein .7z Archiv
+ * @author mitti
+ *
+ */
+public class Compressor7z implements ICompressor {
+	File destinationPath;
+	File[] source;
+	File destination;
+	CompressorGui compressorGui;
+	
+	/**
+	 * Konstruktor erwartet eine Referenz auf das aufrufende GUI
+	 * @param compressorGui GUI vom Typ CompressorGui
+	 */
+	public Compressor7z(CompressorGui compressorGui){
+		this.compressorGui = compressorGui;
+	}
+	
+	public void setDestination(File destinationPath) {
+		this.destination = new File(destinationPath.getAbsolutePath());
+	}
+	
+	public void setSource(File[] source) {
+		this.source = source;
+	}
+	
+	@Override
+	public boolean compress() {
+		if(source == null || destination == null) return false; //Überprüfen ob alles gesetzt ist
+		else{
+			try {
+				SevenZOutputFile archive = new SevenZOutputFile(destination); //Setze Output File					
+				int index = 0; //Setze den Index auf 0
+				
+				for(File file : source){ //Für jedes File in der Quelle
+					SevenZArchiveEntry entry = archive.createArchiveEntry(file, file.getName()); //Erstelle einen Eintrag im Archiv
+					archive.putArchiveEntry(entry);//Für dem OutputFile den Eintrag hinzu
+					
+					FileInputStream inputStream = new FileInputStream(file); //erstelle einen InputStrem
+					byte[] b = new byte[1024]; //erstelle ein Byte mit einem MB grösse
+					int count = 0; //Setze den Counter auf 0
+					while ((count = inputStream.read(b)) > 0) { //Lese 1MB vom InputStream solange Daten da sind
+						archive.write(b, 0, count); //Schreibe Daten in den offenen Eintrag
+					}
+					
+					archive.closeArchiveEntry(); //Schliesse den Eintrag
+					inputStream.close(); //Schliesse den InputStream
+					
+					index++; //erhöhe den Index
+					setProgress(index, file.getName(), source.length); //Aktualisiere die ProgressBar
+				}
+				
+				archive.close(); //Schliesse das OutputFile
+				return true;				
+			} 
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public void setProgress(int progress, String fileName, int length) {
+		compressorGui.setProgress(progress, fileName, length);
+	}
+
+}

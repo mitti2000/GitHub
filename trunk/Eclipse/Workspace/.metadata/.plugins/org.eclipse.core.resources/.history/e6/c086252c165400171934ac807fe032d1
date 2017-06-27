@@ -1,0 +1,36 @@
+package ch.mitdom.compresstutorial;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+/**
+ * Listener der die Compression vorbereitet und wenn alles passt einen 
+ * CompressorWorker aufruft um die Daten zu packen
+ */
+
+public class CompressListener implements ActionListener{
+	
+	CompressorGui compressGUI;
+	ICompressor compressor;
+	
+	/**
+	 * Konstrukter benötigt ein CompressorGui als Parameter
+	 * @param compressGUI GUI vom Typ CompressorGui
+	 */
+	public CompressListener(CompressorGui compressGUI){
+		this.compressGUI = compressGUI;
+	}
+	
+	/**
+	 * Prüft, ob ein Compressor vorhanden ist und startet dann den CompressorWorker,
+	 * welcher die Compression durchführt
+	 */
+	public void actionPerformed(ActionEvent e) {
+		compressGUI.prepareCompress();
+		this.compressor = compressGUI.getCompressor();
+		if(compressGUI != null && compressor != null){
+			new CompressorWorker(compressGUI, compressor).execute();
+		}
+	}
+
+}

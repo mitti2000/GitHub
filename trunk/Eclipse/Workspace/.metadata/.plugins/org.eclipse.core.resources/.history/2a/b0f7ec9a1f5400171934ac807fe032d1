@@ -1,0 +1,67 @@
+package ch.mitdom.compresstutorial;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import org.apache.commons.compress.archivers.zip.*;
+
+public class DecompressorZip implements IDecompressor {
+	File source;
+	File destination;
+	int length;
+	int index;
+
+	public boolean decompress(DecompressorGui decompressorGui) {
+		source = decompressorGui.getSource();
+		length = 0;
+		index = 0;
+		destination = decompressorGui.getDestination();
+		try {
+            InputStream sourceStream = new FileInputStream(source); //Neuer InputStream
+            InputStream tempStream = new FileInputStream(source); //TempStream für ProgressBar update
+            
+            //********
+            //Anzahl Dateien des Archivs ermitteln für das Update der Progress Bar
+			ZipArchiveInputStream archive = new ZipArchiveInputStream(sourceStream); //neuer ZipArchiveInputStream
+			ZipArchiveInputStream tempArchive = new ZipArchiveInputStream(tempStream); //TempArchive für Progress Bar Update
+			ZipArchiveEntry tempEntry;
+			while((tempEntry = tempArchive.getNextZipEntry()) != null){
+				if (!tempEntry.isDirectory())length++;
+			}
+			//********
+			
+			ZipArchiveEntry  entry; //neuer Eintrag
+			while ((entry = archive.getNextZipEntry()) != null) { //Solange es noch Dateien hat...
+				String name = entry.getName(); //Name der Datei lesen
+				if (!entry.isDirectory()) { // Verzeichnisse werden übersprungen
+					ByteArrayOutputStream content = new ByteArrayOutputStream(); //Ein Container für den Dateiinhalt erstellen
+					byte[] buffer = new byte[1024]; //Neues Byte der Grösse 1MB
+					int bytesRead; //anzahl gelesene Bytes
+					while ((bytesRead = archive.read(buffer)) != -1) { //Dateien werden in buffer gelesen. Solange noch Daten da sind
+						content.write(buffer, 0, bytesRead); //Daten vom Buffer in den Output Stream schreiben
+					}
+					File destFile = new File(destination, name); //Zielfile anlegen
+					File destFolder = destFile.getParentFile(); //Zielordner anlegen
+					destFolder.mkdirs(); //Zielordner im Dateisystem anlegen wenn noch nicht vorhanden
+					OutputStream outputStream = new FileOutputStream(destFile); //OutputStream anlegen
+					content.writeTo(outputStream); //Den Inhalt der Datei in den OutputStream schreiben
+					outputStream.close();
+					index++;
+					decompressorGui.setProgress(index, destination.getAbsolutePath()+"\\"+name, length);
+				}
+			}
+			
+			archive.close();
+			return true;
+		} 
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return false;
+		}
+	}
+
+}
