@@ -10,15 +10,15 @@ public class TestSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		final int MAX=10000;
+		final int MAX=100;
 		int[] zahlen = new int[MAX];
 		Random r = new Random();
 		long s,e;
 		
 //		StraightSelection sorter = new StraightSelection();
-//		ShellSort sorter = new ShellSort();
+		ShellSort sorter = new ShellSort();
 //		BubbleSort sorter = new BubbleSort();
-		Shakersort sorter = new Shakersort();
+//		Shakersort sorter = new Shakersort();
 //		Quicksort sorter = new Quicksort();
 //		Quicksortopt sorter = new Quicksortopt();
 //		StraightInsertation sorter = new StraightInsertation();

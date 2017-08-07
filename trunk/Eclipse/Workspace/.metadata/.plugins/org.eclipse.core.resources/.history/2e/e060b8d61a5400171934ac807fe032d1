@@ -1,8 +1,0 @@
-package ch.mitdom.compresstutorial;
-
-import java.io.File;
-
-public interface IDecompressor {
-
-	public boolean decompress(DecompressorGui decompressorGui);
-}
