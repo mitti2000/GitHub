@@ -3349,3 +3349,26 @@ org.eclipse.core.runtime.CoreException: Launch configuration CompressTutorial re
 2017-07-04 17:48:53,915 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2017-07-04 17:51:03,477 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2017-08-07 17:00:56,568 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-08-07 18:33:19,270 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-08-07 18:35:15,691 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-07 18:35:15,695 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\mitti\SVN\compess Tutorial\compress_tutorial\compresstutorial\src\main\resources
+2017-08-07 18:35:15,699 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-07 18:35:15,699 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\mitti\SVN\compess Tutorial\compress_tutorial\compresstutorial\src\test\resources
+2017-08-07 18:35:19,887 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-07 18:35:19,907 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\mitti\SVN\mittischulezbw\my-maventest\src\main\resources
+2017-08-07 18:35:19,911 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-07 18:35:19,927 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\mitti\SVN\mittischulezbw\my-maventest\src\test\resources
+2017-08-10 18:52:53,991 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-08-10 18:54:37,902 [Worker-0] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' C:\Users\mitti\SVN\csv-Viewer\csv-viewer\pom.xml
+2017-08-10 18:54:39,524 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ch.mitdom:csv-viewer:0.0.1-SNAPSHOT @ C:\Users\mitti\SVN\csv-Viewer\csv-viewer\pom.xml.
+2017-08-10 18:54:53,689 [Worker-0] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /csv-viewer/src/main/java
+2017-08-10 18:54:53,700 [Worker-0] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /csv-viewer/src/test/java
+2017-08-10 18:54:53,819 [Worker-0] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 15 sec
+2017-08-10 18:54:55,075 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-10 18:54:55,076 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\mitti\SVN\csv-Viewer\csv-viewer\src\main\resources
+2017-08-10 18:54:55,079 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-10 18:54:55,080 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\mitti\SVN\csv-Viewer\csv-viewer\src\test\resources
+2017-08-10 19:23:02,983 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-08-10 19:23:54,214 [Worker-19] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\mitti\SVN\csv-Viewer\csv-viewer
+2017-08-10 19:23:54,214 [Worker-19] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -s C:\Users\mitti\.m2\settings.xml clean install
+2017-08-14 10:06:35,327 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

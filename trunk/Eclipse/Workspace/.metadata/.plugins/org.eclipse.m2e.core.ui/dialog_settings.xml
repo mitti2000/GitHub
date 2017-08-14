@@ -75,6 +75,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\mitti\SVN\csv-Viewer"/>
+			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\AD6"/>
 			<item value="C:\Users\mitti\SVN\Test"/>
 			<item value="C:\Users\mitti\SVN\mittischulezbw\compress_tutorial"/>
 			<item value="C:\Users\mitti\SVN\mittischulezbw\JPA"/>
@@ -90,18 +92,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="ch.mitdom.testing"/>
-			<item value="ch.mitdom.compresstutorial"/>
-			<item value="ch.mitti.jpa_testing.jpa_testing"/>
+			<item value="ch.mitdom.csv_viewer"/>
 		</list>
 		<list key="groupId">
 			<item value="ch.mitdom"/>
-			<item value="ch.mitti.jpa_testing"/>
 		</list>
 		<list key="artifactId">
-			<item value="testing"/>
-			<item value="compresstutorial"/>
-			<item value="jpa_testing"/>
+			<item value="csv-viewer"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

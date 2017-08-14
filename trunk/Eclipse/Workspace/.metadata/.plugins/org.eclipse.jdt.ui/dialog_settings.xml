@@ -12,8 +12,9 @@
 	<item value="0" key="CallHierarchyViewPart.call_mode"/>
 	<item value="C:\Users\mitti\GitHub\trunk\Eclipse\AD1\jar" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="3" key="CallHierarchyViewPart.orientation"/>
-	<item value="C:\Users\mitti\GitHub\trunk\Eclipse" key="org.eclipse.jdt.ui.last.external.project"/>
+	<item value="C:\Users\mitti\SVN\csv-Viewer" key="org.eclipse.jdt.ui.last.external.project"/>
 	<list key="workingset_selection_history">
+		<item value="Projekte"/>
 		<item value="Übungen"/>
 		<item value="Tests"/>
 	</list>
@@ -103,8 +104,8 @@
 		<item value="151" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="completion_proposal_size">
-		<item value="381" key="size.y"/>
-		<item value="542" key="size.x"/>
+		<item value="382" key="size.y"/>
+		<item value="554" key="size.x"/>
 	</section>
 	<section name="AddGetterSetterDialog">
 		<item value="false" key="SortOrdering"/>
@@ -126,12 +127,12 @@
 	<section name="ProblemSeveritiesConfigurationBlock">
 		<item value="false" key="expanded2"/>
 		<item value="false" key="expanded1"/>
-		<item value="false" key="expanded4"/>
-		<item value="false" key="expanded3"/>
-		<item value="false" key="expanded6"/>
-		<item value="false" key="expanded5"/>
+		<item value="true" key="expanded4"/>
+		<item value="true" key="expanded3"/>
+		<item value="true" key="expanded6"/>
+		<item value="true" key="expanded5"/>
 		<item value="false" key="expanded7"/>
-		<item value="true" key="expanded0"/>
+		<item value="false" key="expanded0"/>
 	</section>
 	<section name="GenerateConstructorUsingFieldsSelectionDialog">
 		<item value="false" key="OmitCallToSuper"/>
