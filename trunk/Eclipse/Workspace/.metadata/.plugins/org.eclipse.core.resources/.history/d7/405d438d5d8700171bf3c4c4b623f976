@@ -1,0 +1,11 @@
+package ch.mitti.mathlight;
+
+import org.junit.Test;
+
+public class MathOperationTests {
+	@Test
+	public void addition_addPositives_returnResult(){
+		//arrange
+		MathOperations sut = new MathOperations();
+	}
+}	

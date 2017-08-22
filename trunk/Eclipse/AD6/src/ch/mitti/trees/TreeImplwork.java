@@ -1,5 +1,7 @@
 package ch.mitti.trees;
 
+import java.util.ArrayList;
+
 public class TreeImplwork implements Tree{
 	
 	private Node root=null;
@@ -110,7 +112,6 @@ public class TreeImplwork implements Tree{
 	*/
 	private Element search2(Node root, int id)
 	{
-		if(root == null) return null;
 		Node tempRoot = root;
 		while(true){
 			if(tempRoot==null) return null;
@@ -127,15 +128,22 @@ public class TreeImplwork implements Tree{
 		if(root==null) return null;
 		if(root.getItem().getId()==id){
 			if(root.getLeft()!=null && root.getRight()!=null){
+				Node preRoot = root;
 				Node tempRoot = root.getRight();
 				while(tempRoot.getLeft()!=null){
+					preRoot = tempRoot;
 					tempRoot=tempRoot.getLeft();
 				}
+				preRoot.setLeft(null);
+				preRoot.setRight(tempRoot.getRight());
 				tempRoot.setRight(root.getRight());
-				return tempRoot;
+				tempRoot.setLeft(root.getLeft());
+				root=tempRoot;
 			}
-			if(root.getLeft()==null) return root.getRight();
-			else if(root.getRight()==null) return root.getLeft();
+			else if(root.getLeft()==null) root = root.getRight();
+			else if(root.getRight()==null) root = root.getLeft();
+			else root=null;
+			return root;
 		}
 		if(id<root.getItem().getId()){
 			root.setLeft(delete(root.getLeft(),id));
@@ -173,6 +181,12 @@ public class TreeImplwork implements Tree{
 	
 	private void length(Node root, int h)
 	{
+		if(root==null) return;
+		anzKnoten++;
+		int tempH = h+1;
+		pfadlaenge+=tempH;
+		length(root.getLeft(),tempH);
+		length(root.getRight(),tempH);
 		
 	}
 

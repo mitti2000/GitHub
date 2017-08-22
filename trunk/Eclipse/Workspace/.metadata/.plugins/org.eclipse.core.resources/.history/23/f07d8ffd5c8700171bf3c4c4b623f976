@@ -1,0 +1,11 @@
+package test.ch.mitti.MathListTests;
+
+import org.junit.Test;
+
+public class MathLigthUnitTest {
+	
+	@Test
+	public void addition_addPositives_returnsSum(){
+		
+	}
+}

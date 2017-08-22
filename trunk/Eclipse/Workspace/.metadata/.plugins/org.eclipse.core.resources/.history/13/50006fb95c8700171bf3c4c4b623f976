@@ -1,0 +1,14 @@
+package test.ch.mitti.MathListTests;
+
+import org.junit.Test;
+
+public class MathLigthUnitTest {
+	@Test
+	public void unit_of_work_operation_result() {
+		//arrange
+
+		//act
+
+		//assert
+	}
+}

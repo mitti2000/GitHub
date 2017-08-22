@@ -1,0 +1,18 @@
+package ch.mitti.mathlight;
+
+import org.hamcrest.core.Is;
+import org.junit.Test;
+
+public class MathOperationTests {
+	@Test
+	public void addition_addPositives_returnResult(){
+		//arrange
+		MathOperations sut = new MathOperations();
+		
+		//act
+		int result = sut.addiere(4, 5);
+		
+		//assert
+		assertEquals(result, Is<T>())
+	}
+}	

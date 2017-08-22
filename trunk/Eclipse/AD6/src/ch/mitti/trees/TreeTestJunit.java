@@ -114,5 +114,9 @@ public class TreeTestJunit extends TestCase {
 		
 		
 	}*/
-
+	
+	@Test
+	public void testLaenge(){
+		assertEquals((14.0/6.0),(baum.length()));
+	}
 }

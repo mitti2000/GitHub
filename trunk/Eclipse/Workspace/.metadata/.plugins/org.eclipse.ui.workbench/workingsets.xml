@@ -2,8 +2,7 @@
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492518019366_3" label="Projekte" name="Projekte">
 <item elementID="=compresstutorial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Yahtzee" type="4"/>
-<item elementID="=csv-viewer" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Yahtzee" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492518124115_5" label="Übungen" name="Übungen">
 <item elementID="=my-maventest" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -15,6 +14,8 @@
 <item elementID="=AD3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AD4" type="4"/>
 <item elementID="=AD6" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MathLibraryLight" type="4"/>
+<item elementID="=mathlight" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1493055710763_6" label="Tests" name="Tests"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1417678534638_0" label="Window Working Set" name="Aggregate for window 1417678534638"/>
