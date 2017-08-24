@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tablePhonebook" layoutX="57.0" layoutY="37.0" prefHeight="434.0" prefWidth="497.0">
+        <columns>
+          <TableColumn fx:id="columnName" prefWidth="164.0" resizable="false" text="Name" />
+          <TableColumn fx:id="columnAge" prefWidth="49.0" resizable="false" text="Alter" />
+            <TableColumn fx:id="columnPhonenumber" prefWidth="120.0" resizable="false" text="Telefonnummer" />
+            <TableColumn fx:id="columnPhonetype" prefWidth="103.0" resizable="false" text="Telefontyp" />
+            <TableColumn fx:id="columnAdvertisment" prefWidth="60.0" resizable="false" text="Werbung" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="476.0" layoutY="482.0" mnemonicParsing="false" text="Hinzufügen" />
+   </children>
+</AnchorPane>

@@ -2,10 +2,12 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="ch.mitti"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="javaFxSchulung"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -16,6 +18,7 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
+			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
@@ -89,6 +92,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Neuer Ordner (2)"/>
+			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Neuer Ordner"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\MathLight"/>
 			<item value="C:\Users\mitti\SVN\csv-Viewer"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\AD6"/>
@@ -107,16 +112,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="ch.mitti.mathlight"/>
-			<item value="ch.mitdom.csv_viewer"/>
 		</list>
 		<list key="groupId">
-			<item value="ch.mitti"/>
-			<item value="ch.mitdom"/>
 		</list>
 		<list key="artifactId">
-			<item value="mathlight"/>
-			<item value="csv-viewer"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -127,7 +126,6 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
