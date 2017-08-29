@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ch.mitti.yahtzee.controller.DiceController"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.model.DiceBoardModel"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="ch.mitti.yahtzee.controller.ButtonController"/>
@@ -32,7 +31,6 @@
 <fullyQualifiedTypeName name="ch.mitti.MathLight.MathOperationTest"/>
 <fullyQualifiedTypeName name="sun.management.ManagementFactoryHelper"/>
 <fullyQualifiedTypeName name="ch.mitti.MathLight.MathOperations"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="org.hamcrest.CoreMatchers"/>
 <fullyQualifiedTypeName name="org.hamcrest.core.Is"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="javafx.scene.control.TableColumn"/>
 <fullyQualifiedTypeName name="javafx.beans.property.SimpleBooleanProperty"/>
 <fullyQualifiedTypeName name="javafx.beans.property.SimpleStringProperty"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="hashtable.HashTabElement"/>
 </qualifiedTypeNameHistroy>

@@ -7,6 +7,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="ad7"/>
 			<item value="javaFxSchulung"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -92,6 +93,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\AD7"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Neuer Ordner (2)"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Neuer Ordner"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\MathLight"/>

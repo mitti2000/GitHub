@@ -1,0 +1,91 @@
+package hashtable;
+
+import zbw.hash.Element;
+
+public class HashtabelleImpl  implements Hashtabelle{
+
+	/**************************************************************************
+	 * ATTRIBUTE
+	 **************************************************************************/
+
+	private final int MAX = 29;
+	private HashTabElement tab[] = new HashTabElement[MAX];
+	
+	
+	/**************************************************************************
+	 * PRIVATE METHODEN
+	 **************************************************************************/
+
+	/**
+	 * Hashfunktion: berechnet aus dem Schlüssel den Promärindex
+	 * @param S Schlüssel
+	 * @return Primärindex 
+	 */
+	private int hash(String s)
+	{
+		int value = (s.length()*(s.charAt(0) + s.charAt(s.length()-1))) % MAX; 
+		return value;
+	}
+	
+	/**
+	 * Element anhand des Schlüssel in der Hashtabelle suchen
+	 * @param id Schlüssel des ELementes
+	 * @return Position des Elementes in der Hashtabelle; -1: Element nicht gefunden
+	 */
+	private int suchen(String id)
+	{	
+		int index = hash(id);
+		if(tab[index].getZustand()==HashTabElement.FREI) return -1;
+		while(tab[index].getElement().getId()!=id){
+			index++;
+			if(tab[index].getZustand()==HashTabElement.FREI) return -1;
+			if(tab[index].getElement().getId() == id) return index;
+		}
+	}
+
+	
+	/**************************************************************************
+	 * PUBLIC METHODEN
+	 **************************************************************************/	
+	
+	/**
+	 * Defaultkonstruktor
+	 */
+	public HashtabelleImpl()
+	{
+		
+	}
+	
+	/**
+	 * Element in der Hashtabelle einfügen
+	 * @param e einzufügendes Element
+	 * @return true: Element wurde eingefügt; 
+	 * 		   false: Hashtabelle voll; Element nicht eingefügt
+	 */
+	public boolean put(Element e)
+	{
+		
+	}
+	
+	/**
+	 * Element in der Hashtabelle suchen
+	 * @param id Schlüssel des zu suchenden Elementes
+	 * @return gesuchtes Element; null-> Element nicht gefunden 
+	 */
+	public Element get(String id)
+	{
+		
+	}
+	
+	/**
+	 * Element in der Hashtabelle löschen
+	 * @param id Schlüssel des zu löschenden Elementes
+	 * @return true: Element wurde gelöscht; 
+	 * 		   false: Element nicht gefunden
+	 */
+	public boolean delete(String id)
+	{
+		
+	}
+}
+	

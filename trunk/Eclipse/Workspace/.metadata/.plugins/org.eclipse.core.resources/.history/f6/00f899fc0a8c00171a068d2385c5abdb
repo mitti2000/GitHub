@@ -1,0 +1,23 @@
+package hashtable;
+
+public class HashtabelleImpl implements Hashtabelle {
+
+	@Override
+	public boolean put(Element e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Element get(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean delete(String id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
