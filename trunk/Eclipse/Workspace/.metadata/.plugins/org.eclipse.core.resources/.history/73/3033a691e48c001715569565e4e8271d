@@ -1,0 +1,7 @@
+package loggingServiceTest;
+
+import org.mockito.Mockito.*;
+
+public class LoggingServiceTest {
+	
+}

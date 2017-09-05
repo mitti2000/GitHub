@@ -1,0 +1,25 @@
+package uebung1Test;
+
+import org.junit.Test;
+import uebung1.CurrentDate;
+import uebung1.FakeDateGenerator;
+
+import static junit.framework.TestCase.assertTrue;
+
+public class CurrentDateTest {
+
+    @Test
+    public void getDate_withStub_returnTrue(){
+        //Arrage
+        FakeDateGenerator fakeDateGenerator = new FakeDateGenerator();
+        CurrentDate sut = new CurrentDate(fakeDateGenerator);
+        boolean result = false;
+
+        //act
+        if(sut.getCurrentDate().equals("01.01.1990")) result = true;
+        System.out.println(sut.getCurrentDate());
+
+        //assert
+        assertTrue(result);
+    }
+}

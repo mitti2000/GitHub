@@ -1,8 +1,0 @@
-package ch.mitti.MathLight;
-
-public class MathOperations {
-	
-	public int addition(int a, int b){
-		
-	}
-}

@@ -1,0 +1,16 @@
+package uebung1;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class CurrentDate {
+	
+	
+	public String getCurrentDate(){
+		IDate  dateGenerator = new DateGenerator();
+		
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+		String result = dateTimeFormatter.format(date);
+		return result;
+	}
+}

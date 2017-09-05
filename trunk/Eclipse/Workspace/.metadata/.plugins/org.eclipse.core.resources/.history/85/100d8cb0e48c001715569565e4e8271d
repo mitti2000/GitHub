@@ -1,0 +1,11 @@
+package loggingServiceTest;
+
+import org.mockito.Mockito.*;
+
+public class LoggingServiceTest {
+	
+	@Test
+	public void addMessage_withMockedWriter_returnTrue(){
+		
+	}
+}

@@ -1,0 +1,9 @@
+package uebung1;
+
+public class CurrentDate {
+	
+	
+	public String getCurrentDate(){
+		
+	}
+}

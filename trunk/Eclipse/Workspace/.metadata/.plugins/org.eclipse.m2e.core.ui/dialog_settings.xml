@@ -7,6 +7,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="dependencyInjection"/>
 			<item value="ad7"/>
 			<item value="javaFxSchulung"/>
 		</list>
@@ -93,6 +94,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\DependencyInjection"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\AD7"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Neuer Ordner (2)"/>
 			<item value="C:\Users\mitti\GitHub\trunk\Eclipse\Neuer Ordner"/>
@@ -130,5 +132,11 @@
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
+	</section>
+	<section name="org.eclipse.m2e.editor.dialogs.ManageDependenciesDialog">
+		<item value="891" key="width"/>
+		<item value="635" key="x"/>
+		<item value="397" key="y"/>
+		<item value="450" key="height"/>
 	</section>
 </section>
