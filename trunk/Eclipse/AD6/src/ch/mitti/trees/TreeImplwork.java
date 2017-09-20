@@ -123,37 +123,6 @@ public class TreeImplwork implements Tree{
 		}
 	}
 	
-	private Node delete(Node root, int id)
-	{
-		if(root==null) return null;
-		if(root.getItem().getId()==id){
-			if(root.getLeft()!=null && root.getRight()!=null){
-				Node preRoot = root;
-				Node tempRoot = root.getRight();
-				while(tempRoot.getLeft()!=null){
-					preRoot = tempRoot;
-					tempRoot=tempRoot.getLeft();
-				}
-				preRoot.setLeft(null);
-				preRoot.setRight(tempRoot.getRight());
-				tempRoot.setRight(root.getRight());
-				tempRoot.setLeft(root.getLeft());
-				root=tempRoot;
-			}
-			else if(root.getLeft()==null) root = root.getRight();
-			else if(root.getRight()==null) root = root.getLeft();
-			else root=null;
-			return root;
-		}
-		if(id<root.getItem().getId()){
-			root.setLeft(delete(root.getLeft(),id));
-		}
-		else {
-			root.setRight(delete(root.getRight(),id));
-		}
-		return root;
-	}
-	
 	private Node insertTree(Node root, Element e)
 	{
 		Node neu;
@@ -189,6 +158,45 @@ public class TreeImplwork implements Tree{
 		length(root.getRight(),tempH);
 		
 	}
+	
+	private Node delete(Node root, int id)
+	{
+		Node hilf, hilfprev;
+		if (root != null){
+			if (id < root.getItem().getId()) root.setLeft(delete(root.getLeft(),id));
+			else{
+				if (id > root.getItem().getId()) root.setRight(delete(root.getRight(),id));
+				else {
+					//Element gefunden
+					
+					// Test Blatt
+					if((root.getLeft()== null) && (root.getRight()==null)) root = null;
+					else {
+						if((root.getLeft()== null) || (root.getRight()==null)){
+							// Nur ein Nachfolger
+							if (root.getLeft() == null) root = root.getRight();
+							else root = root.getLeft();
+						}
+						else {
+							//Knoten hat zwei Nachfolger
 
+							// nächstgrösseres Element bestimmen
+							hilf = root;					
+							hilfprev = hilf;
+							hilf = root.getRight();						
+							while (hilf.getLeft() != null) {
+								hilfprev = hilf;
+								hilf = hilf.getLeft();
+							}
+							root.setItem(hilf.getItem());
+							if (hilfprev == root) hilfprev.setRight(hilf.getLeft());
+							else hilfprev.setLeft(hilf.getRight());				
+						}
+					}
+				}
+			}
+		}
+		return root;	
+	}
 }
 

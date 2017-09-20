@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy package &apos;ch.mitti.netzwerkv3&apos; to &apos;NetzwerkV1/src&apos;&#x0D;&#x0A;- Original project: &apos;NetzwerkV1&apos;&#x0D;&#x0A;- Destination element: &apos;NetzwerkV1/src&apos;&#x0D;&#x0A;- Original element: &apos;NetzwerkV1/src/ch.mitti.netzwerkv3&apos;" description="Copy package" destination="/src" element1="/src&lt;ch.mitti.netzwerkv3" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1484051949533" version="1.0"/>
-</session>

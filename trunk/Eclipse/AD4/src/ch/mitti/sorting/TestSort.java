@@ -16,10 +16,10 @@ public class TestSort {
 		long s,e;
 		
 //		StraightSelection sorter = new StraightSelection();
-		ShellSort sorter = new ShellSort();
+//		ShellSort sorter = new ShellSort();
 //		BubbleSort sorter = new BubbleSort();
 //		Shakersort sorter = new Shakersort();
-//		Quicksort sorter = new Quicksort();
+		Quicksort sorter = new Quicksort();
 //		Quicksortopt sorter = new Quicksortopt();
 //		StraightInsertation sorter = new StraightInsertation();
 //		StudAufgabe sorter = new StudAufgabe();

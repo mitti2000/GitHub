@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;ch.mitti.mystack$&apos; to &apos;ch.mitti.mystack&apos;&#x0D;&#x0A;- Original project: &apos;Stack&apos;&#x0D;&#x0A;- Original element: &apos;Stack/test/ch.mitti.mystack$&apos;&#x0D;&#x0A;- Renamed element: &apos;Stack/test/ch.mitti.mystack&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;ch.mitti.mystack$&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/test&lt;ch.mitti.mystack$" name="ch.mitti.mystack" qualified="false" references="true" stamp="1490107327792" textual="false" version="1.0"/>
-</session>
