@@ -1,8 +1,0 @@
-package ch.mitti.mathlight;
-
-public class MathOperationTests {
-	@Test
-	public void addition_addPositives_returnResult(){
-		
-	}
-}	
