@@ -1,0 +1,16 @@
+package ch.mitti.logger;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class DateFormater {
+	DateGenerator dateGenerator;
+	
+	public DateFormater(){
+		dateGenerator = new DateGenerator();
+	}
+	
+	public LocalDate formatDate(){
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+	}
+}

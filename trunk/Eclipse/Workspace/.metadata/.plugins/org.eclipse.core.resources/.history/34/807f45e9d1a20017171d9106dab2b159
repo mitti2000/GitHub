@@ -1,0 +1,13 @@
+package ch.mitti.logger;
+
+public class DateFormater {
+	DateGenerator dateGenerator;
+	
+	public DateFormater(){
+		dateGenerator = new DateGenerator();
+	}
+	
+	public LocalDate formatDate(){
+		
+	}
+}

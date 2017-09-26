@@ -1,4 +1,4 @@
-package ch.mitti.MathLight;
+package main.ch.mitti.MathLight;
 
 public class MathOperations {
 	

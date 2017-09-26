@@ -1,0 +1,8 @@
+package ch.mitti.logger;
+
+public class DateGenerator {
+	
+	public LocalDate generate(){
+		
+	}
+}

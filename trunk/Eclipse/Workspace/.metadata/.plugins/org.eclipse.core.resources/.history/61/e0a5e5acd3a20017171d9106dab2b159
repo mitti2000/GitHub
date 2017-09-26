@@ -1,0 +1,20 @@
+package ch.mitti.LoggerTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class LoggerIntegrationTest {
+
+
+	@Test
+	public void Logger_log_lognow() {
+		//arrange
+		Logger sut = new Logger()
+		//act
+	
+		//assert
+	}
+
+}

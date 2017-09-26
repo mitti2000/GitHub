@@ -1,5 +1,7 @@
 package test.ch.mitti.MathListTests;
 
+import main.ch.mitti.MathLight.*;
+
 import org.junit.Test;
 
 import ch.mitti.MathLight.MathOperations;
