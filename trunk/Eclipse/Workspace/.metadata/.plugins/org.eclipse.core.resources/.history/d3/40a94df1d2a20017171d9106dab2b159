@@ -1,0 +1,6 @@
+package ch.mitti.logger;
+
+public class Logger {
+	DateGenerator dateGenerator;
+	
+}

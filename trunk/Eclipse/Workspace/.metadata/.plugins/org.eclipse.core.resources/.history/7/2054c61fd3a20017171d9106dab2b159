@@ -1,0 +1,16 @@
+package ch.mitti.logger;
+
+public class Logger {
+	DateGenerator dateGenerator;
+	DateFormater dateFormater;
+	
+	public Logger(DateGenerator dateGenerator){
+		this.dateGenerator = dateGenerator;
+	}
+	
+	public void log(){
+		dateGenerator.generate();
+		System.out.println();
+	}
+	
+}
