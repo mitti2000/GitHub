@@ -5,3 +5,10 @@ F:\GitHub\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\obj\Debug\He
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\obj\Debug\Hello.csproj.CoreCompileInputs.cache
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\obj\Debug\Hello.exe
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\obj\Debug\Hello.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\bin\Debug\Hello.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\bin\Debug\Hello.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\bin\Debug\Hello.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\obj\Debug\Hello.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\obj\Debug\Hello.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\obj\Debug\Hello.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Pluralsight2\Hello\Hello\obj\Debug\Hello.pdb
