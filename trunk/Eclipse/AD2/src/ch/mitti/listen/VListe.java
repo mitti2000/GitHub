@@ -126,52 +126,52 @@ public class VListe implements Liste{
 			//wenn eines oder beide nicht vorhanden
 			if(el1==null || el2 == null) return false;
 			
-				//...und nicht gleich head
-				if(el1!=head && el2!=head){
-					hilf=head;
-					while(hilf!=null){
-						if(hilf.getNext()==el1) hilfEl1 = hilf;
-						if(hilf.getNext()==el2) hilfEl2 = hilf;
-						hilf = hilf.getNext();
-					}
-					if(el1.getNext()!=el2 && el2.getNext()!=el1){
-						//tauschen bei getrennten elementen
-						hilfEl1.setNext(el2);
-						hilfEl2.setNext(el1);
-						temp = el2.getNext();
-						el2.setNext(el1.getNext());
-						el1.setNext(temp);
-						return true;
-					}
+			//...und nicht gleich head
+			if(el1!=head && el2!=head){
+				hilf=head;
+				while(hilf!=null){
+					if(hilf.getNext()==el1) hilfEl1 = hilf;
+					if(hilf.getNext()==el2) hilfEl2 = hilf;
+					hilf = hilf.getNext();
 				}
-				else if (el1==head||el2==head){
-					if(el2==head) {
-						temp = el2;
-						el1 = el2;
-						el2 = temp;
-						temp = null;
-					}
-					hilf = head;
-					while(hilf.getNext()!=el2){
-						hilf = hilf.getNext();
-					}
-					//wenn el2 auf el1 folgt
-					if(el1.getNext()==el2){
-						temp = el2.getNext();
-						head = el2;
-						el2.setNext(el1);
-						el1.setNext(temp);
-						return true;
-					}
-					else{
-						temp = el2.getNext();
-						head=el2;
-						el2.setNext(el1.getNext());
-						hilf.setNext(el1);
-						el1.setNext(temp);
-						return true;
-					}
+				if(el1.getNext()!=el2 && el2.getNext()!=el1){
+					//tauschen bei getrennten elementen
+					hilfEl1.setNext(el2);
+					hilfEl2.setNext(el1);
+					temp = el2.getNext();
+					el2.setNext(el1.getNext());
+					el1.setNext(temp);
+					return true;
 				}
+			}
+			else if (el1==head||el2==head){
+				if(el2==head) {
+					temp = el2;
+					el1 = el2;
+					el2 = temp;
+					temp = null;
+				}
+				hilf = head;
+				while(hilf.getNext()!=el2){
+					hilf = hilf.getNext();
+				}
+				//wenn el2 auf el1 folgt
+				if(el1.getNext()==el2){
+					temp = el2.getNext();
+					head = el2;
+					el2.setNext(el1);
+					el1.setNext(temp);
+					return true;
+				}
+				else{
+					temp = el2.getNext();
+					head=el2;
+					el2.setNext(el1.getNext());
+					hilf.setNext(el1);
+					el1.setNext(temp);
+					return true;
+				}
+			}
 			}
 		return false;
 	}
