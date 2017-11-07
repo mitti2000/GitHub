@@ -1,0 +1,10 @@
+
+public class PersonenListe<T> {
+	public void add(T item){
+		
+	}
+	
+	public void print(){
+		
+	}
+}

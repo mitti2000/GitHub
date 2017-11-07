@@ -1,0 +1,9 @@
+
+public class Student {
+	private String name;
+	private int nummer;
+	public Student(String name, int nummer){
+		this.name = name;
+		this.nummer = nummer;
+	}
+}

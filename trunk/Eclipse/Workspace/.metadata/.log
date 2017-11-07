@@ -1087,3 +1087,39 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
 	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-11-07 19:34:12.428 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_CH
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-11-07 19:34:32.244
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-07 19:34:35.341
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mitti'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-11-07 19:34:45.246
+!MESSAGE Could not bind a reference of component org.eclipse.fx.ide.css.cssext.ui.internal.DefaultCssExtProvider. The reference is: Reference[name = ICSSExtModelProvider, interface = org.eclipse.fx.ide.css.cssext.ICSSExtModelProvider, policy = dynamic, cardinality = 0..n, target = null, bind = bindCssExtensionModelProvider, unbind = unbindCssExtensionModelProvider]
+
+!ENTRY org.tigris.subversion.clientadapter.javahl 1 0 2017-11-07 19:35:31.725
+!MESSAGE Failed to load JavaHL Library.
+These are the errors that were encountered:
+Native Library C:\Windows\System32\dbghelp.dll already loaded in another classloader
+C:\Users\mitti\.eclipse\org.eclipse.platform_4.6.0_1709980481_win32_win32_x86_64\plugins\org.tigris.subversion.clientadapter.javahl.win64_1.9.3\libsvn_delta-1.dll: Die angegebene Prozedur wurde nicht gefunden
+C:\Users\mitti\.eclipse\org.eclipse.platform_4.6.0_1709980481_win32_win32_x86_64\plugins\org.tigris.subversion.clientadapter.javahl.win64_1.9.3\libsvn_diff-1.dll: Die angegebene Prozedur wurde nicht gefunden
+C:\Users\mitti\.eclipse\org.eclipse.platform_4.6.0_1709980481_win32_win32_x86_64\plugins\org.tigris.subversion.clientadapter.javahl.win64_1.9.3\libsvn_wc-1.dll: Die angegebene Prozedur wurde nicht gefunden
+C:\Users\mitti\.eclipse\org.eclipse.platform_4.6.0_1709980481_win32_win32_x86_64\plugins\org.tigris.subversion.clientadapter.javahl.win64_1.9.3\libsvn_fs-1.dll: Die angegebene Prozedur wurde nicht gefunden
+C:\Users\mitti\.eclipse\org.eclipse.platform_4.6.0_1709980481_win32_win32_x86_64\plugins\org.tigris.subversion.clientadapter.javahl.win64_1.9.3\libsvn_repos-1.dll: Die angegebene Prozedur wurde nicht gefunden
+C:\Users\mitti\.eclipse\org.eclipse.platform_4.6.0_1709980481_win32_win32_x86_64\plugins\org.tigris.subversion.clientadapter.javahl.win64_1.9.3\libsvn_ra-1.dll: Die angegebene Prozedur wurde nicht gefunden
+C:\Users\mitti\.eclipse\org.eclipse.platform_4.6.0_1709980481_win32_win32_x86_64\plugins\org.tigris.subversion.clientadapter.javahl.win64_1.9.3\libsvn_client-1.dll: Die angegebene Prozedur wurde nicht gefunden
+C:\Users\mitti\.eclipse\org.eclipse.platform_4.6.0_1709980481_win32_win32_x86_64\plugins\org.tigris.subversion.clientadapter.javahl.win64_1.9.3\libsvnjavahl-1.dll: Die angegebene Prozedur wurde nicht gefunden
+no svnjavahl-1 in java.library.path
+no svnjavahl in java.library.path
+java.library.path = C:\Program Files\eclipse;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_151/bin/server;C:/Program Files/Java/jre1.8.0_151/bin;C:/Program Files/Java/jre1.8.0_151/lib/amd64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_102\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\nodejs\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\apache-maven-3.5.0\bin;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\TortoiseGit\bin;C:\Users\mitti\AppData\Local\Microsoft\WindowsApps;C:\Users\mitti\AppData\Roaming\npm;;C:\Program Files\eclipse;;.

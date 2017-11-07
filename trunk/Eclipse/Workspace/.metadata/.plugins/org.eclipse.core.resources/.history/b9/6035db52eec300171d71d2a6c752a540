@@ -1,0 +1,14 @@
+
+public class PersonenListe<T,V> {
+	public void add(T item){
+		
+	}
+	
+	public void print(String text){
+		
+	}
+	
+	public int merge(PersonenListe<V> liste, PersonenListe<T> merge){
+		
+	}
+}
