@@ -1,4 +1,0 @@
-
-public class Personenliste<T> {
-	public void add(T item)
-}

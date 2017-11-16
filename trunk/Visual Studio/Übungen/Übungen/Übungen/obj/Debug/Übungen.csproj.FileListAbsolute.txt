@@ -1,0 +1,7 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Übungen\bin\Debug\Übungen.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Übungen\bin\Debug\Übungen.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Übungen\bin\Debug\Übungen.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Übungen\obj\Debug\Übungen.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Übungen\obj\Debug\Übungen.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Übungen\obj\Debug\Übungen.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Übungen\obj\Debug\Übungen.pdb

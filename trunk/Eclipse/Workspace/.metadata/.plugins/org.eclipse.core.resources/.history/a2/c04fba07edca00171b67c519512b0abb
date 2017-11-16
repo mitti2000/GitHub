@@ -1,0 +1,14 @@
+package ch.mitti.threadtest;
+
+public class MyThread implements Runnable {
+	
+	public MyThread(String name){
+		super(name);
+	}
+	
+	@Override
+	public void run(){
+		
+	}
+	
+}

@@ -1,9 +1,8 @@
 
-public class Student {
-	private String name;
+public class Student extends Person {
 	private int nummer;
 	public Student(String name, int nummer){
-		this.name = name;
+		super(name);
 		this.nummer = nummer;
 	}
 }

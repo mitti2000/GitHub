@@ -1,0 +1,7 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Fizzbuzz\obj\Debug\Fizzbuzz.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Fizzbuzz\obj\Debug\Fizzbuzz.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Fizzbuzz\bin\Debug\Fizzbuzz.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Fizzbuzz\bin\Debug\Fizzbuzz.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Fizzbuzz\bin\Debug\Fizzbuzz.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Fizzbuzz\obj\Debug\Fizzbuzz.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Fizzbuzz\obj\Debug\Fizzbuzz.pdb

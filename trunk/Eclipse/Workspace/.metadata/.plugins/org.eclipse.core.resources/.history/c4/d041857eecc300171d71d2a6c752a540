@@ -1,6 +1,0 @@
-
-public class personenListe<T> {
-	public void add(T item){
-		
-	}
-}

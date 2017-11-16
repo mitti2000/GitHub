@@ -1,0 +1,9 @@
+
+public class Student extends Person implements java.lang.Comparable {
+	private String name;
+	private int nummer;
+	public Student(String name, int nummer){
+		this.name = name;
+		this.nummer = nummer;
+	}
+}

@@ -1,0 +1,10 @@
+
+public class Student extends Person {
+	private String name;
+	private int nummer;
+	public Student(String name, int nummer){
+		super(name, nummer)
+		this.name = name;
+		this.nummer = nummer;
+	}
+}

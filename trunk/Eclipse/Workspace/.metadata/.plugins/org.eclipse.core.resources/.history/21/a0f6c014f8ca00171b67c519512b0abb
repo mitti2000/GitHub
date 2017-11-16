@@ -1,0 +1,5 @@
+package ch.mitti.threaduebung2;
+
+public class Clock extends Thread {
+	
+}

@@ -1,0 +1,24 @@
+package ch.mitti.threaduebung2;
+
+import javax.swing.JLabel;
+
+public class Clock extends Thread {
+	
+	JLabel label;
+	
+	public Clock(JLabel label){
+		this.label = label;
+	}
+	
+	@Override
+	public void run(){
+		while(!isInterrupted()){
+				label.setText("");
+			try {
+				sleep(100);
+			} catch (InterruptedException e) {
+				interrupt();
+			}
+		}
+	}
+}
