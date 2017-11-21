@@ -1,0 +1,15 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\bin\Debug\WPFTest.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\bin\Debug\WPFTest.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\bin\Debug\WPFTest.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\MainWindow.g.cs
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\App.g.cs
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest_MarkupCompile.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest_MarkupCompile.lref
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\MainWindow.baml
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest.g.resources
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest.Properties.Resources.resources
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest.csproj.GenerateResource.Cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\WPFTest\obj\Debug\WPFTest.pdb
