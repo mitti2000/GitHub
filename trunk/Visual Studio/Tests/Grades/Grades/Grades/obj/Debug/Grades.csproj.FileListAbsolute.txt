@@ -5,3 +5,10 @@ C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\bin\Debug\G
 C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\bin\Debug\Grades.pdb
 C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\obj\Debug\Grades.exe
 C:\Users\mitti\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\obj\Debug\Grades.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\bin\Debug\Grades.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\bin\Debug\Grades.exe
+F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\bin\Debug\Grades.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\obj\Debug\Grades.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\obj\Debug\Grades.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\obj\Debug\Grades.exe
+F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\Grades\obj\Debug\Grades.pdb

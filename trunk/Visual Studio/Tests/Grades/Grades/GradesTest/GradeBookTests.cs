@@ -8,6 +8,67 @@ using Grades;
 
 namespace Grades.Test
 {
+
+    [TestClass]
+    public class TypeTests
+    {
+
+        [TestMethod]
+        public void UpperCaseString()
+        {
+            String name = "thomas";
+            name = name.ToUpper();
+
+            Assert.AreEqual("THOMAS", name);
+        }
+
+        [TestMethod]
+        public void AddDaysToDateTime()
+        {
+            DateTime date = new DateTime(2015, 1, 1);
+            date = date.AddDays(1);
+
+            Assert.AreEqual(2, date.Day);
+        }
+
+        [TestMethod]
+        public void IncrementInt()
+        {
+            int x = 46;
+            IncrementeNumber(x);
+            Assert.AreEqual(46, x);
+        }
+
+        private void IncrementeNumber(int number)
+        {
+            number += 1;
+        }
+
+        [TestMethod]
+        public void ReferenceTypesPassByValue()
+        {
+            GradeBook book1 = new GradeBook();
+            GradeBook book2 = book1;
+
+            GiveBookAName(book2);
+            Assert.AreEqual("A GradeBook", book1.Name);
+        }
+
+        private void GiveBookAName(GradeBook book)
+        {
+            book.Name = "A GradeBook";
+        }
+
+        [TestMethod]
+        public void StringComparisons()
+        {
+        string name1 = "Thomas";
+        string name2 = "thomas";
+        bool result = String.Equals(name1, name2, StringComparison.InvariantCultureIgnoreCase);
+        Assert.IsTrue(result);
+        }
+
+    }
     [TestClass]
     public class GradeBookTests
     {
