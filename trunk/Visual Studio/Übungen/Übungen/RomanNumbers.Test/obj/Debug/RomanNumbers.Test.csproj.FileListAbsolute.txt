@@ -1,0 +1,16 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\RomanNumbers.Test.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\RomanNumbers.Test.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\RomanNumbers.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\RomanNumbers.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\RomanNumbers.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\obj\Debug\RomanNumbers.Test.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\obj\Debug\RomanNumbers.Test.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\obj\Debug\RomanNumbers.Test.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers.Test\obj\Debug\RomanNumbers.Test.pdb

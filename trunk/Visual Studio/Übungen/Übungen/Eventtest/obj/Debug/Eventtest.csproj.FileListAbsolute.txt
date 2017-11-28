@@ -1,0 +1,7 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Eventtest\bin\Debug\Eventtest.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Eventtest\bin\Debug\Eventtest.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Eventtest\bin\Debug\Eventtest.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Eventtest\obj\Debug\Eventtest.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Eventtest\obj\Debug\Eventtest.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Eventtest\obj\Debug\Eventtest.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\Eventtest\obj\Debug\Eventtest.csprojResolveAssemblyReference.cache
