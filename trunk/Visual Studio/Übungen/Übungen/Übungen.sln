@@ -1,13 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fizzbuzz", "Fizzbuzz\Fizzbuzz.csproj", "{DBB181E9-87E3-4F72-B8EE-CABA9E30DE89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fizzbuzz.Test", "Fizzbuzz.Test2\Fizzbuzz.Test.csproj", "{1758AB87-32B1-484D-A8E1-520501ED327A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTest", "WPFTest\WPFTest.csproj", "{4C1A1620-643C-4D77-90A3-5FB46E4B051F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventtest", "Eventtest\Eventtest.csproj", "{AAC94041-9164-4FDC-A2ED-0D9006AC5F14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumbers", "RomanNumbers\RomanNumbers.csproj", "{DF7AF297-94D0-474D-B8D7-FDE7F234AE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumbers.Test", "RomanNumbers.Test\RomanNumbers.Test.csproj", "{BB9759A6-F7E1-4316-B0A1-E7F4F2DCC9A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockingExample", "MockingExample\MockingExample.csproj", "{922808F5-79C1-46FE-A862-22674DE76333}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{4C1A1620-643C-4D77-90A3-5FB46E4B051F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C1A1620-643C-4D77-90A3-5FB46E4B051F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C1A1620-643C-4D77-90A3-5FB46E4B051F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC94041-9164-4FDC-A2ED-0D9006AC5F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC94041-9164-4FDC-A2ED-0D9006AC5F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC94041-9164-4FDC-A2ED-0D9006AC5F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC94041-9164-4FDC-A2ED-0D9006AC5F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF7AF297-94D0-474D-B8D7-FDE7F234AE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7AF297-94D0-474D-B8D7-FDE7F234AE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7AF297-94D0-474D-B8D7-FDE7F234AE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7AF297-94D0-474D-B8D7-FDE7F234AE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB9759A6-F7E1-4316-B0A1-E7F4F2DCC9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9759A6-F7E1-4316-B0A1-E7F4F2DCC9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9759A6-F7E1-4316-B0A1-E7F4F2DCC9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9759A6-F7E1-4316-B0A1-E7F4F2DCC9A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922808F5-79C1-46FE-A862-22674DE76333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922808F5-79C1-46FE-A862-22674DE76333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922808F5-79C1-46FE-A862-22674DE76333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922808F5-79C1-46FE-A862-22674DE76333}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

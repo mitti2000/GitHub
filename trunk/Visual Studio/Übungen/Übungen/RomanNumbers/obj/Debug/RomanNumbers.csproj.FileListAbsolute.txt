@@ -1,0 +1,7 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\bin\Debug\RomanNumbers.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\bin\Debug\RomanNumbers.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\bin\Debug\RomanNumbers.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\obj\Debug\RomanNumbers.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\obj\Debug\RomanNumbers.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\obj\Debug\RomanNumbers.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\obj\Debug\RomanNumbers.pdb
