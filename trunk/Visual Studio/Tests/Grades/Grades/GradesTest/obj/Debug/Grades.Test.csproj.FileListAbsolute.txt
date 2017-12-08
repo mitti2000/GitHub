@@ -21,9 +21,6 @@ F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\obj\Debug\Gr
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\de\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\de\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\de\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\Grades.Test.dll
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\Grades.Test.pdb
 F:\GitHub\GitHub\trunk\Visual Studio\Tests\Grades\Grades\GradesTest\bin\Debug\Grades.exe
