@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumbers.Test", "RomanN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockingExample", "MockingExample\MockingExample.csproj", "{922808F5-79C1-46FE-A862-22674DE76333}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQ", "PriorityQ\PriorityQ.csproj", "{6853E359-871C-48A6-9151-0DA04AE51996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQ.Test", "PriorityQ.Test\PriorityQ.Test.csproj", "{B1429307-BFB0-444B-85EE-AE198A45A236}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{922808F5-79C1-46FE-A862-22674DE76333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{922808F5-79C1-46FE-A862-22674DE76333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{922808F5-79C1-46FE-A862-22674DE76333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6853E359-871C-48A6-9151-0DA04AE51996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6853E359-871C-48A6-9151-0DA04AE51996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6853E359-871C-48A6-9151-0DA04AE51996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6853E359-871C-48A6-9151-0DA04AE51996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1429307-BFB0-444B-85EE-AE198A45A236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1429307-BFB0-444B-85EE-AE198A45A236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1429307-BFB0-444B-85EE-AE198A45A236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1429307-BFB0-444B-85EE-AE198A45A236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

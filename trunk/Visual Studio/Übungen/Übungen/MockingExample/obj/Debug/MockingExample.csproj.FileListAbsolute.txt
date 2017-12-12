@@ -1,0 +1,2 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\MockingExample\obj\Debug\MockingExample.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\MockingExample\obj\Debug\MockingExample.csproj.CoreCompileInputs.cache
