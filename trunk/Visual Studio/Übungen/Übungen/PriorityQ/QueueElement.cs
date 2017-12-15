@@ -7,20 +7,24 @@ using System.Threading.Tasks;
 namespace PriorityQ
 {
 
-    public class QueueElement
+    public class QueueElement<TElement> : IQueueElement
     {
         private int _priority;
         private int _number;
 
         public int Priority
         {
-            get { return _priority; }
+            get => _priority;
+            set => _number = value;
         }
 
         public int Number
         {
-            get { return _number; }
+            get => _number;
+            set => _number = value;
         }
+
+        public TElement Element { get; set; }
 
         public QueueElement(int number)
         {

@@ -7,18 +7,31 @@ using System.Threading.Tasks;
 
 namespace PriorityQ
 {
-    public class PriorityQueue<T>: IProrityQ<T>
+    public class PriorityQueue : IProrityQ<IQueueElement>
     {
-        private List<T> _queue = new List<T>();
+        private List<IQueueElement> _queue = new List<IQueueElement>();
         
-        internal List<T> Queue { get { return _queue; } }
+        internal List<IQueueElement> Queue { get { return _queue; } }
 
-        public void Enqueue(T element, int priority)
+        public void Enqueue(IQueueElement element, int priority)
         {
-            element.
+            IQueueElement el = element;
+            el.Priority = priority;
+            var en = _queue.GetEnumerator();
+            if (_queue.Count == 0) _queue.Add(el);
+            else
+            {
+                while (en.MoveNext())
+                {
+                    if (en.Current.Priority > el.Priority)
+                    {
+                        _queue.Insert(_queue.IndexOf(en.Current), el);
+                    }
+                }
+            }
         }
 
-        public T Dequeue()
+        public IQueueElement Dequeue()
         {
             throw new NotImplementedException();
         }
