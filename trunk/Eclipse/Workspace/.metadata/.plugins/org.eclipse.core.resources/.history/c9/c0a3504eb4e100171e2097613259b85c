@@ -1,0 +1,21 @@
+
+public class Service implements Runnable{
+	
+	private int result;
+	private boolean[] array;
+	
+	public Service(boolean[] array){
+		this.array = array;
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public int getResult(){
+		return result;
+	}
+
+}

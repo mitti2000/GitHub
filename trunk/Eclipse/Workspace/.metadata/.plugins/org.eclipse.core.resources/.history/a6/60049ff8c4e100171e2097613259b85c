@@ -1,0 +1,14 @@
+package ch.mitti.BasicClientServer;
+
+import javax.swing.JFrame;
+
+public class Server extends JFrame {
+	
+	public static void main(String[] args){
+		
+	}
+	
+	public void initGui{
+		
+	}
+}
