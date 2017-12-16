@@ -19,7 +19,10 @@ import java.io.*;
  */
 public class TCPServer_work extends JFrame
 {
-	static int port = 67076;
+	static int port = 60006;
+	
+	JPanel panel;
+	JTextArea text;
 
 	public static void main(String args[])
 	{
@@ -29,7 +32,17 @@ public class TCPServer_work extends JFrame
 	public TCPServer_work()
 	{
 		super("TCP Server");
-		// GUI erstellen
+		this.setSize(1000,800);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		panel = new JPanel();
+		text = new JTextArea(50,50);
+		text.setEditable(false);
+		
+		panel.add(text);
+		this.add(panel);
+		
+		this.setVisible(true);
+		
 		
 		startServer();
 	}
@@ -42,37 +55,43 @@ public class TCPServer_work extends JFrame
 
 		try
 		{	// ServerSocket erzeugen	
-			
+			ServerSocket socket = new ServerSocket(port);
 
 			// Warten auf Verbindung mit Client und akzeptieren
-			
+			Socket client = socket.accept();
 			
 
 		//	console.append("Verbunden mit Rechner: " + client.getInetAddress().getHostName() + " Port: " + client.getPort() + "\n");
+			text.append("Verbunden mit Rechner: " + client.getInetAddress().getHostName() + " Port: " + client.getPort() + "\n");
 		
 			// BufferedReader zum Lesen verwenden
+			BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			
+			text.append("BufferedReader erzeugt\n");
 			
-			System.out.println("BufferedReader erzeugt");
-
+			boolean exit = false;
+			
+			while(!exit) {
 			// Ankommende Daten lesen		
-			
+			text.append(reader.readLine() + "\n");
 			
 		
 			// Dem Client antworten
-			
-			
+			PrintWriter writer = new PrintWriter(client.getOutputStream(), true);
+			writer.println("Hallo Client\n");
+			}
 		
 			// Verbindungen beenden
+			socket.close();
 					
 		}
 		catch (UnknownHostException e)
 		{
-			console.append("Rechenername unbekannt:\n" + e.getMessage() + "\n");
+			text.append("Rechenername unbekannt:\n" + e.getMessage() + "\n");
 		}
 		catch (IOException e)
 		{
-			console.append("Fehler während der Kommunikation:\n" + e.getMessage() + "\n");
+			text.append("Fehler während der Kommunikation:\n" + e.getMessage() + "\n");
 		}
 	}
 	
