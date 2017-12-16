@@ -1,0 +1,7 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\PriorityQ\obj\Debug\PriorityQ.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\PriorityQ\obj\Debug\PriorityQ.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\PriorityQ\bin\Debug\PriorityQ.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\PriorityQ\bin\Debug\PriorityQ.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\PriorityQ\bin\Debug\PriorityQ.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\PriorityQ\obj\Debug\PriorityQ.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\PriorityQ\obj\Debug\PriorityQ.pdb

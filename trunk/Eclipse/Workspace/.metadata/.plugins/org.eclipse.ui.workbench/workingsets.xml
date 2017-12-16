@@ -8,7 +8,7 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492518124115_5" label="Übungen" name="Übungen">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dependencyInjection" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/my-maventest" type="4"/>
-<item elementID="=PNP" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/PNP" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mathlight" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ad7" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Drachenkurve" type="4"/>
@@ -21,12 +21,15 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/jpa_testing" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ch.zbw.softwartesting.Uebung1" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Generics" type="4"/>
+<item elementID="=Weihnachtsrennen" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/superpom" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Telefonbuch" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AD1" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AD3" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/javaFxSchulung" type="4"/>
-<item elementID="=Weihnachtsrennen" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Asynchron" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ParkingGarage" type="4"/>
+<item elementID="=Netzwerkprogrammierung" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1493055710763_6" label="Tests" name="Tests"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1417678534638_0" label="Window Working Set" name="Aggregate for window 1417678534638"/>

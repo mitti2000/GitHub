@@ -1,0 +1,17 @@
+package ch.mitti.BasicClientServer;
+
+import javax.swing.JFrame;
+
+public class Server extends JFrame {
+	
+	JPanel panel;
+	JLabel label;
+	
+	public static void main(String[] args){
+		
+	}
+	
+	public void initGui{
+		
+	}
+}
