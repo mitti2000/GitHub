@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\DelegatesEvents\DelegatesEvents\bin\Debug\DelegatesEvents.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\DelegatesEvents\DelegatesEvents\bin\Debug\DelegatesEvents.exe
+F:\GitHub\GitHub\trunk\Visual Studio\DelegatesEvents\DelegatesEvents\bin\Debug\DelegatesEvents.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\DelegatesEvents\DelegatesEvents\obj\Debug\DelegatesEvents.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\DelegatesEvents\DelegatesEvents\obj\Debug\DelegatesEvents.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\DelegatesEvents\DelegatesEvents\obj\Debug\DelegatesEvents.exe
+F:\GitHub\GitHub\trunk\Visual Studio\DelegatesEvents\DelegatesEvents\obj\Debug\DelegatesEvents.pdb
