@@ -18,6 +18,7 @@ namespace LibraryAssistant
         public FileWatcher()
         {
             _fileObeserver = new FileSystemWatcher();
+            _fileObeserver.IncludeSubdirectories = true;
         }
 
         public FileWatcher(string path)
@@ -30,9 +31,7 @@ namespace LibraryAssistant
         public void ChangePath(string path)
         {
             _fileObeserver.Path = path;
-            OnPathChanged(path);
         }
 
-        public event Action<string> OnPathChanged;
     }
 }

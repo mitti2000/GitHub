@@ -689,3 +689,46 @@ Betroffene Parameter:
    logfile = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.InstallLog
    assemblypath = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe
 Der vorherige Zustand des Ereignisprotokolls für die Quelle LibraryAssistantService wird wiederhergestellt.
+Assembly F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe wird deinstalliert.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.InstallLog
+   assemblypath = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe
+Die EventLog-Quelle LibraryAssistantService wird entfernt.
+Während der Deinstallation des Installers System.Diagnostics.EventLogInstaller ist eine Ausnahme aufgetreten.
+System.Security.SecurityException: Der angeforderte Registrierungszugriff ist unzulässig.
+Während der Deinstallation ist eine Ausnahme aufgetreten. Diese Ausnahme wird ignoriert, und die Deinstallation wird fortgesetzt. Die Anwendung wird jedoch möglicherweise nicht vollständig deinstalliert.
+Assembly F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe wird installiert.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.InstallLog
+   assemblypath = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe
+Dienst LibraryAssistantService wird installiert...
+Die EventLog-Quelle LibraryAssistantService im Protokoll Application wird erstellt...
+Assembly F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe wird zurückgesetzt.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.InstallLog
+   assemblypath = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe
+Der vorherige Zustand des Ereignisprotokolls für die Quelle LibraryAssistantService wird wiederhergestellt.
+Assembly F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe wird deinstalliert.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.InstallLog
+   assemblypath = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe
+Die EventLog-Quelle LibraryAssistantService wird entfernt.
+Der Dienst LibraryAssistantService wird vom System entfernt...
+Dienst LibraryAssistantService wurde vom System entfernt.
+Assembly F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe wird installiert.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.InstallLog
+   assemblypath = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe
+Dienst LibraryAssistantService wird installiert...
+Dienst LibraryAssistantService wurde installiert.
+Die EventLog-Quelle LibraryAssistantService im Protokoll Application wird erstellt...
+Assembly F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe wird ausgeführt.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.InstallLog
+   assemblypath = F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe

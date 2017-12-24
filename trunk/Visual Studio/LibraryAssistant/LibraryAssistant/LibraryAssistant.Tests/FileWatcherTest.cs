@@ -7,7 +7,7 @@ namespace LibraryAssistant.Tests
     public class FileWatcherTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CreateFileWatcher()
         {
         }
     }

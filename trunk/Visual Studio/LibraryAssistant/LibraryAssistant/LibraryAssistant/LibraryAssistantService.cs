@@ -14,6 +14,8 @@ namespace LibraryAssistant
         //private int libraryAssistentEventId = 1;
         private static FileWatcher _fileWatcher;
 
+        private string _sourcepath;
+
         
 
         public LibraryAssistantService()
@@ -36,7 +38,14 @@ namespace LibraryAssistant
         
         private void FileObserver_Created(object sender, FileSystemEventArgs e)
         {
-            libraryAssistantEventLog.WriteEntry(e.FullPath);
+            if (Path.GetExtension(e.FullPath) == ".txt")
+            {
+                FileCopier fc = new FileCopier(e.FullPath);
+                if (fc.copyFile("C:\\temp"))
+                {
+                    libraryAssistantEventLog.WriteEntry("File copied! ("+e.FullPath+")");
+                }
+            }
         }
 
         protected override void OnStart(string[] args)
@@ -62,6 +71,13 @@ namespace LibraryAssistant
 
         private void CreateFileWatcher()
         {
+            _sourcepath =
+                "f:\\GitHub\\GitHub\\trunk\\Visual Studio\\LibraryAssistantGui\\LibraryAssistantGui\\LibraryAssistantGui\\bin\\debug\\path.txt";
+            if (File.Exists(_sourcepath))
+            {
+                libraryAssistantEventLog.WriteEntry("Path exists");
+            }
+            else libraryAssistantEventLog.WriteEntry("Path doesn't exists:"+_sourcepath);
             _fileWatcher = new FileWatcher();
             _fileWatcher.FileObserver.Created += FileObserver_Created;
         }
@@ -73,6 +89,10 @@ namespace LibraryAssistant
 
         private void PathChanged()
         {
+            _fileWatcher.FileObserver.EnableRaisingEvents = false;
+            String[] paths = File.ReadAllLines(_sourcepath);
+            _fileWatcher.ChangePath(paths[paths.Length-1]);
+            _fileWatcher.FileObserver.EnableRaisingEvents = true;
             libraryAssistantEventLog.WriteEntry("FileWatcher Path changed to: " + _fileWatcher.FileObserver.Path);
         }
 
@@ -94,7 +114,7 @@ namespace LibraryAssistant
         protected override void OnCustomCommand(int command)
         {
             base.OnCustomCommand(command);
-            if (command == 1)
+            if (command == 128)
             {
                 PathChanged();
             }

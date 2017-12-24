@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibraryAssistant.exe" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibraryAssistant.exe" size="10752">
       <assemblyIdentity name="LibraryAssistant" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+V9hcytEqQE9Z6bh6La2gD6gLd9EyXLVcWqNs3dV9fo=</dsig:DigestValue>
+        <dsig:DigestValue>9NZWRCpzePcuF1oiA65CIrZm80MF9ziUeVvCO3uh+iI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
