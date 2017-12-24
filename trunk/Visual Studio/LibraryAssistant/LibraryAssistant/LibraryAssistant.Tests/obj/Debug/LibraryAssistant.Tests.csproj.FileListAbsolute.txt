@@ -1,0 +1,16 @@
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\LibraryAssistant.Tests.dll
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\LibraryAssistant.Tests.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\LibraryAssistant.exe
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\LibraryAssistant.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\LibraryAssistant.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\obj\Debug\LibraryAssistant.Tests.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\obj\Debug\LibraryAssistant.Tests.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\obj\Debug\LibraryAssistant.Tests.dll
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant.Tests\obj\Debug\LibraryAssistant.Tests.pdb

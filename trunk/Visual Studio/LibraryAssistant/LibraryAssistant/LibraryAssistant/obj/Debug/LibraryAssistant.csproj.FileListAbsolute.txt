@@ -1,0 +1,15 @@
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.LibraryAssistantService.resources
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.csproj.GenerateResource.Cache
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.exe
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.ProjectInstaller.resources
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.exe.manifest
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\bin\Debug\LibraryAssistant.application
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.TrustInfo.xml
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.exe.manifest
+F:\GitHub\GitHub\trunk\Visual Studio\LibraryAssistant\LibraryAssistant\LibraryAssistant\obj\Debug\LibraryAssistant.application
