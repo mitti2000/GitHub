@@ -1,0 +1,9 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\bin\Debug\MyFirstAwesomeCSharpProject.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\bin\Debug\MyFirstAwesomeCSharpProject.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\bin\Debug\MyFirstAwesomeCSharpProject.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\bin\Debug\NLog.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\bin\Debug\NLog.xml
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\obj\Debug\MyFirstAwesomeCSharpProject.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\obj\Debug\MyFirstAwesomeCSharpProject.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\obj\Debug\MyFirstAwesomeCSharpProject.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\CSGrundkurs\MyFirstAwesomeCSharpProject\MyFirstAwesomeCSharpProject\obj\Debug\MyFirstAwesomeCSharpProject.pdb
