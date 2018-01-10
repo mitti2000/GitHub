@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Adapter\bin\Debug\Adapter.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Adapter\bin\Debug\Adapter.exe
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Adapter\bin\Debug\Adapter.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Adapter\obj\Debug\Adapter.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Adapter\obj\Debug\Adapter.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Adapter\obj\Debug\Adapter.exe
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Adapter\obj\Debug\Adapter.pdb

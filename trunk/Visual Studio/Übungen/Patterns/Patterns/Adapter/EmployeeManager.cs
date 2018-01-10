@@ -8,9 +8,39 @@ namespace Adapter
 {
     public class EmployeeManager
     {
-        public void paySaleries()
+        private readonly List<IEmployee> _employees;
+        private PresidentOfBoard _presidentOfBoard;
+
+        public EmployeeManager()
         {
-            
+            _employees = new List<IEmployee>();
+        }
+
+        public decimal PaySaleries()
+        {
+            decimal totalSaleries = 0;
+
+            foreach (var employee in _employees)
+            {
+                totalSaleries += employee.GetSalery();
+            }
+
+            return totalSaleries;
+        }
+
+        public void AddEmployee(IEmployee employee)
+        {
+            _employees.Add(employee);
+        }
+
+        public void RemoveEmployee(IEmployee employee)
+        {
+            _employees.Remove(employee);
+        }
+
+        public void SetPresidentOfBoard(PresidentOfBoard presidentOfBoard)
+        {
+            _presidentOfBoard = presidentOfBoard;
         }
     }
 }

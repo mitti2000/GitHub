@@ -42,7 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs" />
     <Compile Include="EmployeeManager.cs" />
+    <Compile Include="IEmployee.cs" />
+    <Compile Include="IEmployeeAdapter.cs" />
+    <Compile Include="PresidentOfBoard.cs" />
+    <Compile Include="PresidentOfBoardAdapter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,3 +5,10 @@ C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\bi
 C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\bin\Debug\Strategy.pdb
 C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\obj\Debug\Strategy.exe
 C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\obj\Debug\Strategy.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\bin\Debug\Strategy.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\bin\Debug\Strategy.exe
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\bin\Debug\Strategy.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\obj\Debug\Strategy.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\obj\Debug\Strategy.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\obj\Debug\Strategy.exe
+F:\GitHub\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Strategy\obj\Debug\Strategy.pdb
