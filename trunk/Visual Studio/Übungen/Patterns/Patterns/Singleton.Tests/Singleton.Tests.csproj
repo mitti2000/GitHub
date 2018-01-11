@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Singleton\Singleton.csproj">
-      <Project>{5944db72-dc39-4f9e-a688-69252b7866f5}</Project>
-      <Name>Singleton</Name>
+    <ProjectReference Include="..\Singelton1\Singelton.csproj">
+      <Project>{d788fc4b-2ecd-4251-a62a-ed1803ca5314}</Project>
+      <Name>Singelton</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

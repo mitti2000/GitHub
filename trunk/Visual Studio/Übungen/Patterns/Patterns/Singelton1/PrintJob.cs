@@ -10,7 +10,7 @@ namespace Singleton
 
         public PrintJob(int number)
         {
-            _textToPrint = number.ToString();
+            _textToPrint = "Number is " + number.ToString();
         }
 
         public PrintJob(string text)
