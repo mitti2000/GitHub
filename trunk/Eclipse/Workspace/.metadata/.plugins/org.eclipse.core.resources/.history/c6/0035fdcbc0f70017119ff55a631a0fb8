@@ -1,0 +1,7 @@
+package ch.mitti.chat;
+
+public class ChatServerGui {
+	//startet TCP Server als Thread
+	
+	//braucht name des senders und die Meldung
+}

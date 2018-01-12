@@ -1,0 +1,18 @@
+package ch.mitti.chat;
+
+import java.net.Socket;
+
+public class ServerThread extends Thread{
+	
+	private Socket client;
+	private TCPServer server;
+	
+	public ServerThread(Socket client, TCPServer server){
+		this.client = client;
+		this.server = server;
+	}
+	
+	public void run(){
+		
+	}
+}

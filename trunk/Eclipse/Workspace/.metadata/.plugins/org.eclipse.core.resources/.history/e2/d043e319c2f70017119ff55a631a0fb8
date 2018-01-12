@@ -1,0 +1,42 @@
+package ch.mitti.chat;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
+
+
+public class ChatServerGui extends JFrame{
+	
+	private JTextArea console;
+	private JButton startButton;
+	private JButton stopButton;
+	private JPanel buttonPanel;
+	
+	public ChatServerGui(){
+		super("ChatServer");
+		initGui();
+	}
+	
+	public void initGui(){
+		startButton = new JButton("Start Server");
+		stopButton = new JButton("Stop Server");
+		setLayout(new BorderLayout());
+		console = new JTextArea(20,60);
+		console.setEditable(false);
+		this.add(console, BorderLayout.CENTER);
+		this.add(startButton, BorderLayout.NORTH);
+		this.add(stopButton, BorderLayout.NORTH);
+		pack();
+		setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		ChatServerGui chatServerGui= new ChatServerGui();
+	}
+	//startet TCP Server als Thread
+	
+	//braucht name des senders und die Meldung
+}

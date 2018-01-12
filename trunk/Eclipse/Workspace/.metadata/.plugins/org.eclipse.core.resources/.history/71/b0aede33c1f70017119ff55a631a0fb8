@@ -1,0 +1,30 @@
+package ch.mitti.chat;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+import TCPServer.MyWindowListener;
+
+public class ChatServerGui extends JFrame{
+	
+	public ChatServerGui(){
+		super("ChatServer");
+		initGui();
+	}
+	
+	public void initGui(){
+		setLayout(new FlowLayout());
+		console = new JTextArea(20,60);
+		console.setEditable(false);
+		add(console);
+		this.addWindowListener(new MyWindowListener());
+		pack();
+		setVisible(true);
+		startServer();
+	}
+	//startet TCP Server als Thread
+	
+	//braucht name des senders und die Meldung
+}

@@ -1,0 +1,13 @@
+package ch.mitti.chat;
+
+import javax.swing.JFrame;
+
+public class ChatServerGui extends JFrame{
+	
+	public ChatServerGui{
+		initGui();
+	}
+	//startet TCP Server als Thread
+	
+	//braucht name des senders und die Meldung
+}

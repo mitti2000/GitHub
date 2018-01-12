@@ -1,0 +1,64 @@
+package ch.mitti.chat;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
+
+
+public class ChatServerGui extends JFrame{
+	
+	TCPServer server;
+	
+	private JTextArea console;
+	private JButton startButton;
+	private JButton stopButton;
+	private JPanel buttonPanel;
+	
+	public ChatServerGui(){
+		super("ChatServer");
+		initGui();
+	}
+	
+	public void initGui(){
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		buttonPanel = new JPanel();
+		buttonPanel.setLayout(new FlowLayout());
+		startButton = new JButton("Start Server");
+		stopButton = new JButton("Stop Server");
+		setLayout(new BorderLayout());
+		console = new JTextArea(20,60);
+		console.setEditable(false);
+		buttonPanel.add(startButton);
+		buttonPanel.add(stopButton);
+		this.add(console, BorderLayout.CENTER);
+		this.add(buttonPanel, BorderLayout.NORTH);
+		pack();
+		setVisible(true);
+		
+		
+		startButton.addActionListener(new ActionListener(){
+			{
+		}
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				server = new TCPServer(65000);
+				server.start();
+				startButton.setEnabled(false);
+			}
+		});
+	}
+	
+	public static void main(String[] args){
+		ChatServerGui chatServerGui= new ChatServerGui();
+	}
+	//startet TCP Server als Thread
+	
+	//braucht name des senders und die Meldung
+}

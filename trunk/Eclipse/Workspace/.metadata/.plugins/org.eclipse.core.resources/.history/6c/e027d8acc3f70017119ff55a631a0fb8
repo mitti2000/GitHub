@@ -1,0 +1,47 @@
+package ch.mitti.chat;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class ClientGui extends JFrame {
+	JPanel infoPanel;
+	JPanel messagePanel;
+	JTextArea console;
+	
+	JLabel hostNameLabel;
+	JLabel portLabel;
+	JLabel userNameLabel;
+	JTextField hostNameField;
+	JTextField portField;
+	JTextField userNameField;
+	JButton connectButton;
+	
+	JLabel messageLabel;
+	JTextField messageField;
+	JButton sendButton;
+	
+	public ClientGui(){
+		initGui();
+	}
+	
+	public void initGui(){
+		infoPanel = new JPanel();
+		infoPanel.setLayout(new FlowLayout());
+		messagePanel = new JPanel();
+		messagePanel.setLayout(new FlowLayout());
+		console = new JTextArea(20,60);
+		
+		hostNameLabel = new JLabel("Host:");
+		
+		
+		pack();
+		setVisible(true);
+	}
+	
+}

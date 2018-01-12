@@ -1,0 +1,86 @@
+package ch.mitti.chat;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class ClientGui extends JFrame {
+	JPanel infoPanel;
+	JPanel messagePanel;
+	JPanel controlPanel;
+	JTextArea console;
+	
+	JLabel hostNameLabel;
+	JLabel portLabel;
+	JLabel userNameLabel;
+	JTextField hostNameField;
+	JTextField portField;
+	JTextField userNameField;
+	JButton connectButton;
+	
+	JLabel messageLabel;
+	JTextField messageField;
+	JButton sendButton;
+	
+	public ClientGui(){
+		super("Chat Client");
+		initGui();
+	}
+	
+	public void initGui(){
+		controlPanel = new JPanel();
+		controlPanel.setLayout(new BorderLayout());
+		infoPanel = new JPanel();
+		infoPanel.setLayout(new FlowLayout());
+		messagePanel = new JPanel();
+		messagePanel.setLayout(new FlowLayout());
+		console = new JTextArea(20,60);
+		
+		hostNameLabel = new JLabel("Host:");
+		portLabel = new JLabel("Port:");
+		userNameLabel = new JLabel("Username:");
+		hostNameField = new JTextField(8);
+		portField = new JTextField(8);
+		userNameField = new JTextField(20);
+		connectButton = new JButton("connect");
+		
+		messageLabel = new JLabel("Message:");
+		messageField = new JTextField(50);
+		sendButton = new JButton("send");
+		
+		infoPanel.add(hostNameLabel);
+		infoPanel.add(hostNameField);
+		infoPanel.add(portLabel);
+		infoPanel.add(portField);
+		infoPanel.add(userNameLabel);
+		infoPanel.add(userNameField);
+		infoPanel.add(connectButton);
+		
+		messagePanel.add(messageLabel);
+		messagePanel.add(messageField);
+		messagePanel.add(sendButton);
+		
+		controlPanel.add(infoPanel,BorderLayout.NORTH);
+		controlPanel.add(messagePanel, BorderLayout.CENTER);
+		
+		this.setLayout(new BorderLayout());
+		this.add(controlPanel, BorderLayout.NORTH);
+		this.add(console, BorderLayout.CENTER);
+
+		pack();
+		setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		//ChatServerGui chatServerGui= new ChatServerGui();
+		
+		ClientGui clientGui = new ClientGui();
+	}
+	
+}

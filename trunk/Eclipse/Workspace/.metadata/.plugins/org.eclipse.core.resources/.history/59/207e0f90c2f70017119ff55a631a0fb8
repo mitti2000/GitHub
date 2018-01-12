@@ -1,0 +1,7 @@
+package ch.mitti.chat;
+
+import javax.swing.JFrame;
+
+public class ClientGui extends JFrame {
+	
+}

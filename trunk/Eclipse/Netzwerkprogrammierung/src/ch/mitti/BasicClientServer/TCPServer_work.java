@@ -61,8 +61,8 @@ public class TCPServer_work extends JFrame
 			Socket client = socket.accept();
 			
 
-		//	console.append("Verbunden mit Rechner: " + client.getInetAddress().getHostName() + " Port: " + client.getPort() + "\n");
-			text.append("Verbunden mit Rechner: " + client.getInetAddress().getHostName() + " Port: " + client.getPort() + "\n");
+			//console.append("Verbunden mit Rechner: " + client.getInetAddress().getHostName() + " Port: " + client.getPort() + "\n");
+			//text.append("Verbunden mit Rechner: " + client.getInetAddress().getHostName() + " Port: " + client.getPort() + "\n");
 		
 			// BufferedReader zum Lesen verwenden
 			BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
