@@ -16,7 +16,7 @@ public class ChatClient extends Thread{
 	private int port;
 	private boolean running;
 	private Socket server;
-	//private String username;
+	private String username;
 	private BufferedReader inputStream;
 	private PrintStream outputStream;
 	public static final String CONNECTED_MESSAGE = "-connected-";
@@ -25,7 +25,7 @@ public class ChatClient extends Thread{
 	
 	public ChatClient( String hostname, int port, String username, ClientGui gui) {
 		super(username);
-		//this.username = username;
+		this.username = username;
 		this.hostname = hostname;
 		this.port = port;
 		this.gui = gui;
@@ -50,14 +50,14 @@ public class ChatClient extends Thread{
 			outputStream = new PrintStream(server.getOutputStream ());	
 		    running = true;
 		    sendMessageContainer[2] = "1";
+		    this.start();
 		} catch (NumberFormatException e) {
-			e.printStackTrace();
+			gui.connectionFailed();
 		} catch (UnknownHostException e) {
-			e.printStackTrace();
+			gui.connectionFailed();
 		} catch (IOException e) {
-			e.printStackTrace();
+			gui.connectionFailed();
 		}
-		
 	}
 	
 	public void run() {
@@ -66,21 +66,33 @@ public class ChatClient extends Thread{
 		gui.addToConsole("You are connected to " + server.getInetAddress().getHostName() + " on Port " + server.getPort(), Color.BLACK, new Font("ownerFont", Font.PLAIN, 12));
 		while(running) {
 			try {
-				while(true) {
+				while(running) {
 					String message = inputStream.readLine();
-					addMessageToGui(message);
+					if(message.equals("-close-")) {
+						running = false;
+						disconnect();
+						break;
+					}
+					else addMessageToGui(message);
+					interrupt();
 				}
 				} catch(IOException ex){
-					ex.printStackTrace();
-				} finally {
-					try {
-						server.close();
-					} catch (IOException ex) {
-						ex.printStackTrace();
-					}
-				}
+					interrupt();
+				} 	
 		}
 	}
+	
+	public void disconnect() {
+		if(running) {
+			running = false;
+			try {
+				outputStream.println(username + "//-close-//2");
+				server.close();
+				gui.setDisconnected();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}	}
 	
 	public void sendMessage(String message) {
 		outputStream.println(message);
@@ -117,7 +129,6 @@ public class ChatClient extends Thread{
 		Font font = new Font("ClientFont", style, size);
 		String[] colorRGB =  messageContainer[4].split("-");
 		Color color = new Color(Integer.parseInt(colorRGB[0]), Integer.parseInt(colorRGB[1]), Integer.parseInt(colorRGB[2]));
-		gui.setFont(color, font);
 		gui.addToConsole(messageContainer[0] + ": " + messageContainer[1], color, font);
 	}
 }

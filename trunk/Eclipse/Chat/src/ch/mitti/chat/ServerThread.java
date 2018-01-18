@@ -30,20 +30,29 @@ public class ServerThread extends Thread{
 				sleep(100);
 				while(true) {
 					String[] message = inputStream.readLine().split("//");
-					server.notifyClients(message, this);
+					if(message[1].equals("-close-")) {
+						message[1] = " has disconnected. Good Bye!";
+						server.notifyClients(message, this);
+						closeConnection();
+						break;
+					}
+					else server.notifyClients(message, this);
 				}
 				} catch(IOException ex){
-					ex.printStackTrace();
+					interrupt();
 				} catch (InterruptedException e) {
-					e.printStackTrace();
-				} finally {
-					server.removeServerThread(this);
-					try {
-						client.close();
-					} catch (IOException ex) {
-						ex.printStackTrace();
-					}
-				}
+					interrupt();
+				} 
+		}
+	}
+	
+	public void closeConnection() {
+		running = false;
+		try {
+			outputStream.println("-close-");
+			client.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 	

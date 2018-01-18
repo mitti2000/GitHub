@@ -16,11 +16,12 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.text.*;
 
-public class ClientGui extends JFrame implements ActionListener {
+public class ClientGui extends JFrame implements ActionListener, ClosableGui{
 	
 	private static final long serialVersionUID = 1L;
 
 	ChatClient chatClient;
+	boolean isDisconnected = true;
 	
 	JPanel infoPanel;
 	JPanel messagePanel;
@@ -37,6 +38,7 @@ public class ClientGui extends JFrame implements ActionListener {
 	JTextField portField;
 	JTextField userNameField;
 	JButton connectButton;
+	JButton disconnectButton;
 	
 	JLabel messageLabel;
 	JTextField messageField;
@@ -57,7 +59,7 @@ public class ClientGui extends JFrame implements ActionListener {
 	
 	public void initGui(){
 		
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.addWindowListener(new ChatWindowListener(this));
 		
 		controlPanel = new JPanel();
 		controlPanel.setLayout(new BorderLayout());
@@ -81,6 +83,9 @@ public class ClientGui extends JFrame implements ActionListener {
 		userNameField = new JTextField(20);
 		connectButton = new JButton("connect");
 		connectButton.addActionListener(this);
+		disconnectButton = new JButton("disconnect");
+		disconnectButton.addActionListener(this);
+		disconnectButton.setEnabled(false);
 		
 		messageLabel = new JLabel("Message:");
 		messageField = new JTextField(50);
@@ -88,6 +93,7 @@ public class ClientGui extends JFrame implements ActionListener {
 		sendButton = new JButton("send");
 		sendButton.setEnabled(false);
 		sendButton.addActionListener(this);
+		sendButton.setEnabled(false);
 		
 		infoPanel.add(hostNameLabel);
 		infoPanel.add(hostNameField);
@@ -96,6 +102,7 @@ public class ClientGui extends JFrame implements ActionListener {
 		infoPanel.add(userNameLabel);
 		infoPanel.add(userNameField);
 		infoPanel.add(connectButton);
+		infoPanel.add(disconnectButton);
 		
 		messagePanel.add(messageLabel);
 		messagePanel.add(messageField);
@@ -127,10 +134,10 @@ public class ClientGui extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == this.connectButton) {
-			chatClient = new ChatClient(hostNameField.getText(), Integer.parseInt(portField.getText()), userNameField.getText(), this);
-			chatClient.start();
 			sendButton.setEnabled(true);
 			connectButton.setEnabled(false);
+			disconnectButton.setEnabled(true);
+			chatClient = new ChatClient(hostNameField.getText(), Integer.parseInt(portField.getText()), userNameField.getText(), this);
 			
 		}
 		
@@ -141,13 +148,11 @@ public class ClientGui extends JFrame implements ActionListener {
 			}
 		}
 		
+		else if(e.getSource() == this.disconnectButton) {
+			chatClient.disconnect();
+		}
+		
 	}
-	
-	public void setFont(Color color, Font font) {
-		console.setFont(font);
-		console.setForeground(color);
-	}
-	
 	
 	public void addToConsole(String message, Color color, Font font) {
 		SimpleAttributeSet attributeSet = new SimpleAttributeSet();
@@ -166,4 +171,26 @@ public class ClientGui extends JFrame implements ActionListener {
 	    console.replaceSelection(message + "\n");
 	}
 	
+	public void setDisconnected() {
+		disconnectButton.setEnabled(false);
+		connectButton.setEnabled(true); 
+		addToConsole("Disconnected from Server", Color.BLACK, new Font("ownerFont", Font.BOLD + Font.ITALIC, 12));
+	}
+	
+	public void connectionFailed() {
+		disconnectButton.setEnabled(false);
+		connectButton.setEnabled(true);
+		sendButton.setEnabled(false);
+		addToConsole("Connection Failed!", Color.BLACK, new Font("ownerFont", Font.BOLD + Font.ITALIC, 12));
+	}
+	
+	@Override
+	public void closeWindow() {
+		if(chatClient != null) chatClient.disconnect();
+		System.exit(0);
+	}
+	
+	public static void main(String[] args) {
+		new ClientGui();
+	}
 }
