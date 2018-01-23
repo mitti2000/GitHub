@@ -15,16 +15,16 @@ import java.io.*;
  * eines Clients beantworten kann
  * 
  */
-public class TCPServer extends JFrame
+public class TCPServer_work extends JFrame
 {
 	static int port = ;
 
 	public static void main(String args[])
 	{
-		TCPServer wnd = new TCPServer();
+		TCPServer_work wnd = new TCPServer_work();
 	}
 	
-	public TCPServer()
+	public TCPServer_work()
 	{
 		super("TCP Server");
 		// GUI erstellen

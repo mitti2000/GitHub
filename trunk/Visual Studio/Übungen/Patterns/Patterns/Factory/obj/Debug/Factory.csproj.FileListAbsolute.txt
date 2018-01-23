@@ -1,0 +1,7 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Factory\obj\Debug\Factory.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Factory\bin\Debug\Factory.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Factory\bin\Debug\Factory.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Factory\bin\Debug\Factory.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Factory\obj\Debug\Factory.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Factory\obj\Debug\Factory.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Patterns\Patterns\Factory\obj\Debug\Factory.pdb

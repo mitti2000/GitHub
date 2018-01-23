@@ -18,6 +18,16 @@ namespace Singleton
             var numberPrinterThread = new Thread(numberPrinter.Print);
             var textPrinterThread = new Thread(textPrinter.Print);
             var printSpoolerThread = new Thread(spooler.PrintOutput);
+            /*
+            var numberPrinterThread2 = new Thread(() =>
+            {
+                while (true)
+                {
+                    Console.WriteLine();
+                };
+            });
+            numberPrinterThread2.Start();
+            */
             numberPrinterThread.Start();
             textPrinterThread.Start();
             printSpoolerThread.Start();

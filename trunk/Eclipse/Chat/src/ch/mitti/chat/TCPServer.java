@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class TCPServer extends Thread {
 	ServerSocket serverSocket;
-	private ArrayList<Socket> clients;
+	//private ArrayList<Socket> clients;
 	private ChatServerGui gui;
 	private boolean running;
 	private ArrayList<ServerThread> serverThreads;
@@ -19,7 +19,7 @@ public class TCPServer extends Thread {
 		this.gui = gui;
 		running = true;
 		randomColor = new Random();
-		clients = new ArrayList<Socket>();
+		//clients = new ArrayList<Socket>();
 		serverThreads = new ArrayList<ServerThread>();
 		colorStrings = new ArrayList<String>();
 		
@@ -36,7 +36,7 @@ public class TCPServer extends Thread {
 				Socket client = serverSocket.accept();
 				gui.addToConsole("Client Connected: " + client.getInetAddress().getHostName() + " on Port: " + client.getPort() + "\n");
 				ServerThread thread = new ServerThread(client, this);
-				clients.add(client);
+				//clients.add(client);
 				thread.start();
 			}
 			serverSocket.close();
