@@ -26,13 +26,13 @@ public class TCPServer extends Thread {
 		try {
 			serverSocket = new ServerSocket(port);
 		} catch (IOException e) {
-			e.printStackTrace();
+			gui.connectionFailed();
 		}
 	}
 	
 	public void run(){
 		try {
-			while(running){
+			while(running==true){
 				Socket client = serverSocket.accept();
 				gui.addToConsole("Client Connected: " + client.getInetAddress().getHostName() + " on Port: " + client.getPort() + "\n");
 				ServerThread thread = new ServerThread(client, this);
@@ -42,16 +42,27 @@ public class TCPServer extends Thread {
 			serverSocket.close();
 		
 		} catch (IOException e) {
+			this.interrupt();
+		}
+	}
+	
+	public void closeServer() {
+		running = false;
+		try {
+			closeClients();
+			serverSocket.close();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public void terminate() {
-		running = false;
+	private void closeClients() {
+		for(ServerThread thread : serverThreads) {
+			thread.closeConnection();
+		}
 	}
-	
+
 	public void notifyClients(String[] message, ServerThread sendingThread) {
-		//for(ServerThread serverThread : serverThreads) {
 		for(int i = 0; i<serverThreads.size(); i++) {
 			if(serverThreads.get(i) != sendingThread) {
 				synchronized (serverThreads.get(i).getOutputStream()) {
@@ -69,10 +80,10 @@ public class TCPServer extends Thread {
 		if(message[2].equals("1")) {
 			gui.addToConsole(message[0] + " has connected.\n");
 		}
-		
+		else if(message[2].equals("2")) {
+			gui.addToConsole(message[0] + " has disconnected.\n");
+		}		
 	}
-	
-
 	
 	public void addServerThread(ServerThread thread) {
 		serverThreads.add(thread);
@@ -87,5 +98,6 @@ public class TCPServer extends Thread {
 		String compiledMessage = message[0] + "//" + message[1] + "//0//0//" + colorStrings.get(index);
 		return compiledMessage;
 	}
+	
 }
 

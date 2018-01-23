@@ -11,7 +11,7 @@ import javax.swing.JTextArea;
 import javax.swing.JButton;
 
 
-public class ChatServerGui extends JFrame implements ActionListener{
+public class ChatServerGui extends JFrame implements ActionListener, ClosableGui{
 	
 	private static final long serialVersionUID = 1L;
 
@@ -30,7 +30,7 @@ public class ChatServerGui extends JFrame implements ActionListener{
 	}
 	
 	public void initGui(){
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.addWindowListener(new ChatWindowListener(this));
 		
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new FlowLayout());
@@ -47,13 +47,8 @@ public class ChatServerGui extends JFrame implements ActionListener{
 		pack();
 		setVisible(true);
 		
-		
 		startButton.addActionListener(this);
 		stopButton.addActionListener(this);
-	}
-	
-	public static void main(String[] args){
-		new ChatServerGui();
 	}
 
 	@Override
@@ -65,18 +60,34 @@ public class ChatServerGui extends JFrame implements ActionListener{
 			server.start();
 			console.append("Server started on Port: " + port + "\n");
 		}
-		/*
+		
 		else if(e.getSource() == this.stopButton) {
 			stopButton.setEnabled(false);
 			startButton.setEnabled(true);
-			//server.terminate();
+			server.closeServer();
 		}
-		*/
-		
 	}
 	
 	public void addToConsole(String message) {
 		console.append(message);
+	}
+	
+	public void connectionFailed() {
+		addToConsole("Connection failed!");
+		stopButton.setEnabled(false);
+		startButton.setEnabled(true);
+	}
+
+	@Override
+	public void closeWindow() {
+		stopButton.setEnabled(false);
+		startButton.setEnabled(true);
+		if(server != null) server.closeServer();
+		System.exit(0);
+	}
+	
+	public static void main(String[] args){
+		new ChatServerGui();
 	}
 }
 
