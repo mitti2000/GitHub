@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TCPSocket.java&apos; to &apos;TCPServerUebungen/src/ch.mitti.dynparallel&apos;&#x0D;&#x0A;- Original project: &apos;TCPServerUebungen&apos;&#x0D;&#x0A;- Destination element: &apos;TCPServerUebungen/src/ch.mitti.dynparallel&apos;&#x0D;&#x0A;- Original element: &apos;ch.mitti.sequenziell.TCPSocket.java&apos;" description="Copy compilation unit" destination="/src&lt;ch.mitti.dynparallel" element1="/src&lt;ch.mitti.sequenziell{TCPSocket.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1516984347010" units="1" version="1.0"/>
+</session>

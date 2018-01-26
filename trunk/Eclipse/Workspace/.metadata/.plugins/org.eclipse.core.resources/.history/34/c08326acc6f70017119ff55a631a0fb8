@@ -1,8 +1,0 @@
-package ch.mitti.chat;
-
-public class ServerThread extends Thread{
-	
-	public ServerThread(Socket client){
-		
-	}
-}
