@@ -12,7 +12,7 @@ namespace MockingExample
         [TestMethod]
         public void Detete_WhenFIleDeletet_ThenThrowFileNotFoundException()
         {
-            /Arrage
+            //Arrage
             Mock<IFileWrapper> fileMock = new Mock<IFileWrapper>();
             var fileManager = new FileManager(fileMock.Object);
 

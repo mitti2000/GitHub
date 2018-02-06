@@ -1,0 +1,6 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\SalesBuddy\ZbW.SalesBuddy\bin\Debug\ZbW.SalesBuddy.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\SalesBuddy\ZbW.SalesBuddy\bin\Debug\ZbW.SalesBuddy.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\SalesBuddy\ZbW.SalesBuddy\obj\Debug\ZbW.SalesBuddy.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\SalesBuddy\ZbW.SalesBuddy\obj\Debug\ZbW.SalesBuddy.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\SalesBuddy\ZbW.SalesBuddy\obj\Debug\ZbW.SalesBuddy.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\SalesBuddy\ZbW.SalesBuddy\obj\Debug\ZbW.SalesBuddy.pdb

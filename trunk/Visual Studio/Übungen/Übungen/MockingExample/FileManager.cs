@@ -17,7 +17,8 @@ namespace MockingExample
 
         public void deleteAll()
         {
-            _fileWrapper.deleteAll();elete(file);
+            _fileWrapper.deleteAll();
+                delete(file);
         }
 
     }
