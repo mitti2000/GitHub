@@ -5,3 +5,8 @@ C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\obj\Deb
 C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\obj\Debug\RomanNumbers.csproj.CoreCompileInputs.cache
 C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\obj\Debug\RomanNumbers.exe
 C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\obj\Debug\RomanNumbers.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\bin\Debug\FluentAssertions.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\bin\Debug\System.ValueTuple.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\bin\Debug\FluentAssertions.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\bin\Debug\FluentAssertions.xml
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\RomanNumbers\bin\Debug\System.ValueTuple.xml

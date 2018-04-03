@@ -1,0 +1,6 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\EnumerableTest\bin\Debug\EnumerableTest.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\EnumerableTest\bin\Debug\EnumerableTest.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\EnumerableTest\bin\Debug\EnumerableTest.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\EnumerableTest\obj\Debug\EnumerableTest.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\EnumerableTest\obj\Debug\EnumerableTest.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\Übungen\Übungen\EnumerableTest\obj\Debug\EnumerableTest.pdb

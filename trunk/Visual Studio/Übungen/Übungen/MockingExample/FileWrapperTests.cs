@@ -17,8 +17,8 @@ namespace MockingExample
             var fileManager = new FileManager(fileMock.Object);
 
             //Act
-            Assert.ThrowsException<FileNotFoundException>(() => fileManager.deleteAll())
-                
+            Assert.ThrowsException<FileNotFoundException>(() => fileManager.deleteAll());
+
         }
     }
 }

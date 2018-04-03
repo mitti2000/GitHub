@@ -1,4 +1,5 @@
 ﻿using System;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace RomanNumbers.Test
@@ -22,6 +23,7 @@ namespace RomanNumbers.Test
             //Act
             var result = romanNumbers.ArabicToRoman(input);
             //Assert
+            result.Should().NotEndWith("A").And.NotBe("C");
             Assert.AreEqual(expected, result);
         }
 
