@@ -1,0 +1,11 @@
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.deps.json
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.runtimeconfig.json
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.runtimeconfig.dev.json
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.dll
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.pdb
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.AssemblyInfoInputs.cache
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.AssemblyInfo.cs
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.dll
+F:\GitHub\GitHub\trunk\Projects\WebCoreMongo\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.pdb
