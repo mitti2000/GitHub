@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC14EA27-604E-40B8-AE16-839AAD6C9A4E}</ProjectGuid>
+    <ProjectGuid>{08EA2A92-EE79-40FD-A9B7-8F7F8EA6A753}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PEA</RootNamespace>
-    <AssemblyName>PEA</AssemblyName>
+    <RootNamespace>DBA</RootNamespace>
+    <AssemblyName>DBA</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
