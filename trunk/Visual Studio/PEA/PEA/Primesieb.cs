@@ -25,11 +25,10 @@ namespace PEA
             while (pos < Siebgroesse)
             {
                 pos++;
-                for (int i = 0; i < Siebgroesse; i++)
+                for (int i = pos-1; i < Siebgroesse; i++)
                 {
                     if (intarray[i] == 1) primes[i] = PrimeType.Prim;
-                    else if (intarray[i]%pos == 0) primes[i]= PrimeType.NotPrim;
-                    else primes[i] = PrimeType.Prim;
+                    else if(primes[i] != PrimeType.NotPrim && intarray[i]!= pos && intarray[i]%pos == 0) primes[i] = PrimeType.NotPrim;
                 }
             }
 
