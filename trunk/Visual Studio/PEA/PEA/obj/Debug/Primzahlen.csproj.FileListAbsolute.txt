@@ -5,3 +5,10 @@ C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\PEA\bin\Debug\PEA.exe
 C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\PEA\bin\Debug\PEA.pdb
 C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\PEA\obj\Debug\PEA.exe
 C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\PEA\obj\Debug\PEA.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\PEA\bin\Debug\PEA.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\PEA\bin\Debug\PEA.exe
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\PEA\bin\Debug\PEA.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\PEA\obj\Debug\Primzahlen.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\PEA\obj\Debug\Primzahlen.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\PEA\obj\Debug\PEA.exe
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\PEA\obj\Debug\PEA.pdb
