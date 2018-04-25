@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\01EmployeeReader\bin\Debug\01EmployeeReader.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\01EmployeeReader\bin\Debug\01EmployeeReader.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\01EmployeeReader\bin\Debug\01EmployeeReader.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\01EmployeeReader\obj\Debug\01EmployeeReader.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\01EmployeeReader\obj\Debug\01EmployeeReader.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\01EmployeeReader\obj\Debug\01EmployeeReader.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\01EmployeeReader\obj\Debug\01EmployeeReader.pdb

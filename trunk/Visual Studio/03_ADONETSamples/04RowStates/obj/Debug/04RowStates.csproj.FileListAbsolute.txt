@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\04RowStates\bin\Debug\03RowStates.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\04RowStates\bin\Debug\03RowStates.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\04RowStates\bin\Debug\03RowStates.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\04RowStates\obj\Debug\04RowStates.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\04RowStates\obj\Debug\04RowStates.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\04RowStates\obj\Debug\03RowStates.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\04RowStates\obj\Debug\03RowStates.pdb

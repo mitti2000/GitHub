@@ -8,7 +8,7 @@ namespace EmployeeReader {
             // Installation Northwind-Datenbank: https://northwinddatabase.codeplex.com/releases/view/71634
 
             // Connectionstring: https://www.connectionstrings.com/sqlconnection/
-            string connStr = "Data Source=(local)\\symas;" + "Integrated Security=SSPI;" +
+            string connStr = "Data Source=MITTIDESKTOP;" + "Integrated Security=SSPI;" +
                              "Initial Catalog=Northwind";
 
             //string connStr = "provider=SQLOLEDB; data source=(local)\\NetSDK; " +

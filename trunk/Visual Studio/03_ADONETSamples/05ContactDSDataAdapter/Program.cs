@@ -10,7 +10,7 @@ namespace ContactDSDataAdapter {
     class Program {
         static IDbCommand GetSelectAllCmd() {
             OleDbCommand cmd = new OleDbCommand();
-            cmd.Connection = new OleDbConnection("Provider=SQLOLEDB;Data Source=(local)\\symas;Integrated Security=SSPI;Initial Catalog=playground");
+            cmd.Connection = new OleDbConnection("Provider=SQLOLEDB;Data Source=MITTIDESKTOP;Integrated Security=SSPI;Initial Catalog=playground");
             cmd.CommandText = "SELECT * FROM Person; SELECT * FROM Contact";
             return cmd;
         }

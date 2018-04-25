@@ -12,7 +12,7 @@ namespace Transactions {
             // Installation Northwind-Datenbank: https://northwinddatabase.codeplex.com/releases/view/71634
 
             // Connectionstring: https://www.connectionstrings.com/sqlconnection/
-            string connStr = "Data Source=(local)\\symas;Integrated Security=SSPI;Initial Catalog=Northwind";
+            string connStr = "Data Source=MITTIDESKTOP;Integrated Security=SSPI;Initial Catalog=Northwind";
 
             IDbConnection con = new SqlConnection(connStr);   //Verbindung erzeugen
             IDbTransaction trans = null;
@@ -34,11 +34,12 @@ namespace Transactions {
             } catch (Exception e) {
                 if (trans != null)
                     trans.Rollback();
+                Console.WriteLine("Catch");
             } finally {
                     con.Close();
             }
 
-            
+            Console.WriteLine("finished");
             Console.ReadLine();
         }
 

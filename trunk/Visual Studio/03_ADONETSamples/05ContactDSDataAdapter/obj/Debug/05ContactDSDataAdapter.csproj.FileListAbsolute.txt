@@ -1,0 +1,6 @@
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\05ContactDSDataAdapter\bin\Debug\03ContactDSDataAdapter.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\05ContactDSDataAdapter\bin\Debug\03ContactDSDataAdapter.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\05ContactDSDataAdapter\bin\Debug\03ContactDSDataAdapter.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\05ContactDSDataAdapter\obj\Debug\05ContactDSDataAdapter.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\05ContactDSDataAdapter\obj\Debug\03ContactDSDataAdapter.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\05ContactDSDataAdapter\obj\Debug\03ContactDSDataAdapter.pdb
