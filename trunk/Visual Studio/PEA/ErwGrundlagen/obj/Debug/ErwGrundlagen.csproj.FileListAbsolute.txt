@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ErwGrundlagen\bin\Debug\ErwGrundlagen.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ErwGrundlagen\bin\Debug\ErwGrundlagen.exe
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ErwGrundlagen\bin\Debug\ErwGrundlagen.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ErwGrundlagen\obj\Debug\ErwGrundlagen.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ErwGrundlagen\obj\Debug\ErwGrundlagen.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ErwGrundlagen\obj\Debug\ErwGrundlagen.exe
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ErwGrundlagen\obj\Debug\ErwGrundlagen.pdb
