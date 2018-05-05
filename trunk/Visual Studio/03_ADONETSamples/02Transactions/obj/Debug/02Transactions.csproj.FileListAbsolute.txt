@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\02Transactions\bin\Debug\02Transactions.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\02Transactions\bin\Debug\02Transactions.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\02Transactions\bin\Debug\02Transactions.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\02Transactions\obj\Debug\02Transactions.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\02Transactions\obj\Debug\02Transactions.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\02Transactions\obj\Debug\02Transactions.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\02Transactions\obj\Debug\02Transactions.pdb

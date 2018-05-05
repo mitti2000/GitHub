@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\03ContactDS\bin\Debug\02ContactDS.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\03ContactDS\bin\Debug\02ContactDS.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\03ContactDS\bin\Debug\02ContactDS.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\03ContactDS\obj\Debug\03ContactDS.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\03ContactDS\obj\Debug\03ContactDS.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\03ContactDS\obj\Debug\02ContactDS.exe
+F:\GitHub\GitHub\trunk\Visual Studio\03_ADONETSamples\03ContactDS\obj\Debug\02ContactDS.pdb
