@@ -25,10 +25,7 @@ wuerfel2.wuerfeln();
 function wuerfel3(id){
     this.id = id;
     this.zahl;
-    this.wuerfeln = (function(){
-            this.zahl = Math.round((Math.random()*6)+1);
-        }()
-    );
+    this.wuerfeln = function(){this.zahl = Math.round((Math.random()*6)+1);}
 }
 
 
@@ -38,10 +35,8 @@ for(var i =0; i<5; i++){
     wuerfels.push(new wuerfel3(i));
 }
 
-alert(wuerfels[1].zahl);
-
 for(var j = 0; j<wuerfels.length; j++){
-   //    wuerfels[j].wuerfeln();
+    wuerfels[j].wuerfeln();
     console.log(wuerfels[j].zahl);
 }
 

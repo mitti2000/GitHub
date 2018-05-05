@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primzahlen", "PEA\Primzahle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErwGrundlagen", "ErwGrundlagen\ErwGrundlagen.csproj", "{9734A9C9-9B72-4273-AC74-C705F46EB94F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VektorTestat", "VektorTestat\VektorTestat.csproj", "{AE0F5769-E807-436A-B760-CF5682992AAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9734A9C9-9B72-4273-AC74-C705F46EB94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9734A9C9-9B72-4273-AC74-C705F46EB94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9734A9C9-9B72-4273-AC74-C705F46EB94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0F5769-E807-436A-B760-CF5682992AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0F5769-E807-436A-B760-CF5682992AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0F5769-E807-436A-B760-CF5682992AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0F5769-E807-436A-B760-CF5682992AAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

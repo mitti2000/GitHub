@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\VektorTestat\bin\Debug\VektorTestat.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\VektorTestat\bin\Debug\VektorTestat.exe
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\VektorTestat\bin\Debug\VektorTestat.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\VektorTestat\obj\Debug\VektorTestat.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\VektorTestat\obj\Debug\VektorTestat.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\VektorTestat\obj\Debug\VektorTestat.exe
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\VektorTestat\obj\Debug\VektorTestat.pdb
