@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primzahlen", "PEA\Primzahlen.csproj", "{FC14EA27-604E-40B8-AE16-839AAD6C9A4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErwGrundlagen", "ErwGrundlagen\ErwGrundlagen.csproj", "{9734A9C9-9B72-4273-AC74-C705F46EB94F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FC14EA27-604E-40B8-AE16-839AAD6C9A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC14EA27-604E-40B8-AE16-839AAD6C9A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC14EA27-604E-40B8-AE16-839AAD6C9A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9734A9C9-9B72-4273-AC74-C705F46EB94F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9734A9C9-9B72-4273-AC74-C705F46EB94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9734A9C9-9B72-4273-AC74-C705F46EB94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9734A9C9-9B72-4273-AC74-C705F46EB94F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
