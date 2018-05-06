@@ -1,0 +1,6 @@
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.1_Sort\bin\Debug\1.1_Sort.exe
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.1_Sort\bin\Debug\1.1_Sort.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.1_Sort\obj\Debug\1.1_Sort.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.1_Sort\obj\Debug\1.1_Sort.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.1_Sort\obj\Debug\1.1_Sort.exe
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.1_Sort\obj\Debug\1.1_Sort.pdb
