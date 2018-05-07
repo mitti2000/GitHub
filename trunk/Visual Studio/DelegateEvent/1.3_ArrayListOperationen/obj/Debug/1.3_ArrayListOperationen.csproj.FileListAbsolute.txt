@@ -1,0 +1,6 @@
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.3_ArrayListOperationen\bin\Debug\1.3_ArrayListOperationen.exe
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.3_ArrayListOperationen\bin\Debug\1.3_ArrayListOperationen.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.3_ArrayListOperationen\obj\Debug\1.3_ArrayListOperationen.csprojResolveAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.3_ArrayListOperationen\obj\Debug\1.3_ArrayListOperationen.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.3_ArrayListOperationen\obj\Debug\1.3_ArrayListOperationen.exe
+F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.3_ArrayListOperationen\obj\Debug\1.3_ArrayListOperationen.pdb

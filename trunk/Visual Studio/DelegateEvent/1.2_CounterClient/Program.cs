@@ -20,8 +20,14 @@ namespace _1._2_CounterClient {
 
             // TODO:
             // Registrieren der Event-Handler
-            counter.CountValueChanged += obs1;
-            counter.CountValueChanged += obs2;
+            counter.CountValueChanged += obs1.CounterChanged;
+            counter.CountValueChanged += obs2.CounterChanged;
+
+            counter.Increment();
+            counter.Increment();
+            counter.Decrement();
+            counter.Reset();
+
 
             // TODO:
             // Inkrementieren des Counters
@@ -39,7 +45,10 @@ namespace _1._2_CounterClient {
         // Implementieren Sie die Klasse "CounterObserver"
         public class CounterObserver
         {
-
+            public void CounterChanged(Counter counter, CounterEventArgs args)
+            {
+                Console.WriteLine("Counter changed to: " + args.Count);
+            }
         }
 
 

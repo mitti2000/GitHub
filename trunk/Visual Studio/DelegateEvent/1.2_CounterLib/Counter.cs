@@ -8,6 +8,7 @@ namespace _1._2_CounterLib {
 
         public event CounterEventHandler CountValueChanged;
         private int count;
+        private CounterEventArgs args;
 
         public int Count
         {
@@ -17,41 +18,53 @@ namespace _1._2_CounterLib {
 
         public Counter(int value)
         {
+            args = new CounterEventArgs();
+            args.Count = Count;
             this.count = value;
+            
         }
 
         public Counter()
         {
-            count = 0;
+            args = new CounterEventArgs();
+            args.Count = Count;
+            Count = 0;
+
         }
 
         public int Increment()
         {
-            count++;
+            Count++;
+            args.Count = Count;
+            CountValueChanged(this, args);
             return Count;
         }
 
         public int Decrement()
         {
-            count--;
+            Count--;
+            args.Count = Count;
+            CountValueChanged(this, args);
             return Count;
         }
 
         public void Reset()
         {
-            count = 0;
+            Count = 0;
+            args.Count = Count;
+            CountValueChanged(this,args);
         }
 
         public void Reset(int value)
         {
-            count = value;
+            Count = value;
         }
 
     }
 
     public class CounterEventArgs : EventArgs
     {
-        
+        public int Count { get; set; }
     }
     // TODO: Klasse CounterEventArgs implementieren
 

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics.Eventing.Reader;
 
 namespace _1._3_ArrayListOperationen {
     // TODO: Delegate "Action"
-    // public delegate ...
+    public delegate void Action(string i);
 
     // TODO: Delegate "Predicate"
-    // public delegate ...
+    public delegate bool Predicate(string s);
 
     class Program {
         static void Main() {
@@ -17,27 +18,28 @@ namespace _1._3_ArrayListOperationen {
             Console.WriteLine("Liste aller Namen:");
 
             // TODO: list ausgeben (Methode ForAll)
-            // ForAll(list, ...);
+            //ForAll(list, Ausgabe);
+            ForAll(list, delegate(string i){Console.WriteLine(i);});
 
 
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Liste aller Namen mit 'S':");
 
             // TODO: list auf Namen beginnend mit "S" filtern mit anonymer Methode (Methode Find)
-            // ArrayList listStartsWithS = ...
+            ArrayList listStartsWithS = Find(list, s => s.StartsWith("S"));
 
             // TODO: listStartsWithS ausgeben (Methode ForAll)
-            // ForAll(list, ...);
+            ForAll(listStartsWithS, Ausgabe);
 
 
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Liste aller Namen mit Länge >= 15:");
 
             // TODO: list auf Namen mit Länge >= 15 filtern mit anonymer Methode (Methode Find)
-            // ArrayList listLength15Plus = ...
+            ArrayList listLength15Plus = Find(list, i => i.Length >= 15);
 
             // TODO: listLength15Plus ausgeben (Methode ForAll)
-            // ForAll(list, ...);
+            ForAll(listLength15Plus, Ausgabe);
 
 
             Console.WriteLine("--------------------------------------------------");
@@ -46,7 +48,7 @@ namespace _1._3_ArrayListOperationen {
             string concatenated = String.Empty;
 
             // TODO: list in einen string konkatenieren (Methode ForAll)
-            // ForAll(list, ...);
+            ForAll(list, AusgabeConcat);
 
             // TODO: string "concatenated" auf Konsole ausgeben
 
@@ -54,10 +56,36 @@ namespace _1._3_ArrayListOperationen {
         }
 
         // TODO: Methode ForAll(...) implementieren
-        // private static void ForAll(ArrayList list, Action action)
+        private static void ForAll(ArrayList list, Action action)
+        {
+            foreach (var text in list)
+            {
+                action((string)text);
+            }
+
+        }
+
+        private static void Ausgabe(string i)
+        {
+            Console.WriteLine(i);
+        }
+
+        private static void AusgabeConcat(string i)
+        {
+            Console.Write(i + " ");
+        }
 
         // TODO: Methode Find(...) implementieren
-        // private static ArrayList Find(ArrayList list, Predicate predicate)
+        private static ArrayList Find(ArrayList list, Predicate predicate)
+        {
+            ArrayList filtered = new ArrayList();
+
+            foreach (var text in list)
+            {
+                if (predicate((string)text)) filtered.Add(text);
+            }
+            return filtered;
+        }
 
         private static ArrayList GetNameList() {
             return new ArrayList {
