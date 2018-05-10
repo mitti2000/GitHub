@@ -90,9 +90,9 @@ namespace VektorTestat
             return vector3D.VektorBetrag();
         }
 
-        public static implicit operator Vektor3D(int point)
+        public static implicit operator Vektor3D(double point)
         {
-            return new Vektor3D(point, 0, 0);
+            return new Vektor3D((int)point, 0, 0);
         }
 
         public override bool Equals(object obj)

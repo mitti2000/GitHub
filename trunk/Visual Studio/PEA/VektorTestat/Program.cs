@@ -12,9 +12,15 @@ namespace VektorTestat
         {
 
             Vektor3D vek1 = new Vektor3D(1,2,3);
-            Vektor3D vek2 = new Vektor3D(2,3,4);
+            Vektor3D vek2 = new Vektor3D(4,5,6);
+            Vektor3D vek4 = new Vektor3D(5,7,8);
+            vek4 = 8.5;
+            Console.WriteLine(vek4);
 
             vek1[1] = 10;
+            Console.WriteLine(vek1[1]);
+            Console.WriteLine((double)vek1);
+            
 
             Console.WriteLine(vek1.ToString());
             Console.WriteLine(vek2.ToString());

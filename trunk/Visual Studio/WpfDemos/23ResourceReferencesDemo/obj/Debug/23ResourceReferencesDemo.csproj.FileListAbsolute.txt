@@ -1,0 +1,11 @@
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\bin\Debug\ResourceReferences.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\bin\Debug\ResourceReferences.exe
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\bin\Debug\ResourceReferences.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\obj\Debug\Window1.baml
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\obj\Debug\Window1.g.cs
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\obj\Debug\App.g.cs
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\obj\Debug\ResourceReferences_MarkupCompile.cache
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\obj\Debug\ResourceReferences.g.resources
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\obj\Debug\23ResourceReferencesDemo.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\obj\Debug\ResourceReferences.exe
+F:\GitHub\GitHub\trunk\Visual Studio\WpfDemos\23ResourceReferencesDemo\obj\Debug\ResourceReferences.pdb
