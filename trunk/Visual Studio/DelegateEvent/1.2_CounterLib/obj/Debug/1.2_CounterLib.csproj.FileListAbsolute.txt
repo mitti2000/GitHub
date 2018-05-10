@@ -4,3 +4,9 @@ F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\obj\Debug\1.2_
 F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\obj\Debug\1.2_CounterLib.csproj.CoreCompileInputs.cache
 F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\obj\Debug\1.2_CounterLib.dll
 F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\obj\Debug\1.2_CounterLib.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\bin\Debug\1.2_CounterLib.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\bin\Debug\1.2_CounterLib.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\obj\Debug\1.2_CounterLib.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\obj\Debug\1.2_CounterLib.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\obj\Debug\1.2_CounterLib.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterLib\obj\Debug\1.2_CounterLib.pdb

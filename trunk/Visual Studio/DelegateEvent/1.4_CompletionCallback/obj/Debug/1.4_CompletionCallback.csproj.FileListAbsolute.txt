@@ -1,0 +1,6 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.4_CompletionCallback\bin\Debug\1.4_CompletionCallback.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.4_CompletionCallback\bin\Debug\1.4_CompletionCallback.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.4_CompletionCallback\obj\Debug\1.4_CompletionCallback.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.4_CompletionCallback\obj\Debug\1.4_CompletionCallback.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.4_CompletionCallback\obj\Debug\1.4_CompletionCallback.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.4_CompletionCallback\obj\Debug\1.4_CompletionCallback.pdb

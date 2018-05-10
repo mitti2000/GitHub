@@ -12,31 +12,28 @@ namespace _1._2_CounterClient {
             // TODO:
             Counter counter = new Counter(10);
 
-            // TODO:
             // CounterObserver-Instanzen "myObserver1" / "myObserver2" mit den Namen  "obs1" / "obs2"
-            CounterObserver obs1 = new CounterObserver();
-            CounterObserver obs2 = new CounterObserver();
+            CounterObserver obs1 = new CounterObserver("myObserver1");
+            CounterObserver obs2 = new CounterObserver("myObserver2");
 
 
-            // TODO:
             // Registrieren der Event-Handler
             counter.CountValueChanged += obs1.CounterChanged;
             counter.CountValueChanged += obs2.CounterChanged;
 
+            // Inkrementieren des Counters
             counter.Increment();
             counter.Increment();
             counter.Decrement();
             counter.Reset();
 
 
-            // TODO:
-            // Inkrementieren des Counters
-
-            // TODO:
             // Deregistrieren des Events von myObserver1
+            counter.CountValueChanged -= obs1.CounterChanged;
 
             // TODO:
             // Counterwert auf "100" zurücksetzen.
+            counter.Reset(100);
 
             Console.ReadKey();
         }
@@ -45,9 +42,15 @@ namespace _1._2_CounterClient {
         // Implementieren Sie die Klasse "CounterObserver"
         public class CounterObserver
         {
+            public string Name { get; set; }
+
+            public CounterObserver(string name)
+            {
+                Name = name;
+            }
             public void CounterChanged(Counter counter, CounterEventArgs args)
             {
-                Console.WriteLine("Counter changed to: " + args.Count);
+                Console.WriteLine($"Counter {Name} changed to: {args.Count}");
             }
         }
 

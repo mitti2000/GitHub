@@ -2,9 +2,11 @@
 
 namespace _1._2_CounterLib {
 
+    public delegate void CounterEventHandler(Counter c, CounterEventArgs args);
+
     public class Counter
     {
-        public delegate void CounterEventHandler(Counter c, CounterEventArgs args);
+        
 
         public event CounterEventHandler CountValueChanged;
         private int count;

@@ -85,6 +85,23 @@ namespace VektorTestat
             }
         }
 
+        public static explicit operator double(Vektor3D vector3D)
+        {
+            return vector3D.VektorBetrag();
+        }
+
+        public static implicit operator Vektor3D(int point)
+        {
+            return new Vektor3D(point, 0, 0);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var p = obj as Vektor3D;
+            if (p == null) return false;
+            return p == this;
+        }
+
         public override string ToString()
         {
             return $"Vektor ist: A1={_a1}, A2={_a2}, A3={_a3}";

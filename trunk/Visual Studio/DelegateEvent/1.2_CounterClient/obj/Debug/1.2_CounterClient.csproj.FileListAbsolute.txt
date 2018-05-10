@@ -7,3 +7,12 @@ F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1
 F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1.2_CounterClient.csproj.CopyComplete
 F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1.2_CounterClient.exe
 F:\GitHub\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1.2_CounterClient.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\bin\Debug\1.2_CounterClient.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\bin\Debug\1.2_CounterClient.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\bin\Debug\1.2_CounterLib.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\bin\Debug\1.2_CounterLib.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1.2_CounterClient.csprojResolveAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1.2_CounterClient.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1.2_CounterClient.csproj.CopyComplete
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1.2_CounterClient.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\DelegateEvent\1.2_CounterClient\obj\Debug\1.2_CounterClient.pdb
