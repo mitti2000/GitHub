@@ -32,11 +32,12 @@ namespace WPFTestat
         public MainWindow()
         {
             InitializeComponent();
-            Loaded += new RoutedEventHandler(OnMainWindowLoaded);
-            CloseButton.Click += new RoutedEventHandler(OnCloseButtonClick);
-            PreviousCust.Click += new RoutedEventHandler(OnPreviousCustomer);
-            NextCust.Click += new RoutedEventHandler(OnNextCustomer);
-            CustomerList.SelectionChanged += new SelectionChangedEventHandler(OnListSelectionChanged);
+            var routedEventHandler = new RoutedEventHandler(OnMainWindowLoaded);
+            Loaded += routedEventHandler;
+            CloseButton.Click += OnCloseButtonClick;
+            PreviousCust.Click += OnPreviousCustomer;
+            NextCust.Click += OnNextCustomer;
+            CustomerList.SelectionChanged += OnListSelectionChanged;
         }
 
         private void OnListSelectionChanged(object sender, RoutedEventArgs e)
@@ -44,7 +45,7 @@ namespace WPFTestat
             ListBox listBox = sender as ListBox;
             Customer selectedCustomer = listBox.SelectedItem as Customer;
             customerIndex = customerData.IndexOf(selectedCustomer);
-            setCustomer();
+            SetCustomer();
             SetBindings();
         }
 
@@ -54,7 +55,7 @@ namespace WPFTestat
             customerData = data.Customers.CustomerList;
             CustomerList.ItemsSource = customerData;
             CustomerList.SelectionMode = SelectionMode.Single;
-            setCustomer();
+            SetCustomer();
             SetBindings();
         }
 
@@ -73,7 +74,7 @@ namespace WPFTestat
             if (customerIndex < (customerData.Count-1))
             {
                 customerIndex++;
-                setCustomer();
+                SetCustomer();
             }
         }
 
@@ -83,11 +84,11 @@ namespace WPFTestat
             if (customerIndex > 0)
             {
                 customerIndex--;
-                setCustomer();
+                SetCustomer();
             }
         }
 
-        private void setCustomer()
+        private void SetCustomer()
         {
             CurrentCustomer = customerData[customerIndex];
             SetBindings();
@@ -102,7 +103,6 @@ namespace WPFTestat
         public void SetBindings()
         {
             CustomerGrid.DataContext = CurrentCustomer;
-
         }
 
     }

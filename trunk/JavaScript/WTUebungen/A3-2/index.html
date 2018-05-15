@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Rechner</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+ </head>
+ <body>
+  <div id="rechner">
+	<div id="titleBar">Rechner</div>
+	<div id="content">
+		<div id="displayContainer">
+			<input type="text" id="displayHistory" readonly="readonly" />
+			<input type="text" id="display" readonly="readonly"/>
+		</div>
+		<div id="row7">
+			<input type="button" id="memoryClear" value="MC"/>
+			<input type="button" id="memoryReset" value="MR"/>
+			<input type="button" id="memoryPlus" value="M+"/>
+			<input type="button" id="memoryMinus" value="M-"/>
+			<input type="button" id="memorySave" value="MS"/>
+		</div>
+		<div id="basicContainer">
+			<div id="row6">
+				<input type="button" id="percent" value="%"/>
+				<input type="button" id="sqrt" value="&radic;"/>
+				<input type="button" id="square" value="x&#178;"/>
+				<input type="button" id="invers" value="1/x"/>
+			</div>
+			<div id="row5">
+				<input type="button" id="clear" value="CE"/>
+				<input type="button" id="reset" value="C"/>
+				<input type="button" id="return" value="&larr;"/>
+				<input type="button" id="operationDivision" value="&#247;"/>
+			</div>
+			<div id="row4">
+				<input type="button" id="value7" value="7"/>
+				<input type="button" id="value8" value="8"/>
+				<input type="button" id="value9" value="9"/>
+				<input type="button" id="operationMuliplication" value="x"/>
+			</div>
+			<div id="row3">
+				<input type="button" id="value4" value="4"/>
+				<input type="button" id="value5" value="5"/>
+				<input type="button" id="value6" value="6"/>
+				<input type="button" id="operationMinus" value="-"/>
+			</div>
+			<div id="row2">
+				<input type="button" id="value1" value="1"/>
+				<input type="button" id="value2" value="2"/>
+				<input type="button" id="value3" value="3"/>
+				<input type="button" id="operationPlus" value="+"/>
+			</div>
+			<div id="row1">
+				<input type="button" id="invert" value="&#177;"/>
+				<input type="button" id="value0" value="0"/>
+				<input type="button" id="point" value="."/>
+				<input type="button" id="result" value="="/>
+			</div>
+		</div>
+	</div>
+  </div>
+  <script src="code.js"></script> 
+ </body>
+</html>

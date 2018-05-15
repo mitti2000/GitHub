@@ -43,6 +43,7 @@
             <Button x:Name="PreviousCust" Grid.Row="0" Grid.Column="0" Content="&lt;"/>
             <Button x:Name="NextCust" Grid.Row="0" Grid.Column="1" Content="&gt;"/>
         </Grid>
+
         <TextBox x:Name="CustomerId" Grid.Row="0" Grid.Column="1" Text="{Binding CustomerID}"/>
         <TextBox x:Name="Companyname" Grid.Row="1" Grid.Column="1" Text="{Binding CompanyName}"/>
         <TextBox x:Name="Contactname" Grid.Row="2" Grid.Column="1" Text="{Binding ContactName}"/>
@@ -60,11 +61,15 @@
             <Button x:Name="CloseButton" Grid.Row="0" Grid.Column="0" Content="Close"/>
         </Grid>
         <ListBox x:Name="CustomerList" Grid.Column="1" HorizontalAlignment="Left" Height="187" Margin="10,10,0,0" Grid.Row="7" VerticalAlignment="Top" Width="380">
-            <!--<DataTemplate>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="{Binding CusotmerID}"/>
-                </StackPanel>
-            </DataTemplate>-->
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding CusotmerID}"/>
+                        <Label Content="{Binding CompanyName}"/>
+                        <Label Content="{Binding ContactName}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
 </Window>
