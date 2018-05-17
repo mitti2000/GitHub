@@ -1,0 +1,7 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\ClickingBad\ClickingBad\bin\Debug\ClickingBad.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\ClickingBad\ClickingBad\bin\Debug\ClickingBad.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\ClickingBad\ClickingBad\bin\Debug\ClickingBad.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\ClickingBad\ClickingBad\obj\Debug\ClickingBad.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\ClickingBad\ClickingBad\obj\Debug\ClickingBad.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\ClickingBad\ClickingBad\obj\Debug\ClickingBad.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\ClickingBad\ClickingBad\obj\Debug\ClickingBad.pdb
