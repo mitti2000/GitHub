@@ -2,9 +2,9 @@
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Customers>
     <Customer CustomerID="GREAL">
-      <CompanyName>Great Lakes Food Market2</CompanyName>
+      <CompanyName>Great Lakes Food Market</CompanyName>
       <ContactName>Howard Snyder</ContactName>
-      <ContactTitle>Marketing Manager2</ContactTitle>
+      <ContactTitle>Marketing Manager</ContactTitle>
       <Phone>(503) 555-7555</Phone>
       <Fax>(503) 555-7556</Fax>
       <Birthday>1997-08-28T00:00:00</Birthday>
@@ -16,7 +16,7 @@
         <Country>USA</Country>
       </FullAddress>
     </Customer>
-    <Customer CustomerID="HUNGC">
+    <Customer CustomerID="HUNG">
       <CompanyName>Hungry Coyote Import Store</CompanyName>
       <ContactName>Yoshi Latimer</ContactName>
       <ContactTitle>Sales Representative</ContactTitle>

@@ -6,71 +6,99 @@
         xmlns:local="clr-namespace:WPFTestat"
         mc:Ignorable="d"
         Title="CustomerManagement" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="CloseButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Width="50" Height="50" 
+                                    Fill="{TemplateBinding Background}"
+                                     Stroke="{TemplateBinding BorderBrush}"/>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderBrush" Value="Red"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="Green"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid
-        x:Name="CustomerGrid"
-        >
+        x:Name="CustomerGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="70" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="400" />
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="0" Content="CustomerID:"/>
-        <Label Grid.Row="1" Grid.Column="0" Content="Companyname:"/>
-        <Label Grid.Row="2" Grid.Column="0" Content="Contactname:"/>
-        <Label Grid.Row="3" Grid.Column="0" Content="Contacttitle:"/>
-        <Label Grid.Row="4" Grid.Column="0" Content="Phone:"/>
-        <Label Grid.Row="5" Grid.Column="0" Content="Fax"/>
-        <Label Grid.Row="6" Grid.Column="0" Content="Birthday"/>
-        <Grid Grid.Row="8" Grid.Column="0">
+        <Label Grid.Row="0" Grid.Column="0" Content="CustomerID:" />
+        <Label Grid.Row="1" Grid.Column="0" Content="Companyname:" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Contactname:" />
+        <Label Grid.Row="3" Grid.Column="0" Content="Contacttitle:" />
+        <Label Grid.Row="4" Grid.Column="0" Content="Phone:" />
+        <Label Grid.Row="5" Grid.Column="0" Content="Fax" />
+        <Label Grid.Row="6" Grid.Column="0" Content="Birthday" />
+        <!--<Grid Grid.Row="8" Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"></ColumnDefinition>
-                <ColumnDefinition Width="50"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="PreviousCust" Grid.Row="0" Grid.Column="0" Content="&lt;"/>
-            <Button x:Name="NextCust" Grid.Row="0" Grid.Column="1" Content="&gt;"/>
-        </Grid>
+            <Button x:Name="PreviousCust" Grid.Row="0" Grid.Column="0" Content="&lt;" />
+            <Button x:Name="NextCust" Grid.Row="0" Grid.Column="1" Content="&gt;" />
+        </Grid>-->
 
-        <TextBox x:Name="CustomerId" Grid.Row="0" Grid.Column="1" Text="{Binding CustomerID}"/>
-        <TextBox x:Name="Companyname" Grid.Row="1" Grid.Column="1" Text="{Binding CompanyName}"/>
-        <TextBox x:Name="Contactname" Grid.Row="2" Grid.Column="1" Text="{Binding ContactName}"/>
-        <TextBox x:Name="Contacttitle" Grid.Row="3" Grid.Column="1" Text="{Binding ContactTitle}"/>
-        <TextBox x:Name="Phone" Grid.Row="4" Grid.Column="1" Text="{Binding Phone}"/>
-        <TextBox x:Name="Fax" Grid.Row="5" Grid.Column="1" Text="{Binding Fax}"/>
-        <DatePicker x:Name="Birthday"  Grid.Row="6" Grid.Column="1" SelectedDate="{Binding Birthday}"/>
-        <Grid Grid.Row="8" Grid.Column="1">
+        <TextBox x:Name="CustomerId" Grid.Row="0" Grid.Column="1" Text="{Binding CustomerID, ValidatesOnDataErrors=True}" />
+        <TextBox x:Name="Companyname" Grid.Row="1" Grid.Column="1" Text="{Binding CompanyName, ValidatesOnDataErrors=True}" />
+        <TextBox x:Name="Contactname" Grid.Row="2" Grid.Column="1" Text="{Binding ContactName, ValidatesOnDataErrors=True}" />
+        <TextBox x:Name="Contacttitle" Grid.Row="3" Grid.Column="1" Text="{Binding ContactTitle, ValidatesOnDataErrors=True}" />
+        <TextBox x:Name="Phone" Grid.Row="4" Grid.Column="1" Text="{Binding Phone, ValidatesOnDataErrors=True}" />
+        <TextBox x:Name="Fax" Grid.Row="5" Grid.Column="1" Text="{Binding Fax, ValidatesOnDataErrors=True}" />
+        <DatePicker x:Name="Birthday" Grid.Row="6" Grid.Column="1" SelectedDate="{Binding Birthday, ValidatesOnDataErrors=True}" />
+        <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="CloseButton" Grid.Row="0" Grid.Column="0" Content="Close"/>
+            <Button x:Name="CloseButton" Grid.Row="0" Grid.Column="0" Content="Close" Style="{StaticResource CloseButtonStyle}" />
         </Grid>
-        <ListBox x:Name="CustomerList" Grid.Column="1" HorizontalAlignment="Left" Height="187" Margin="10,10,0,0" Grid.Row="7" VerticalAlignment="Top" Width="380">
+        <ListBox x:Name="CustomerList" HorizontalAlignment="Left" Height="147" Margin="10,10,0,0" Grid.Row="7"
+                 VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="{Binding CusotmerID}"/>
-                        <Label Content="{Binding CompanyName}"/>
-                        <Label Content="{Binding ContactName}"/>
+                        <Label  Content="{Binding CustomerID}" />
+                        <Label Content="{Binding CompanyName}" />
+                        <Label Content="{Binding ContactName}" />
+                        <Label Content="{Binding ContactTitle}" />
+                        <Label Content="{Binding Phone}" />
+                        <Label Content="{Binding Birthday}" ContentStringFormat="dd.MM.yyyy" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
-</Window>
 
+</Window>

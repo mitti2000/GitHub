@@ -35,8 +35,8 @@ namespace WPFTestat
             var routedEventHandler = new RoutedEventHandler(OnMainWindowLoaded);
             Loaded += routedEventHandler;
             CloseButton.Click += OnCloseButtonClick;
-            PreviousCust.Click += OnPreviousCustomer;
-            NextCust.Click += OnNextCustomer;
+            //PreviousCust.Click += OnPreviousCustomer;
+            //NextCust.Click += OnNextCustomer;
             CustomerList.SelectionChanged += OnListSelectionChanged;
         }
 
