@@ -30,6 +30,28 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="TextErrorStyle" TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="Background" Value="IndianRed"/>
+                    <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                    <Setter Property="Validation.ErrorTemplate">
+                        <Setter.Value>
+                            <ControlTemplate x:Name="TextErrorTemplate">
+                                <DockPanel>
+                                    <Border BorderBrush="Red" BorderThickness="1">
+                                        <AdornedElementPlaceholder/>
+                                    </Border>
+                                    <TextBlock FontSize="20" Foreground="Red">*!*</TextBlock>
+                                </DockPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
     <Grid
         x:Name="CustomerGrid">
@@ -55,26 +77,27 @@
         <Label Grid.Row="4" Grid.Column="0" Content="Phone:" />
         <Label Grid.Row="5" Grid.Column="0" Content="Fax" />
         <Label Grid.Row="6" Grid.Column="0" Content="Birthday" />
-        <!--<Grid Grid.Row="8" Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50" />
-                <ColumnDefinition Width="50" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Button x:Name="PreviousCust" Grid.Row="0" Grid.Column="0" Content="&lt;" />
-            <Button x:Name="NextCust" Grid.Row="0" Grid.Column="1" Content="&gt;" />
-        </Grid>-->
 
-        <TextBox x:Name="CustomerId" Grid.Row="0" Grid.Column="1" Text="{Binding CustomerID, ValidatesOnDataErrors=True}" />
-        <TextBox x:Name="Companyname" Grid.Row="1" Grid.Column="1" Text="{Binding CompanyName, ValidatesOnDataErrors=True}" />
-        <TextBox x:Name="Contactname" Grid.Row="2" Grid.Column="1" Text="{Binding ContactName, ValidatesOnDataErrors=True}" />
-        <TextBox x:Name="Contacttitle" Grid.Row="3" Grid.Column="1" Text="{Binding ContactTitle, ValidatesOnDataErrors=True}" />
-        <TextBox x:Name="Phone" Grid.Row="4" Grid.Column="1" Text="{Binding Phone, ValidatesOnDataErrors=True}" />
-        <TextBox x:Name="Fax" Grid.Row="5" Grid.Column="1" Text="{Binding Fax, ValidatesOnDataErrors=True}" />
-        <DatePicker x:Name="Birthday" Grid.Row="6" Grid.Column="1" SelectedDate="{Binding Birthday, ValidatesOnDataErrors=True}" />
+        <TextBox x:Name="CustomerId" Grid.Row="0" Grid.Column="1" Margin="0,0,35,0"
+                 Text="{Binding CustomerID, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Style="{StaticResource TextErrorStyle}"/>
+        <TextBox x:Name="Companyname" Grid.Row="1" Grid.Column="1" Margin="0,0,35,0" 
+                 Text="{Binding CompanyName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Style="{StaticResource TextErrorStyle}"/>
+        <TextBox x:Name="Contactname" Grid.Row="2" Grid.Column="1" Margin="0,0,35,0" 
+                 Text="{Binding ContactName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Style="{StaticResource TextErrorStyle}"/>
+        <TextBox x:Name="Contacttitle" Grid.Row="3" Grid.Column="1" Margin="0,0,35,0" 
+                 Text="{Binding ContactTitle, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Style="{StaticResource TextErrorStyle}"/>
+        <TextBox x:Name="Phone" Grid.Row="4" Grid.Column="1" Margin="0,0,35,0" 
+                 Text="{Binding Phone, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Style="{StaticResource TextErrorStyle}"/>
+        <TextBox x:Name="Fax" Grid.Row="5" Grid.Column="1" Margin="0,0,35,0" 
+                 Text="{Binding Fax, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Style="{StaticResource TextErrorStyle}"/>
+        <DatePicker x:Name="Birthday" Grid.Row="6" Grid.Column="1" Margin="0,0,35,0" 
+                 SelectedDate="{Binding Birthday, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" />
         <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -89,7 +112,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Label  Content="{Binding CustomerID}" />
+                        <Label Content="{Binding CustomerID}" />
                         <Label Content="{Binding CompanyName}" />
                         <Label Content="{Binding ContactName}" />
                         <Label Content="{Binding ContactTitle}" />

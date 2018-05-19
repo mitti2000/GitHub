@@ -35,8 +35,6 @@ namespace WPFTestat
             var routedEventHandler = new RoutedEventHandler(OnMainWindowLoaded);
             Loaded += routedEventHandler;
             CloseButton.Click += OnCloseButtonClick;
-            //PreviousCust.Click += OnPreviousCustomer;
-            //NextCust.Click += OnNextCustomer;
             CustomerList.SelectionChanged += OnListSelectionChanged;
         }
 
@@ -61,10 +59,23 @@ namespace WPFTestat
 
         private void OnCloseButtonClick(object sender, RoutedEventArgs e)
         {
-            SaveCustomer();
-            this.Close();
-            data.Save();
-            Application.Current.Shutdown();
+            if (Validation.GetHasError(CustomerId) ||
+                Validation.GetHasError(Companyname) ||
+                Validation.GetHasError(Contacttitle) ||
+                Validation.GetHasError(Contactname) ||
+                Validation.GetHasError(Phone) ||
+                Validation.GetHasError(Fax) ||
+                Validation.GetHasError(Birthday))
+            {
+                MessageBox.Show("Form still has Errors!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                SaveCustomer();
+                this.Close();
+                data.Save();
+                Application.Current.Shutdown();
+            }
 
         }
 
