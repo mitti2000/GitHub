@@ -79,25 +79,25 @@ namespace WPFTestat
 
         }
 
-        private void OnNextCustomer(object sender, RoutedEventArgs e)
-        {
-            SaveCustomer();
-            if (customerIndex < (customerData.Count-1))
-            {
-                customerIndex++;
-                SetCustomer();
-            }
-        }
+        //private void OnNextCustomer(object sender, RoutedEventArgs e)
+        //{
+        //    SaveCustomer();
+        //    if (customerIndex < (customerData.Count-1))
+        //    {
+        //        customerIndex++;
+        //        SetCustomer();
+        //    }
+        //}
 
-        private void OnPreviousCustomer(object sender, RoutedEventArgs e)
-        {
-            SaveCustomer();
-            if (customerIndex > 0)
-            {
-                customerIndex--;
-                SetCustomer();
-            }
-        }
+        //private void OnPreviousCustomer(object sender, RoutedEventArgs e)
+        //{
+        //    SaveCustomer();
+        //    if (customerIndex > 0)
+        //    {
+        //        customerIndex--;
+        //        SetCustomer();
+        //    }
+        //}
 
         private void SetCustomer()
         {
@@ -113,7 +113,7 @@ namespace WPFTestat
 
         public void SetBindings()
         {
-            CustomerGrid.DataContext = CurrentCustomer;
+            this.DataContext = CurrentCustomer;
         }
 
     }
