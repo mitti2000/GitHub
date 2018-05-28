@@ -31,7 +31,7 @@ namespace ClickMyDrugs
                 SetCursorPos(100, 380);
                 for (int i = 0; i < 1000; i++)
                 {
-                    Thread.Sleep(5);
+                    Thread.Sleep(10);
                     mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
                     mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
                 }

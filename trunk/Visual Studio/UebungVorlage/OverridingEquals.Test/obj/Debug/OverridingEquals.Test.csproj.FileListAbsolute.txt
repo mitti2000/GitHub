@@ -1,0 +1,10 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\bin\Debug\OverridingEquals.Test.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\bin\Debug\OverridingEquals.Test.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\bin\Debug\OverridingEquals.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\bin\Debug\OverridingEquals.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\obj\Debug\OverridingEquals.Test.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\obj\Debug\OverridingEquals.Test.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\obj\Debug\OverridingEquals.Test.csproj.CopyComplete
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\obj\Debug\OverridingEquals.Test.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals.Test\obj\Debug\OverridingEquals.Test.pdb

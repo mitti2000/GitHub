@@ -1,0 +1,6 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals\bin\Debug\OverridingEquals.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals\bin\Debug\OverridingEquals.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals\obj\Debug\OverridingEquals.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals\obj\Debug\OverridingEquals.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals\obj\Debug\OverridingEquals.dll
+C:\Users\mitti\GitHub\trunk\Visual Studio\UebungVorlage\OverridingEquals\obj\Debug\OverridingEquals.pdb
