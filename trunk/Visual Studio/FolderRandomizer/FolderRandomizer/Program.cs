@@ -11,7 +11,7 @@ namespace FolderRandomizer
     {
         static void Main(string[] args)
         {
-            Randomizer randomizer = new Randomizer(@"C: \Users\mitti\Desktop\aaa",10);
+            Randomizer randomizer = new Randomizer(@"F:\temp\Music", @"F:\temp\Musictarget", 100);
             randomizer.Output();
             Console.ReadLine();
 

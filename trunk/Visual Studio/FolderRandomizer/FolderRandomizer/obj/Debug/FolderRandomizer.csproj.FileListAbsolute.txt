@@ -5,3 +5,10 @@ C:\Users\mitti\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\obj\
 C:\Users\mitti\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\obj\Debug\FolderRandomizer.csproj.CoreCompileInputs.cache
 C:\Users\mitti\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\obj\Debug\FolderRandomizer.exe
 C:\Users\mitti\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\obj\Debug\FolderRandomizer.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\bin\Debug\FolderRandomizer.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\bin\Debug\FolderRandomizer.exe
+F:\GitHub\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\bin\Debug\FolderRandomizer.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\obj\Debug\FolderRandomizer.csprojAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\obj\Debug\FolderRandomizer.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\obj\Debug\FolderRandomizer.exe
+F:\GitHub\GitHub\trunk\Visual Studio\FolderRandomizer\FolderRandomizer\obj\Debug\FolderRandomizer.pdb

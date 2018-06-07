@@ -1,0 +1,6 @@
+F:\GitHub\GitHub\trunk\Visual Studio\MVVMDemos\03ZzaDashboard - SimpleMVVM\ZzaDashboard\obj\Debug\ZzaDashboard.csprojAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\MVVMDemos\03ZzaDashboard - SimpleMVVM\ZzaDashboard\obj\Debug\MainWindow.g.cs
+F:\GitHub\GitHub\trunk\Visual Studio\MVVMDemos\03ZzaDashboard - SimpleMVVM\ZzaDashboard\obj\Debug\App.g.cs
+F:\GitHub\GitHub\trunk\Visual Studio\MVVMDemos\03ZzaDashboard - SimpleMVVM\ZzaDashboard\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\GitHub\GitHub\trunk\Visual Studio\MVVMDemos\03ZzaDashboard - SimpleMVVM\ZzaDashboard\obj\Debug\ZzaDashboard_MarkupCompile.cache
+F:\GitHub\GitHub\trunk\Visual Studio\MVVMDemos\03ZzaDashboard - SimpleMVVM\ZzaDashboard\obj\Debug\ZzaDashboard_MarkupCompile.lref
