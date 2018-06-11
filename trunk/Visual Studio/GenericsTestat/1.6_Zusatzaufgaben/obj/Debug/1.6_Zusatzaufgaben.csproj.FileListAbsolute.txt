@@ -1,0 +1,5 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\bin\Debug\1.6_Zusatzaufgaben.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\bin\Debug\1.6_Zusatzaufgaben.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.pdb

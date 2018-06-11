@@ -1,0 +1,6 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.5_Delegates\bin\Debug\1.5_Delegates.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.5_Delegates\bin\Debug\1.5_Delegates.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.5_Delegates\obj\Debug\1.5_Delegates.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.5_Delegates\obj\Debug\1.5_Delegates.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.5_Delegates\obj\Debug\1.5_Delegates.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.5_Delegates\obj\Debug\1.5_Delegates.pdb

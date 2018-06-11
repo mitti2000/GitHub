@@ -1,0 +1,6 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.1_UmbauGenerics\obj\Debug\1.1_UmbauGenerics.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.1_UmbauGenerics\obj\Debug\1.1_UmbauGenerics.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.1_UmbauGenerics\bin\Debug\1.1_UmbauGenerics.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.1_UmbauGenerics\bin\Debug\1.1_UmbauGenerics.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.1_UmbauGenerics\obj\Debug\1.1_UmbauGenerics.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.1_UmbauGenerics\obj\Debug\1.1_UmbauGenerics.pdb

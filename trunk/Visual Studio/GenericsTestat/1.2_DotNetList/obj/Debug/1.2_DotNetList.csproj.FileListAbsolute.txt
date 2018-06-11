@@ -1,0 +1,6 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.2_DotNetList\bin\Debug\1.2_DotNetList.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.2_DotNetList\bin\Debug\1.2_DotNetList.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.2_DotNetList\obj\Debug\1.2_DotNetList.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.2_DotNetList\obj\Debug\1.2_DotNetList.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.2_DotNetList\obj\Debug\1.2_DotNetList.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.2_DotNetList\obj\Debug\1.2_DotNetList.pdb

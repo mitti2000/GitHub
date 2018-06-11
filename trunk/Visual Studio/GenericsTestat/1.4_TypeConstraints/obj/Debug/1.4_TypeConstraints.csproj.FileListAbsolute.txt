@@ -1,0 +1,6 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.4_TypeConstraints\bin\Debug\1.4_TypeConstraints.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.4_TypeConstraints\bin\Debug\1.4_TypeConstraints.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.4_TypeConstraints\obj\Debug\1.4_TypeConstraints.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.4_TypeConstraints\obj\Debug\1.4_TypeConstraints.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.4_TypeConstraints\obj\Debug\1.4_TypeConstraints.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.4_TypeConstraints\obj\Debug\1.4_TypeConstraints.pdb
