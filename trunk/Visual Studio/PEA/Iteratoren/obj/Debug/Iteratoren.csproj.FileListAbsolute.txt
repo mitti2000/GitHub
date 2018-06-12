@@ -1,0 +1,7 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\Iteratoren\bin\Debug\Iteratoren.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\Iteratoren\bin\Debug\Iteratoren.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\Iteratoren\bin\Debug\Iteratoren.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\Iteratoren\obj\Debug\Iteratoren.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\Iteratoren\obj\Debug\Iteratoren.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\Iteratoren\obj\Debug\Iteratoren.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\Iteratoren\obj\Debug\Iteratoren.pdb
