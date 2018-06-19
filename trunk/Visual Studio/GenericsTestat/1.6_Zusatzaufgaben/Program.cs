@@ -3,19 +3,19 @@
 namespace _1._6_Zusatzaufgaben {
     class Program {
         static void Main(string[] args) {
-            TestAufgabe1();
-            TestAufgabe2();
-            TestAufgabe3();
+            //TestAufgabe1();
+            //TestAufgabe2();
+            //TestAufgabe3();
             TestAufgabe4();
-            TestAufgabe5();
-            TestAufgabe6();
+            //TestAufgabe5();
+            //TestAufgabe6();
 
             Console.ReadKey();
         }
 
         private static void TestAufgabe1() {
             Console.WriteLine("TestBinaryTree");
-            BinaryTreeInt mTree = new BinaryTreeInt();
+            BinaryTreeInt<int> mTree = new BinaryTreeInt<int>();
             mTree.Add(4, 6, 2, 7, 5, 3, 1);
 
             Console.WriteLine("Trace");

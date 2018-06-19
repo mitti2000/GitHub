@@ -3,3 +3,9 @@ C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\bin\
 C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.csproj.CoreCompileInputs.cache
 C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.exe
 C:\Users\mitti\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\bin\Debug\1.6_Zusatzaufgaben.exe
+F:\GitHub\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\bin\Debug\1.6_Zusatzaufgaben.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.exe
+F:\GitHub\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\GenericsTestat\1.6_Zusatzaufgaben\obj\Debug\1.6_Zusatzaufgaben.csprojAssemblyReference.cache
