@@ -51,7 +51,6 @@ namespace _1._2_DotNetList {
 
         private static int ComparePersonsByName(Person p1, Person p2) {
             // TODO: Implementieren Sie die benötigte Funktionalität.
-            return -1;
-        }
+            return p1.Name.CompareTo(p2.Name);        }
     }
 }

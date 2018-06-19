@@ -2,56 +2,56 @@
 
 namespace _1._6_Zusatzaufgaben {
     [Serializable]
-    class Node {
-        public static bool operator >(Node lhs, Node rhs) {
+    class Node<T> where T : IComparable<T> {
+        public static bool operator >(Node<T> lhs, Node<T> rhs) {
             int res = lhs.Item.CompareTo(rhs.Item);
             return res > 0;
         }
 
-        public static bool operator <(Node lhs, Node rhs) {
+        public static bool operator <(Node<T> lhs, Node<T> rhs) {
             int res = lhs.Item.CompareTo(rhs.Item);
             return res < 0;
         }
 
         public Node() {
             RightNode = LeftNode = null;
-            Item = Int32.MinValue; // erstzen durch Default-Wert von T;
+            Item = default(T); // erstzen durch Default-Wert von T;
         }
 
-        public Node(int item) {
+        public Node(T item) {
             RightNode = LeftNode = null;
             Item = item;
         }
 
-        public Node(int item, Node right, Node left) {
+        public Node(T item, Node<T> right, Node<T> left) {
             RightNode = right;
             LeftNode = left;
             Item = item;
         }
 
-        public Node LeftNode;
-        public Node RightNode;
-        public int Item; //int durch T ersetzen
+        public Node<T> LeftNode;
+        public Node<T> RightNode;
+        public T Item; //int durch T ersetzen
     }
 
-    public class BinaryTreeInt {
-        Node m_Root;
+    public class BinaryTreeInt<T> where T : IComparable<T> {
+        Node<T> m_Root;
 
         public BinaryTreeInt() {
-            m_Root = new Node();
+            m_Root = new Node<T>();
         }
 
-        public void Add(params int[] items) {
-            foreach (int t in items) {
+        public void Add(params T[] items) {
+            foreach (T t in items) {
                 Add(t);
             }
         }
 
-        public void Add(int item) {
-            Add(new Node(item), m_Root);
+        public void Add(T item) {
+            Add(new Node<T>(item), m_Root);
         }
 
-        void Add(Node newNode, Node root) {
+        void Add(Node<T> newNode, Node<T> root) {
             if (newNode > root) {
                 if (root.RightNode == null) {
                     root.RightNode = newNode;
@@ -79,7 +79,7 @@ namespace _1._6_Zusatzaufgaben {
             TracePostOrder(m_Root.RightNode);
         }
 
-        void TraceInOrder(Node root) {
+        void TraceInOrder(Node<T> root) {
             if (root.LeftNode != null)
                 TraceInOrder(root.LeftNode);
 
@@ -89,7 +89,7 @@ namespace _1._6_Zusatzaufgaben {
                 TraceInOrder(root.RightNode);
         }
 
-        void TracePostOrder(Node root) {
+        void TracePostOrder(Node<T> root) {
             Console.WriteLine(root.Item.ToString());
 
             if (root.LeftNode != null)

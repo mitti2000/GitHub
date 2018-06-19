@@ -10,5 +10,10 @@ namespace _1._4_TypeConstraints
         {
             return new T();
         }
+
+        public Test()
+        {
+
+        }
     }
 }
