@@ -10,6 +10,15 @@ namespace DelegateEvent
     {
         static void Main(string[] args)
         {
+            Testclass tc = new Testclass();
+            Eventtest et = new Eventtest();
+
+            et.MyEvent += tc.EventMethod;
+
+            et.ChangeSometing();
+
+            Console.WriteLine("--------------------------------------------");
+
             SortArray sortArray = new SortArray();
 
             int[] sortedArray = sortArray.Sort(sortArray.intArray, sortArray.compElements);
@@ -18,6 +27,15 @@ namespace DelegateEvent
             {
                 Console.Write(VARIABLE + ",");
             }
+        }
+
+    }
+
+    public class Testclass
+    {
+        public void EventMethod(string text)
+        {
+            Console.WriteLine(text);
         }
     }
 }

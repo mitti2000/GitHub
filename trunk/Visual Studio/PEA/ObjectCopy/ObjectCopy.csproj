@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EFD6E010-FC68-4ADD-A6F7-9CDE5122E9F2}</ProjectGuid>
+    <ProjectGuid>{F0E26EB0-455C-41FF-B3D2-BA50AFDE70DB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DelegateEvent</RootNamespace>
-    <AssemblyName>DelegateEvent</AssemblyName>
+    <RootNamespace>ObjectCopy</RootNamespace>
+    <AssemblyName>ObjectCopy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Eventtest.cs" />
-    <Compile Include="SortArray.cs" />
+    <Compile Include="Adress.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,7 +1,6 @@
 F:\GitHub\GitHub\trunk\Visual Studio\PEA\WPFTestat\bin\Debug\WPFTestat.exe.config
 F:\GitHub\GitHub\trunk\Visual Studio\PEA\WPFTestat\bin\Debug\WPFTestat.exe
 F:\GitHub\GitHub\trunk\Visual Studio\PEA\WPFTestat\bin\Debug\WPFTestat.pdb
-F:\GitHub\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\WPFTestat.csprojResolveAssemblyReference.cache
 F:\GitHub\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\MainWindow.g.cs
 F:\GitHub\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\App.g.cs
 F:\GitHub\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\WPFTestat_MarkupCompile.cache
@@ -32,3 +31,4 @@ C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\WPFTestat.cspr
 C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\WPFTestat.csproj.CopyComplete
 C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\WPFTestat.exe
 C:\Users\mitti\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\WPFTestat.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\WPFTestat\obj\Debug\WPFTestat.csprojAssemblyReference.cache
