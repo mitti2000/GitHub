@@ -1,0 +1,14 @@
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\bin\Debug\TestUIThread.exe.config
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\bin\Debug\TestUIThread.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\bin\Debug\TestUIThread.pdb
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\TestUIThread.csprojAssemblyReference.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\MainWindow.baml
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\MainWindow.g.cs
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\App.g.cs
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\TestUIThread_MarkupCompile.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\TestUIThread.g.resources
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\TestUIThread.Properties.Resources.resources
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\TestUIThread.csproj.GenerateResource.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\TestUIThread.csproj.CoreCompileInputs.cache
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\TestUIThread.exe
+C:\Users\mitti\GitHub\trunk\Visual Studio\WPFThreading1\TestUIThread\obj\Debug\TestUIThread.pdb
