@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ObjectCopy\bin\Debug\ObjectCopy.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ObjectCopy\bin\Debug\ObjectCopy.exe
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ObjectCopy\bin\Debug\ObjectCopy.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ObjectCopy\obj\Debug\ObjectCopy.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ObjectCopy\obj\Debug\ObjectCopy.exe
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ObjectCopy\obj\Debug\ObjectCopy.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\PEA\ObjectCopy\obj\Debug\ObjectCopy.csprojAssemblyReference.cache
