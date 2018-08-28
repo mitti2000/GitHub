@@ -1,0 +1,26 @@
+Voraussetzung:
+Visual Studio 2017 V15.3.0 oder höher
+SQL Server 2017 Enterprise / Developer inkl. Analysis Services (Feature für die SQL-Server-Instanz) – Analysis Service mit dem aktuellen Benutzer als Anmeldung für den Dienst sowie im Server Mode «Multidemsional and DataMining Mode»
+SQL Server Data Tools (neu: via Visual Studio Installer installieren: Workload «Data storage and processing» zusätzlich in VS->Tools->Extensions and Updates->Online->Microsoft Analysis Services PRojects)alt: können installiert werden über Installation Center als sep. Punkt – alle drei auswählen: Analysis Services, Reporting Services, Integration Services)
+SQL Server 2017 Reporting Services
+
+BIDemo_ETL
+für die zwei Verbindungen «AdventureWorks2016» und «AdventureWorksDWH» müssen die ConnectionStrings angepasst werden (Server anpassen von symas-ws\symas auf symas-nb\symas)
+SSIS-Paket «Master.dtsx» ContextMenu: Paket ausführen – somit wird der komplette ETL-Prozess durchgeführt
+
+BIDemo_Cube
+In den Projekteigenschaften (rechte Maustaste auf Projekt -> Eigenschaften) unter Bereitstellung den Server eintragen: symas-nb\symas
+ConnectionString der Datenquelle anpassen (Server von symas-ws\symas auf symas-nb\symas) – unter Impersionationinformationen ist Dienstkonto gewählt – da oben der Analysis Service mit dem aktuellen Benutzer für den Dienst installiert wurde (und der hoffentlich zugriff auf die DB hat), sollte das funktionierenWichtig: der SQL-Server muss unter Security (allgemein) der Benutzer als SysAdmin definiert haben (z.b. symas-nb\tkehl)
+Dimension «Dim Customer.dim» -> Rechte Maustaste -> Verabeiten
+Dimension «Dim Product.dim» -> Rechte Maustaste -> Verabeiten
+Cube «Adventure Works DWH.cube» -> Rechte Maustaste -> Verabeiten
+Nun kann der Cobe geöffnet werden (Entwurf) und auf dem Tab «Browser» oben in der Symbolleiste «Excel» gewählt werden -> Excel öffnet mit den Daten
+Im Excel für Zeile die «Products»-Hierarchie wählen, für Spalten die «Geography»-Hierarchie und für Werte «Line Total» von den Fakten
+Das öffnen des Excel bzw. das Browsen des Cubes ist auch möglich, wenn im SQL Management Studio auf den Analysis Service verbunden wird und bei der DB BIDemo_Cube dort der Cube via Rechte Maustaste -> Browse geöffnet wird. Da kann das Excel auch geöffnet werden
+
+BIDemo_Reports:
+unter «Freigegebene Datenquellen» muss bei «BIDemo_Cube.rds» der ConnectionString angepasst werden (Servername von symas-ws\symas zu symas-nb\symas)
+Report «Line Total Sales.rdl» öffnen (Doppelclick)
+Im Report auf Preview wechlsen -> Daten werden angezeigt (Info: Daten ohne Kategorie und ohne Land wurden rausgefiltert – ansonsten tritt eine OutOfMemoryExcepiton auf)
+
+

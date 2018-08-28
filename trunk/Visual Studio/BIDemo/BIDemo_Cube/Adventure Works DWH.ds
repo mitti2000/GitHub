@@ -3,7 +3,7 @@
   <Name>Adventure Works DWH</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-  <ConnectionString>Provider=SQLNCLI11.1;Data Source=symas-ws\symas;Integrated Security=SSPI;Initial Catalog=AdventureWorksDWH</ConnectionString>
+  <ConnectionString>Provider=SQLNCLI11.1;Data Source=MITTILAPTOP;Integrated Security=SSPI;Initial Catalog=AdventureWorksDWH</ConnectionString>
   <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
   <ImpersonationInfo>
     <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>

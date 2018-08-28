@@ -1,8 +1,8 @@
 ﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
   <Target>
     <Database>BIDemo_Cube</Database>
-    <Server>symas-ws\symas</Server>
-    <ConnectionString>Data Source=symas-ws\symas;Timeout=0</ConnectionString>
+    <Server>MITTILAPTOP</Server>
+    <ConnectionString>Data Source=MITTILAPTOP;Timeout=0</ConnectionString>
   </Target>
   <Options>
     <TransactionalDeployment>false</TransactionalDeployment>
@@ -19,35 +19,35 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>MSdCVG2rMeO7co4zEcoXYoKnY6g=10.12.2017 10:43:2710.12.2017 13:44:28</TimeStamp>
+        <TimeStamp>FuRHqGdy5MB+sWNGFjUrh+nNWuY=28.08.2018 16:24:4528.08.2018 13:48:19</TimeStamp>
         <ID>
           <String>Adventure Works DWH</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>gydQdVjchAHG3SiK+QcwR5lczwE=10.12.2017 10:43:4710.12.2017 13:44:28</TimeStamp>
+        <TimeStamp>gydQdVjchAHG3SiK+QcwR5lczwE=28.08.2018 13:48:1928.08.2018 13:48:19</TimeStamp>
         <ID>
           <String>Adventure Works DWH</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>AbTru5Gd35qabqq66llWLSs1ons=10.12.2017 12:22:0510.12.2017 13:44:28</TimeStamp>
+        <TimeStamp>AbTru5Gd35qabqq66llWLSs1ons=28.08.2018 13:48:1928.08.2018 13:48:19</TimeStamp>
         <ID>
           <String>Dim Customer</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>cCLu20On9ISXYtia2H/F+PzQpIE=10.12.2017 12:58:3710.12.2017 13:44:28</TimeStamp>
+        <TimeStamp>cCLu20On9ISXYtia2H/F+PzQpIE=28.08.2018 13:48:1928.08.2018 13:48:19</TimeStamp>
         <ID>
           <String>Dim Product</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>Uk1+GoOi0sdPWz1+eBZCFMhKZjU=10.12.2017 12:58:3710.12.2017 13:44:287b4Cm61jPprYWdB9mfRIOsTn4mQ=10.12.2017 12:58:3710.12.2017 13:44:28</TimeStamp>
+        <TimeStamp>Uk1+GoOi0sdPWz1+eBZCFMhKZjU=28.08.2018 13:48:1928.08.2018 13:48:197b4Cm61jPprYWdB9mfRIOsTn4mQ=28.08.2018 13:48:1928.08.2018 13:48:19</TimeStamp>
         <ID>
           <String>Adventure Works DWH</String>
         </ID>
@@ -55,14 +55,14 @@
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>MBnI4+u3vFNL8QzKNyBQnEXWp0k=10.12.2017 13:43:1010.12.2017 13:44:28</TimeStamp>
+      <TimeStamp>MBnI4+u3vFNL8QzKNyBQnEXWp0k=28.08.2018 13:48:1928.08.2018 13:48:19</TimeStamp>
       <ID>
-        <String>BIDemo_Cube</String>
+        <String>MultidimensionalProject2</String>
       </ID>
     </DatabaseSnapshot>
     <Granularity>Coarse</Granularity>
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2017-12-10T12:45:45.486667Z</LastDeployed>
+  <LastDeployed>2018-08-28T14:58:52.126667Z</LastDeployed>
 </DeploymentSnapshot>
