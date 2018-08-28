@@ -1,0 +1,1490 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/15/2010 11:45:39 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CFBI05"
+  DTS:CreatorName="CF001\rcain"
+  DTS:DTSID="{5B240A81-7EE7-4DD1-BFAD-56E66753EA3D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.0800.98"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DimProduct"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{7B06B853-A766-4AAC-B3D4-878AC255FBD2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Adventure Works Lite 2008 R2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7B5FF7F0-5B54-4C78-BF3E-ADC7A9FB8A78}"
+      DTS:ObjectName="Adventure Works Lite 2008 R2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=AdventureWorksLT2008R2;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Adventure Works Lite 2008 R2 Data Warehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C0D40D40-9386-4DE3-9632-35992E622C8D}"
+      DTS:ObjectName="Adventure Works Lite 2008 R2 Data Warehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=AdventureWorksLT2008R2DW;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DimProduct - DFT - Read Source Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9B57B779-90E0-4528-8E2A-42FE979078A8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DimProduct - DFT - Read Source Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{1509E46B-035C-4892-95C9-101A418A7D1A}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="User"
+          DTS:ObjectName="CNT_CountOfRowsWithNoChangedData">
+          <DTS:VariableValue
+            DTS:DataType="3">0</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DimProduct - DFT - Read Source Data\CNT - Count of rows with no changed data"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts the rows in a dataset."
+              name="CNT - Count of rows with no changed data">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::CNT_CountOfRowsWithNoChangedData</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DimProduct - DFT - Read Source Data\CNT - Count of rows with no changed data.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\CNT - Count of rows with no changed data.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\CNT - Count of rows with no changed data.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Evaluates and directs rows in a dataset."
+              name="CSPL - Compare what we read from Product Data to what's in the target DB already"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Category"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[Subcategory]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Subcategory"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Subcategory]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[Product]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Product"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Color"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="ListPrice"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ListPrice]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[InDb_Category]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="InDb_Category"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Category]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[InDb_Subcategory]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="InDb_Subcategory"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Subcategory]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[InDb_Product]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="InDb_Product"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Product]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[InDb_Color]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="InDb_Color"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Color]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input].Columns[InDb_ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="InDb_ListPrice"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_ListPrice]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[DataHasChanged]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="DataHasChanged"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Category]} != #{Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Category]}) || (#{Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Subcategory]} != #{Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Subcategory]}) || (#{Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Product]} != #{Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Product]}) || (#{Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Color]} != #{Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Color]}) || (#{Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ListPrice]} != #{Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_ListPrice]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(Category != InDb_Category) || (Subcategory != InDb_Subcategory) || (Product != InDb_Product) || (Color != InDb_Color) || (ListPrice != InDb_ListPrice)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[NoChanges]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NoChanges"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DST - Not found, insert it"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[BI].[DimProduct]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Connections[OleDbConnection]"
+                  connectionManagerID="{B2D4726A-E3A4-4D6E-B4D0-1AB49E8A20D3}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorksDWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].Columns[Subcategory]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Subcategory"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Subcategory]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].Columns[Product]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Product"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].Columns[ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="ListPrice"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[ListPrice]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ListPrice]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedDataType="i4"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ProductID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[DimProductID]"
+                      dataType="i4"
+                      name="DimProductID" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory]"
+                      dataType="wstr"
+                      length="50"
+                      name="Subcategory" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
+                      dataType="wstr"
+                      length="50"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="15"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[ListPrice]"
+                      dataType="cy"
+                      name="ListPrice" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DST - Send to staging for later update"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Staging].[DimProduct]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Connections[OleDbConnection]"
+                  connectionManagerID="{B2D4726A-E3A4-4D6E-B4D0-1AB49E8A20D3}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorksDWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].Columns[Subcategory]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Subcategory"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Subcategory]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].Columns[Product]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Product"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].Columns[ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="ListPrice"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[ListPrice]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ListPrice]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedDataType="i4"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].Columns[DimProductID]"
+                      cachedDataType="i4"
+                      cachedName="DimProductID"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[DimProductID]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[DimProductID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[DimProductID]"
+                      dataType="i4"
+                      name="DimProductID" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory]"
+                      dataType="wstr"
+                      length="50"
+                      name="Subcategory" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
+                      dataType="wstr"
+                      length="50"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="15"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[ListPrice]"
+                      dataType="cy"
+                      name="ListPrice" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+              description="Looks up values in a reference dataset by using exact matching."
+              name="LKP - See if Product is already on file"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [BI].[DimProduct]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [BI].[DimProduct]) [refTable]
+where [refTable].[ProductID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DimProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Category" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Subcategory" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Product" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Color" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ListPrice" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ProductID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Bestimmt, ob doppelte Schlüssel in den Verweisdaten bei Verwendung des Vollcachemodus als Fehler behandelt werden sollen."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Connections[OleDbConnection]"
+                  connectionManagerID="{B2D4726A-E3A4-4D6E-B4D0-1AB49E8A20D3}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorksDWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Inputs[Lookup Input].Columns[ProductID]"
+                      cachedDataType="i4"
+                      cachedName="ProductID"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ProductID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[DimProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[DimProductID]"
+                      name="DimProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DimProductID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Category]"
+                      name="InDb_Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Category</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Subcategory]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Subcategory]"
+                      name="InDb_Subcategory"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Subcategory</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Product]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Product]"
+                      name="InDb_Product"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Product</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Color]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="15"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_Color]"
+                      name="InDb_Color"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Color</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_ListPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output].Columns[InDb_ListPrice]"
+                      name="InDb_ListPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ListPrice</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="SRC - Product Data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT isnull(parent.[Name],'') AS Category
+     , isnull(sub.[Name],'') AS Subcategory
+     , prod.[Name] AS Product
+     , ISNULL(prod.[Color], 'n/a') AS Color
+     , prod.[ListPrice]
+     , prod.[ProductID]   
+  FROM [AdventureWorks2016].[Production].[Product] prod
+  left outer join [AdventureWorks2016].[Production].[ProductCategory] sub
+  ON prod.[ProductSubcategoryID] = sub.[ProductCategoryID]
+    left outer JOIN [AdventureWorks2016].[Production].[ProductSubcategory] subparent
+     ON sub.ProductCategoryID = subparent.ProductSubcategoryID
+  left outer JOIN [AdventureWorks2016].[Production].[ProductCategory] parent 
+     ON subparent.ProductCategoryID = parent.[ProductCategoryID]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Connections[OleDbConnection]"
+                  connectionManagerID="{32954103-A72B-45A4-AE51-639F4A18FA92}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2016]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Subcategory]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[Subcategory]"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Subcategory]"
+                      name="Subcategory"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Product]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[Product]"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Product]"
+                      name="Product"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Color]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[Color]"
+                      length="15"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[Color]"
+                      name="Color"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ListPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[ListPrice]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ListPrice]"
+                      name="ListPrice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[ProductID]"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[Subcategory]"
+                      dataType="wstr"
+                      length="50"
+                      name="Subcategory" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[Product]"
+                      dataType="wstr"
+                      length="50"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="15"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[ListPrice]"
+                      dataType="cy"
+                      name="ListPrice" />
+                    <externalMetadataColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[Subcategory]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[Subcategory]"
+                      name="Subcategory" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[Product]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[Product]"
+                      name="Product" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[Color]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[Color]"
+                      name="Color" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[ListPrice]"
+                      dataType="cy"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[ListPrice]"
+                      name="ListPrice" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[ProductID]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DimProduct - DFT - Read Source Data.Paths[DataHasChanged]"
+              endId="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update.Inputs[OLE DB Destination Input]"
+              name="DataHasChanged"
+              startId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[DataHasChanged]" />
+            <path
+              refId="Package\DimProduct - DFT - Read Source Data.Paths[Lookup Match Output]"
+              endId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Inputs[Conditional Split Input]"
+              name="Lookup Match Output"
+              startId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DimProduct - DFT - Read Source Data.Paths[Lookup No Match Output]"
+              endId="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DimProduct - DFT - Read Source Data.Paths[NoChanges]"
+              endId="Package\DimProduct - DFT - Read Source Data\CNT - Count of rows with no changed data.Inputs[Row Count Input 1]"
+              name="NoChanges"
+              startId="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already.Outputs[NoChanges]" />
+            <path
+              refId="Package\DimProduct - DFT - Read Source Data.Paths[OLE DB Source Output]"
+              endId="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\DimProduct - DFT - Read Source Data\SRC - Product Data.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DimProduct - SQL - Reset Staging Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C3EC04AB-A315-4BC8-987A-D87CED9B2E6E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DimProduct - SQL - Reset Staging Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{34CC4704-687C-453F-BE98-FDD2A62ED2F2}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="SQL_ResetStaging">
+          <DTS:VariableValue
+            DTS:DataType="8">DELETE FROM Staging.DimProduct</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{B2D4726A-E3A4-4D6E-B4D0-1AB49E8A20D3}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::SQL_ResetStaging" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DimProduct - SQL - Update from Staging"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9F5CB382-1178-42A0-9DDE-963FAE54BA00}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DimProduct - SQL - Update from Staging"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{B2D4726A-E3A4-4D6E-B4D0-1AB49E8A20D3}"
+          SQLTask:SqlStatementSource="UPDATE BI&#xA;   SET BI.Category = s.Category&#xA;     , BI.Subcategory = s.Subcategory&#xA;     , BI.Product = s.Product&#xA;     , BI.Color = s.Color&#xA;     , BI.ListPrice = s.ListPrice&#xA;  FROM [AdventureWorksDWH].[BI].[DimProduct] BI&#xA;  JOIN [AdventureWorksDWH].[Staging].[DimProduct] s&#xA;    ON BI.DimProductID = s.DimProductID&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{13A31154-E81D-4072-BF5B-20A9D02E14A7}"
+      DTS:From="Package\DimProduct - SQL - Reset Staging Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DimProduct - DFT - Read Source Data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{FE9C39A4-996B-4B59-BD80-D5686456BCA1}"
+      DTS:From="Package\DimProduct - DFT - Read Source Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DimProduct - SQL - Update from Staging" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="359,35"
+          Id="Package\DimProduct - DFT - Read Source Data"
+          TopLeft="5.5,118.179245283019" />
+        <NodeLayout
+          Size="359,35"
+          Id="Package\DimProduct - SQL - Reset Staging Table"
+          TopLeft="5.5,12.0660377358491" />
+        <NodeLayout
+          Size="359,35"
+          Id="Package\DimProduct - SQL - Update from Staging"
+          TopLeft="5.5,224.330188679245" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="184.820754716981,47.1981132075472">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,70.9811320754717"
+              Start="0,0"
+              End="0,63.4811320754717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.4811320754717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="184.820754716981,153.311320754717">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,71.0188679245283"
+              Start="0,0"
+              End="0,63.5188679245283">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.5188679245283" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="The logic here is similar to DimCustomer.dtsx,&#xA;please see it's annotations for more info. &#xA;Main difference is inside the DFT, which is&#xA;documented there."
+          ParentId="Package"
+          Size="656,76"
+          Id="fd3b9be1-a875-4a4f-a084-b24de6654f6c"
+          TopLeft="386.518867924528,5.5">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="10.800000190734863"
+              Color="#FF080000">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[Adventure Works Lite 2008 R2]">
+    <DataSourceID>Adventure Works Lite 2008 R2</DataSourceID>
+  </ConnectionManager>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[Adventure Works Lite 2008 R2 Data Warehouse]">
+    <DataSourceID>Adventure Works Lite 2008 R2 Data Warehouse</DataSourceID>
+  </ConnectionManager>
+  <TaskHost
+    design-time-name="Package\DimProduct - DFT - Read Source Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="315,35"
+          Id="Package\DimProduct - DFT - Read Source Data\SRC - Product Data"
+          TopLeft="78.1792452830189,23.2735849056604" />
+        <NodeLayout
+          Size="219,35"
+          Id="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it"
+          TopLeft="353.764150943396,206.971698113208" />
+        <NodeLayout
+          Size="259,42"
+          Id="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update"
+          TopLeft="5.5,299.084905660377" />
+        <NodeLayout
+          Size="312,35"
+          Id="Package\DimProduct - DFT - Read Source Data\CSPL - Compare what we read from Product Data to what's in the target DB already"
+          TopLeft="15.8773584905661,206.971698113208" />
+        <NodeLayout
+          Size="305,35"
+          Id="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file"
+          TopLeft="79.7641509433962,105.537735849057" />
+        <NodeLayout
+          Size="197,35"
+          Id="Package\DimProduct - DFT - Read Source Data\CNT - Count of rows with no changed data"
+          TopLeft="242.745283018868,298.066037735849" />
+        <EdgeLayout
+          Id="Package\DimProduct - DFT - Read Source Data.Paths[OLE DB Source Output]"
+          TopLeft="235.537735849057,58.4056603773585">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-3.20754716981133,47.1320754716981"
+              Start="0,0"
+              End="-3.20754716981133,39.6320754716981">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5471698113208" />
+                  <mssgle:LineSegment
+                    End="-3.20754716981133,23.5471698113208" />
+                  <mssgle:LineSegment
+                    End="-3.20754716981133,39.6320754716981" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DimProduct - DFT - Read Source Data.Paths[NoChanges]"
+          TopLeft="233.877358490566,242.103773584906">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="107.509433962264,55.9622641509434"
+              Start="0,0"
+              End="107.509433962264,48.4622641509434">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.9622641509434" />
+                  <mssgle:LineSegment
+                    End="107.509433962264,27.9622641509434" />
+                  <mssgle:LineSegment
+                    End="107.509433962264,48.4622641509434" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="28.3321388561321,32.9622641509434,50.84515625,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DimProduct - DFT - Read Source Data.Paths[Lookup No Match Output]"
+          TopLeft="232.330188679245,140.669811320755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="230.867924528302,66.3018867924528"
+              Start="0,0"
+              End="230.867924528302,58.8018867924528">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.1320754716981" />
+                  <mssgle:LineSegment
+                    End="230.867924528302,33.1320754716981" />
+                  <mssgle:LineSegment
+                    End="230.867924528302,58.8018867924528" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="59.627575545401,38.1320754716981,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DimProduct - DFT - Read Source Data.Paths[Lookup Match Output]"
+          TopLeft="190.820754716981,140.669811320755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-19.2075471698113,66.3018867924528"
+              Start="0,0"
+              End="-19.2075471698113,58.8018867924528">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.1320754716981" />
+                  <mssgle:LineSegment
+                    End="-19.2075471698113,33.1320754716981" />
+                  <mssgle:LineSegment
+                    End="-19.2075471698113,58.8018867924528" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.7951603036556,38.1320754716981,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DimProduct - DFT - Read Source Data.Paths[DataHasChanged]"
+          TopLeft="121.210691823899,241.971698113208">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="13.7893081761006,57.113207547169"
+              Start="0,0"
+              End="13.7893081761006,49.613207547169">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.0201193685018" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.0201193685018"
+                    Point2="0,23.0201193685018"
+                    Point3="4,23.0201193685018" />
+                  <mssgle:LineSegment
+                    End="9.78930817610056,23.0201193685018" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9.78930817610056,23.0201193685018"
+                    Point2="13.7893081761006,23.0201193685018"
+                    Point3="13.7893081761006,27.0201193685018" />
+                  <mssgle:LineSegment
+                    End="13.7893081761006,49.613207547169" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-31.3133341931997,28.0201193685018,76.4159765625,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="This DFT demonstrates a technique you can use when you&#xA;don't have a last modified date that you can use in the WHERE&#xA;clause. Here, we use a conditional split, comparing each row&#xA;we read in to what's already in the target DB. If any of the &#xA;columns are different, the output flows down the &#xA;DataHasChanged path, where it goes to a staging table. &#xA;If there are NoChanges, it's currently flowing into a Row&#xA;Count which could be logged, or simply ignored. &#xA;One important note, make sure none of the fields being&#xA;compared have nulls, otherwise the comparison will return a&#xA;null and trigger an error. "
+          ParentId="Package\DimProduct - DFT - Read Source Data"
+          Size="759,167"
+          Id="b34f0677-de13-4eb4-88b3-e318c0b64f74"
+          TopLeft="424.028301886792,5.5">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="10.800000190734863"
+              Color="#FF080000">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimProduct - DFT - Read Source Data\SRC - Product Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimProduct - DFT - Read Source Data\DST - Not found, insert it">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimProduct - DFT - Read Source Data\DST - Send to staging for later update">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimProduct - DFT - Read Source Data\LKP - See if Product is already on file">
+    <Properties>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q2:string">[BI].[DimProduct]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q3:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q4:string">true</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Navigation;
@@ -8,24 +9,41 @@ using NetTcpStyleUriParser = System.NetTcpStyleUriParser;
 
 namespace TestUIThread {
     public partial class MainWindow : Window {
+
+        
+
         public MainWindow() {
             InitializeComponent();
         }
 
+        private bool isCancelled = false;
+
         private async void startCalculationButton_Click(object sender, RoutedEventArgs e) {
             long initial;
             long amount;
+            
             if (!long.TryParse(baseNumberTextBox.Text, out initial) ||
                 !long.TryParse(succeedingPrimesTextBox.Text, out amount)) {
                 return;
             }
+
 
             startCalculationButton.Content = "Cancel";
             startCalculationButton.Click -= startCalculationButton_Click;
             startCalculationButton.Click += stopCalculation;
             progressLabel.Content = "computing...";
             await ComputeNextPrimes(initial, amount);
-            progressLabel.Content = "done";
+            if (isCancelled)
+            {
+                progressLabel.Content = "cancelled";
+            }
+            else
+            {
+                progressLabel.Content = "done";
+            }
+
+            isCancelled = false;
+            progressBar.Value = 0;
             startCalculationButton.Content = "Start";
             startCalculationButton.Click -= stopCalculation;
             startCalculationButton.Click += startCalculationButton_Click;
@@ -33,7 +51,12 @@ namespace TestUIThread {
         }
 
         private async Task ComputeNextPrimes(long inital, long amount) {
-            for (var number = inital; number < inital + amount; number++) {
+            for (var number = inital; number < inital + amount; number++)
+            {
+                if (isCancelled)
+                {
+                    return;
+                }
                 if (await IsPrime(number)) {
                     resultListView.Items.Add(number);
                 }
@@ -59,7 +82,7 @@ namespace TestUIThread {
 
         private void stopCalculation(object sender, RoutedEventArgs e)
         {
-            return;
+            isCancelled = true;
         }
     }
 }

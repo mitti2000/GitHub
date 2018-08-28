@@ -1,0 +1,7 @@
+F:\GitHub\GitHub\trunk\Visual Studio\WPFThreading2\Pitfall1\bin\Debug\Pitfall1.exe.config
+F:\GitHub\GitHub\trunk\Visual Studio\WPFThreading2\Pitfall1\bin\Debug\Pitfall1.exe
+F:\GitHub\GitHub\trunk\Visual Studio\WPFThreading2\Pitfall1\bin\Debug\Pitfall1.pdb
+F:\GitHub\GitHub\trunk\Visual Studio\WPFThreading2\Pitfall1\obj\Debug\Pitfall1.csprojAssemblyReference.cache
+F:\GitHub\GitHub\trunk\Visual Studio\WPFThreading2\Pitfall1\obj\Debug\Pitfall1.csproj.CoreCompileInputs.cache
+F:\GitHub\GitHub\trunk\Visual Studio\WPFThreading2\Pitfall1\obj\Debug\Pitfall1.exe
+F:\GitHub\GitHub\trunk\Visual Studio\WPFThreading2\Pitfall1\obj\Debug\Pitfall1.pdb
