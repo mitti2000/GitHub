@@ -2,28 +2,28 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BIDemo_ETL</Name>
-    <LastWriteTime>2018-08-28T13:06:30.7750798Z</LastWriteTime>
+    <LastWriteTime>2018-08-29T12:37:13.9041962Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimCustomer.dtsx</Name>
-      <LastWriteTime>2018-08-28T11:48:19.1326922Z</LastWriteTime>
+      <LastWriteTime>2017-12-10T12:43:48Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimProduct.dtsx</Name>
-      <LastWriteTime>2018-08-28T11:48:19.1366893Z</LastWriteTime>
+      <LastWriteTime>2017-12-09T17:10:26Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FactSales.dtsx</Name>
-      <LastWriteTime>2018-08-28T11:48:19.1396876Z</LastWriteTime>
+      <LastWriteTime>2017-12-09T17:10:26Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Master.dtsx</Name>
-      <LastWriteTime>2018-08-28T11:48:19.1426859Z</LastWriteTime>
+      <LastWriteTime>2017-12-09T16:30:14Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

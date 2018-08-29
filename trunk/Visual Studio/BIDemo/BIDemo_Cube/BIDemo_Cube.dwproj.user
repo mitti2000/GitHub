@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>MITTILAPTOP</TargetServer>
+        <TargetServer>MITTIDESKTOP\MSSQLSERVERANALY</TargetServer>
         <TargetDatabase>BIDemo_Cube</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>

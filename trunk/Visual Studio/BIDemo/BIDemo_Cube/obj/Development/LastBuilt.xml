@@ -1,31 +1,31 @@
 ﻿<Infos>
   <Item name="Adventure Works DWH.ds">
-    <Time>636710702853789628</Time>
+    <Time>636711540699248223</Time>
     <Hash length="20">
-      <b>22</b>
+      <b>154</b>
+      <b>169</b>
+      <b>94</b>
+      <b>18</b>
+      <b>190</b>
+      <b>217</b>
+      <b>74</b>
+      <b>203</b>
+      <b>65</b>
+      <b>224</b>
+      <b>16</b>
+      <b>240</b>
+      <b>42</b>
       <b>228</b>
-      <b>71</b>
-      <b>168</b>
-      <b>103</b>
-      <b>114</b>
-      <b>228</b>
-      <b>192</b>
-      <b>126</b>
-      <b>177</b>
-      <b>99</b>
-      <b>70</b>
-      <b>22</b>
-      <b>53</b>
+      <b>110</b>
+      <b>105</b>
+      <b>60</b>
+      <b>213</b>
+      <b>173</b>
       <b>43</b>
-      <b>135</b>
-      <b>233</b>
-      <b>205</b>
-      <b>90</b>
-      <b>230</b>
     </Hash>
   </Item>
   <Item name="Adventure Works DWH.cube">
-    <Time>636710608990287515</Time>
+    <Time>636485075180000000</Time>
     <Hash length="20">
       <b>82</b>
       <b>77</b>
@@ -49,8 +49,33 @@
       <b>53</b>
     </Hash>
   </Item>
+  <Item name="Dim Product.dim">
+    <Time>636485075180000000</Time>
+    <Hash length="20">
+      <b>112</b>
+      <b>34</b>
+      <b>238</b>
+      <b>219</b>
+      <b>67</b>
+      <b>167</b>
+      <b>244</b>
+      <b>132</b>
+      <b>151</b>
+      <b>98</b>
+      <b>216</b>
+      <b>154</b>
+      <b>216</b>
+      <b>127</b>
+      <b>197</b>
+      <b>248</b>
+      <b>252</b>
+      <b>208</b>
+      <b>164</b>
+      <b>129</b>
+    </Hash>
+  </Item>
   <Item name="MultidimensionalProject2.database">
-    <Time>636710608990667293</Time>
+    <Time>636485101900000000</Time>
     <Hash length="20">
       <b>48</b>
       <b>25</b>
@@ -75,7 +100,7 @@
     </Hash>
   </Item>
   <Item name="Adventure Works DWH.partitions">
-    <Time>636710608990387447</Time>
+    <Time>636485075180000000</Time>
     <Hash length="20">
       <b>237</b>
       <b>190</b>
@@ -99,33 +124,8 @@
       <b>100</b>
     </Hash>
   </Item>
-  <Item name="Dim Product.dim">
-    <Time>636710608990637310</Time>
-    <Hash length="20">
-      <b>112</b>
-      <b>34</b>
-      <b>238</b>
-      <b>219</b>
-      <b>67</b>
-      <b>167</b>
-      <b>244</b>
-      <b>132</b>
-      <b>151</b>
-      <b>98</b>
-      <b>216</b>
-      <b>154</b>
-      <b>216</b>
-      <b>127</b>
-      <b>197</b>
-      <b>248</b>
-      <b>252</b>
-      <b>208</b>
-      <b>164</b>
-      <b>129</b>
-    </Hash>
-  </Item>
   <Item name="Adventure Works DWH.dsv">
-    <Time>636710608990357473</Time>
+    <Time>636484994280000000</Time>
     <Hash length="20">
       <b>131</b>
       <b>39</b>
@@ -150,7 +150,7 @@
     </Hash>
   </Item>
   <Item name="Dim Customer.dim">
-    <Time>636710608990567352</Time>
+    <Time>636485053260000000</Time>
     <Hash length="20">
       <b>1</b>
       <b>180</b>
