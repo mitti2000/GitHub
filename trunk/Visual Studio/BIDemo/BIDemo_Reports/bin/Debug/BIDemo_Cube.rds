@@ -2,7 +2,7 @@
 <RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BIDemo_Cube">
   <ConnectionProperties>
     <Extension>OLEDB-MD</Extension>
-    <ConnectString>Data Source=MITTILAPTOP;Initial Catalog=BIDemo_Cube</ConnectString>
+    <ConnectString>Data Source=MITTIDESKTOP\MSSQLSERVERANALY;Initial Catalog=BIDemo_Cube</ConnectString>
     <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
   <DataSourceID>5897f7d3-60d2-4a2c-90c5-262269813d94</DataSourceID>

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">SYMAS-WS</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxeMpJIYH0ixm0PPGDPyZgAAAAACAAAAAAAQZgAAAAEAACAAAABMLkSyXY5TLQAnkBmd25eBB9zJAtf0qMrrn4hneIvQQwAAAAAOgAAAAAIAACAAAACMxjlIVEoCdgM80TCwPDKWW76AqrXBy96NlgtnSa3yv5AAAABjuLR45aa3TWLZ39fkL6uCGTHGrsGCDGKUKQMQ/sdZbi0zXNvMSnyF5Tpf2tvijCNMu8gZhv6xYqvp3x/Hgzg1YNTE8U9A0vSGQc+y1Ae/OgIfKQrwlgyOSLtNiBRhw78AX543JlV7i5r2GySDNVsME02AqUd4atstMAtWj/yeG2yeYcMm62SOtQHd43VXwNxAAAAAX6pp/8Vlm3zpCMTHfFVXhrju5LRvK+wseOb4Alrs8S7GFBu3Oh3Ju1zxSJADq0heoyZkUuu51e6A1r+MZJaZfA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2pxB0HiprEa1nDlZieAzpwAAAAACAAAAAAAQZgAAAAEAACAAAACj7ik59quZiaTjUfzSd+iIZzzp0yCZCbWsezUIgutVBwAAAAAOgAAAAAIAACAAAADUeKv7tCyqV8bJsIE4oWkpPZLYk7xveeUbZqCC3wl2hZAAAADtEMzZWTF7x0eUSvouFtqaJLf20ZlzbtbwXo83Ye8rp/qL5ogHDQ3BbCj/RMX+IJzfshVZf85Oyl2Rjk1GqZcmC63e1YjuAgmaUlMCyEfyMdCYvoCHdbPtZQgteVNdMX5zpAPfNCOReCSgVho+xSg1wXNTFM237lkBBwQPGLvruejVOm4VSbO8K32bcuHD8ZFAAAAAjKx9AiH05PONCNol4sVKEMFztxpLA+2MFK6zLxNV8yPJQTlgn7mROW5YINAJjySE0PgW9KDvMmzoY6pUK8euPg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -52,7 +52,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=MITTILAPTOP;Initial Catalog=AdventureWorks2016;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=MITTIDESKTOP;Initial Catalog=AdventureWorks2016;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -111,7 +111,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">MITTILAPTOP</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">MITTIDESKTOP</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -140,7 +140,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=MITTILAPTOP;Initial Catalog=AdventureWorksDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=MITTIDESKTOP;Initial Catalog=AdventureWorksDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -199,7 +199,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">MITTILAPTOP</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">MITTIDESKTOP</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>

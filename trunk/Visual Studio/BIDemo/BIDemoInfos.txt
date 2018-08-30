@@ -24,3 +24,57 @@ Report «Line Total Sales.rdl» öffnen (Doppelclick)
 Im Report auf Preview wechlsen -> Daten werden angezeigt (Info: Daten ohne Kategorie und ohne Land wurden rausgefiltert – ansonsten tritt eine OutOfMemoryExcepiton auf)
 
 
+Vorgehen bei Thomas Mittermair:
+
+1. Sicherstellen, dass folgende Erweiterungen im Visual Studio noch nicht installiert sind
+	Wenn vorhanden, deinstallieren (VS --> Tools --> Extensions and Updates --> Installed):
+	- Microsoft Analysis Service Projects
+	- Microsoft Reporting Services Projects
+2. Visual Studio schliessen. Allfällige deinstallationen werden durchgeführt
+3. SSDT (SQL Server Data Tools) komplett installieren. https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017#ssdt-for-vs-2017-standalone-installer
+	Bei der Installation die aktuelle VisualStudio 2017 Instanz wählen und alle Haken markieren.
+	Nach der Installation ist ein Neustart nötig
+	- Eventuell muss nachträglich der Analysis Service über das Visual Studio nochmal deinstalliert und installiert werden... (war bei mir der Fall)
+5. AdventureWorks2016 Datenbank wiederherstellen aus .bak Datei !!DIE NORMALE DB UND NICHT DW!! (https://www.microsoft.com/en-us/download/details.aspx?id=49502)
+4. Beiliegendes SQL Script BIDemo.sql im SQL Management Studio ausführen
+5. Sicherstellen, dass auf beiden Datenbanken der ServiceAccount stimmt.
+	Dazu in den Diensten nach den beiden Diensten SQL Server(MSSQLSERVER), SQL Server Analyses Service(MSSQLSERVER) und MSOLAP$MSSQLSERVERANALY suchen. 
+	Per Doppelklick auf einen Service kann im Tab Anmelden der Serviceuser gelesen werden. 
+	Im Normalfall sind das NT Service\MSSQLSERVER, NT Service\MSSQLServerOLAPService und NT Service\MSOLAP$MSSQLSERVERANALY
+	Diese beiden User auf den beiden Datenbanken AdventureWorks2016 und AdventureWorksDWH Berechtigen
+	Dazu in der entsprechenden Datenbank unter Security-->Users einen Rechtsklick auf User machen
+	New User wählen und den Im Feld "User name" und "Login name" den Usernamen eintragen.
+	Unter Membership db_owner anwählen
+6. Solution im VisualStudio öffnen. Wenn die 3 Projekte nicht geladen werden, reicht ein Rechtsklick und "Reload Projects"
+7. Im Projekt BIDemo_ETL die beiden Connections unter Connection Manager anpassen
+	- Doppelklick auf AdventureWorks2016.conmgr und AdventureWorksDWH.conmgr
+	- Servernamen anpassen und Datenbank auswählen
+	- Mit Test Connection die Verbindung zur Datenbank testen
+8. Im Project BIDemo_Cube unter Data Sources ein Doppelklick auf Adventure Works DWH.ds
+	- Bei Connection auf Edit, den Servernamen eintragen und die korrekte DB auswählen
+	- Im Tab Impersonation Information muss "Use the service account" gewählt sein.
+9. Unter SSIS Packeges per Rechtsklick auf Master.dtsx --> Execute Package wird der komplette ETL Prozess durchgeführt
+	- Alle Haken müssen grün sein
+	- Ist der Prozess fertig, kann die Ausführung gestoppt werden
+10. Rechtsklick auf Projekt BIDemo_Cube --> Properties --> Deployment --> Server eintragen
+11. Dimensions verarbeiten mit Rechtsklick auf Dimension --> Process in der Reihenfolge
+	- Dim Customer.dim
+	- Dim Product.dim
+	- Adventure Works DWH.cube
+	- Eventuell muss das Projekt zuert neu gebildet und deployed werden
+12. Nun kann der Cube geöffnet werden.
+	- Adventure Works DWH.cube --> Rechtsklick --> open
+	- In der iberen Leiste auf Browser
+	- Oben auf den Excel Button klicken
+13. Für die Reports muss zuerst der Connection String angepasst werden
+	- Im Projekt BIDemo_Reports\Shared Data Sources ein Doppelklick auf BIDemo_Cube.rds
+	- Dort auf Edit
+	- Unter "Server name" muss der Servername des AnalysisServer eingetragen werden (normalerweise PCNAME\MSSQLSERVERANALY)
+14. Jetzt kann der Report Line Total Sale.rdl per Doppelklick geöffnet werden
+	- Oben kann per Preview auf die Datenansicht gewechselt werden. Werden dort Zahlen angezeigt hat alles funktioniert.
+	
+	
+
+
+
+
